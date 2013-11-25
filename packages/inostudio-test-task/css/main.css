@@ -198,6 +198,7 @@ input[type=text]{
     -webkit-border-radius: 0 5px 5px 0;
     -moz-border-radius: 0 5px 5px 0;
     border-radius: 0 5px 5px 0;
+    z-index:1;
 }
 
 .sidebar a{
