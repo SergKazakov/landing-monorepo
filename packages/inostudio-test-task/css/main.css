@@ -39,14 +39,17 @@ input[type=text]{
 
 .header{
     width: 1202px;
-     padding-bottom: 15px; 
+    /* padding-bottom: 16px; */
 }
 
 .logo{
     font-size:21px;
     float: left;
     text-transform:uppercase;
-    margin: 20px 111px 3px 8px;
+    margin-top: 20px;
+    margin-right: 111px;
+    margin-left: 8px;
+    margin-bottom: 19px;
 }
 
 .logo a{
@@ -670,7 +673,7 @@ a.red-buttons:active span{
 .group-fields2{
     float: right;
     margin-right: 310px;
-    width: 269px;
+    width: 269px; /*для ie7*/
 }
 
 .group-fields2 .single-button a{
