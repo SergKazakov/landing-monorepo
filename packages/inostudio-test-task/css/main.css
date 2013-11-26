@@ -767,7 +767,6 @@ a.red-buttons:active span{
     width: 65px;
     padding-left: 25px;
     background: url(../img/sprite_small_icons.png) -48px 2px no-repeat #fff;
-    float: left;
 }
 
 .info-panel .column2 .last{
