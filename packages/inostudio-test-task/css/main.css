@@ -243,7 +243,8 @@ body {
 
 .sidebar a{
     display: block;
-    height: 43px;
+    padding-top: 21px;
+    padding-bottom: 21px;
 }
 
 .sidebar .item1{
@@ -251,12 +252,69 @@ body {
 }
 .sidebar .item2{
     background: url(../img/fixed_menu.png) 8px -28px no-repeat;
+    position: relative;
 }
 .sidebar .item3{
     background: url(../img/fixed_menu.png) 8px -68px no-repeat;
 }
 .sidebar .item4{
     background: url(../img/fixed_menu.png) 8px -108px no-repeat;
+}
+
+.sidebar li:hover .item2{
+    background-position: -32px -29px;
+}
+
+.sidebar li:hover{
+    background: #4b4f54;
+}
+
+.sidebar li ul{
+    display: none;
+}
+
+.sidebar li:hover ul{
+    display: block;
+    position: absolute;
+    top: 42px;
+    left: 39px;
+    width: 114px;
+    background: #4b4f54;
+    padding-left: 23px;
+    -webkit-border-radius: 0 5px 5px 0;
+    -moz-border-radius: 0 5px 5px 0;
+    border-radius: 0 5px 5px 0;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    z-index:1;
+}
+
+.sidebar ul a{
+    color: #fff;
+    font-size: 14px;
+    padding-top: 11px;
+    padding-bottom: 11px;
+}
+
+.sidebar li:hover ul a:hover{
+    font-weight: bold;
+    color:#d4e1f4;
+}
+
+.sidebar ul a span{
+    margin-left: 34px;
+}
+
+.sidebar .item2-inner{
+    background: url(../img/fixed_menu.png) 0px -150px no-repeat;
+}
+
+.sidebar .item3-inner{
+    background: url(../img/fixed_menu.png) 0px -200px no-repeat;
+}
+
+.sidebar .item4-inner{
+    background: url(../img/fixed_menu.png) 0px -268px no-repeat;
 }
 
 .info{
