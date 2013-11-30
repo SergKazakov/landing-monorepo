@@ -261,6 +261,18 @@ body {
     background: url(../img/fixed_menu.png) 8px -108px no-repeat;
 }
 
+.sidebar li:first-child:hover{
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+
+.sidebar li.last:hover{
+    -webkit-border-radius: 0 0 5px 0;
+    -moz-border-radius: 0 0 5px 0;
+    border-radius: 0 0 5px 0;
+}
+
 .sidebar li:hover .item2{
     background-position: -32px -29px;
 }
@@ -277,7 +289,7 @@ body {
     display: block;
     position: absolute;
     top: 42px;
-    left: 39px;
+    left: 100%;
     width: 114px;
     background: #4b4f54;
     padding-left: 23px;
@@ -452,9 +464,14 @@ p.image-title{
     right:0;
 }
 
-.active-panel.active .block1 {display: none; }
+/* .active-panel.active .block1 {display: none; } */
 
-.panel .description{
+
+.panel .ui-helper-reset{
+    line-height: 1;
+}
+
+.panel h3.ui-accordion-header{
     background-color: #585d63;
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#818992', endColorstr='#585d63');
     background-image: -webkit-gradient(linear, left top, left bottom, from(#818992), to(#585d63));
@@ -466,20 +483,30 @@ p.image-title{
     -webkit-box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.3);
     -moz-box-shadow:inset 0px 1px 2px rgba(255, 255, 255, 0.3);
     box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.3);
+    margin: 0;
+    font-weight: normal;
+    padding: 0;
+    line-height: none;
 }
 
-.panel .description a{
+.panel h3.ui-accordion-header span{
+    position: absolute;
+    left:7px;
+    top: 12px;
+}
+
+.panel h3.ui-accordion-header a{
     color: #fff;
     font-size:14px;
     display: block;
     padding-top: 10px;
     padding-bottom: 9px;
+    padding-left: 23px;
 }
 
-.panel .description a img{
-    margin-left: 8px;
-    margin-right: 7px;
-    margin-bottom: 2px;
+.ui-accordion-content.ui-helper-reset.ui-widget-content.ui-corner-bottom.ui-accordion-content-active{
+    padding-right: 0;
+    padding-left: 0;
 }
 
 .panel [class^="block"] {
@@ -507,14 +534,6 @@ p.image-title{
 .panel-buttons a{
     margin-bottom: 5px;
     width: 162px;
-}
-
-.panel-buttons a span{
-    padding-right: 4px;
-    padding-top: 9px;
-    padding-bottom: 10px;
-    display: block;
-    background: url(../img/buttons_sprite.png) 100% -44px no-repeat;
 }
 
 .block2{
@@ -580,9 +599,6 @@ p.image-title{
 
 .block4{
     padding-top: 20px;
-}
-
-.block4 .row{
     padding-bottom: 9px;
 }
 
@@ -903,28 +919,74 @@ input[type=text]:focus{
     margin-bottom: 11px;
 }
 
+.reports-content .field .column1,
+.reports-content .field .column2{
+    float: left;
+}
+
+.reports-content .field .column1{
+    margin-right: 13px;
+    padding-top: 7px;
+}
+
 .reports-content .field label{
     font-size: 14px;
     font-weight: bold;
     color: #4e4e4e;
-    vertical-align: middle;
-    margin-right: 13px;
 }
 
 .reports-content .field select{
     width: 206px;
 }
 
-.reports-content .block{
+.reports-content .input-tag-block{
     margin-left: 111px;
     margin-bottom: 43px;
 }
 
-.reports-content .block input{
-    margin-right: 13px;
+.reports-content .input-tag-block .clear{
+    padding-top: 5px;
 }
 
-.reports-content .block a,
+.reports-content .input-tag-block .tagsinput,
+.reports-content .input-tag-block .clear{
+    float: left;
+}
+
+.reports-content .input-tag-block .tagsinput{
+    margin-right: 13px;
+    margin-bottom: 43px;
+    border: 1px solid #b4bfcf;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    border-radius: 5px 5px 5px 5px;
+    max-height: 80px;
+    padding: 1px 1px 0 1px;
+}
+
+.reports-content .input-tag-block .tagsinput span.tag{
+    border: 0;
+    background: #d0d9e5;
+    font-size: 12px;
+    color: #575c62;
+    margin: 1px 5px 0 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.reports-content .input-tag-block .tagsinput span.tag a{
+    color: #fff;
+    vertical-align: 1px;
+}
+
+.reports-content .input-tag-block .tagsinput input{
+    padding: 0;
+    vertical-align: -2px;
+    margin-top: 2px;
+}
+
+.reports-content .clear a,
 .input-form .column3 a{
     font-size: 12px;
     color: #4e4e4e;
@@ -1016,8 +1078,8 @@ input[type=text]:focus{
     margin-right: 13px;
 }
 
-.input-form .column2 input,
-.reports-content .block input{
+.input-form .column2 input/*,
+.reports-content .block input*/{
     width: 517px;
     height: 25px;
     padding-left: 5px;
@@ -1028,6 +1090,81 @@ input[type=text]:focus{
 }
 
 /* systems_manufacturers.html */
+
+.systems-info .jq-selectbox{
+    margin-left: 76px;
+}
+
+.systems-info .jq-selectbox.opened .jq-selectbox__select{
+    -webkit-border-radius: 5px 5px 0 0;
+    -moz-border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0;
+/*    border-bottom: 0;*/
+}
+
+.systems-info .jq-selectbox__select{
+    border: 1px solid #575c62;
+    background: #878d97;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    line-height:14px;
+    height: auto;
+    padding-top: 7px;
+    padding-bottom: 6px;
+    text-shadow: none;
+    color: #fff;
+}
+
+.systems-info .jq-selectbox__select:hover{
+    background: #878d97;
+}
+
+
+.systems-info .jq-selectbox__select:active{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.systems-info .jq-selectbox__select .jq-selectbox__trigger{
+    background: url(../img/white-trigger-arrow.png) 14px 8px no-repeat;
+}
+
+.systems-info .jq-selectbox__select .jq-selectbox__trigger-arrow{
+    border: 0 none;
+    position: static;
+}
+
+.systems-info .jq-selectbox__dropdown{
+    -webkit-border-radius: 0 0 5px 5px;
+    -moz-border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px;
+    border: 1px solid #575c62;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 0;
+    top: 26px;
+}
+
+.systems-info .jq-selectbox__trigger{
+    border-left: 1px solid #575c62;;
+}
+
+.systems-info .jq-selectbox li{
+    background: #e5e8ed;
+    color: black;
+/*    height: auto;*/
+    min-height: 0;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    border-bottom: 1px solid #575c62;
+}
+
+.systems-info .jq-selectbox li:hover{
+    background: #b4bfcf;
+}
 
 .systems-info{
     padding: 9px 7px 7px 13px;

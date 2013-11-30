@@ -14,6 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="js/plugins/Accordion/jquery-ui-1.10.3.custom.css">
 </head>
 
 <body>
@@ -27,22 +28,34 @@
                 </p>
                 <ul class="menu clearfix">
                     <li>
-                        <a class="list-item1" href="#"><span>Dashboard</span></a>
+                        <a class="list-item1" href="#">
+                            <span>Dashboard</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="list-item2 active" href="#"><span>Customer</span></a>
+                        <a class="list-item2 active" href="#">
+                            <span>Customer</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="list-item3" href="#"><span>Shedule</span></a>
+                        <a class="list-item3" href="#">
+                            <span>Shedule</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="list-item4" href="systems_manufacturers.html"><span>Systems</span></a>
+                        <a class="list-item4" href="systems_manufacturers.html">
+                            <span>Systems</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="list-item5" href="reports.html"><span>Reports</span></a>
+                        <a class="list-item5" href="reports.html">
+                            <span>Reports</span>
+                        </a>
                     </li>
                     <li>
-                        <a class="list-item6" href="#"><span>Settings</span></a>
+                        <a class="list-item6" href="#">
+                            <span>Settings</span>
+                        </a>
                     </li>
                 </ul>
                 <ul class="user">
@@ -77,16 +90,30 @@
             <li>
                 <a class="item2" href="#"></a>
                 <ul>
-                    <li><a class="item1-inner" href="#">Communicate</a></li>
-                    <li><a class="item2-inner" href="#"><span>Email</span></a></li>
-                    <li><a class="item3-inner" href="#"><span>Send Text</span></a></li>
-                    <li><a class="item4-inner last" href="#"><span>Call</span></a></li>
+                    <li>
+                        <a class="item1-inner" href="#">Communicate</a>
+                    </li>
+                    <li>
+                        <a class="item2-inner" href="#">
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item3-inner" href="#">
+                            <span>Send Text</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item4-inner last" href="#">
+                            <span>Call</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li>
                 <a class="item3" href="#"></a>
             </li>
-            <li>
+            <li class="last">
                 <a class="item4" href="#"></a>
             </li>
         </ul>
@@ -142,86 +169,104 @@
                         </ul>
                     </div>
                     <div class="plot">
-                        <p class="image-title">Panel Positioning<a href="#"><img src="img/i.png" alt=""></a>
+                        <p class="image-title">Panel Positioning
+                            <a href="#">
+                                <img src="img/i.png" alt="">
+                            </a>
                         </p>
                         <div class="big-image">
                             <img src="img/picture.png" alt="">
                         </div>
                         <div class="plot-buttons clearfix">
-                            <a href="#" class="grey-buttons"><span>Back</span></a>
-                            <a href="#" class="red-buttons"><span>Next</span></a>
-                            <a href="#" class="last grey-buttons"><span>Save</span></a>
+                            <a href="#" class="grey-buttons">
+                                <span>Back</span>
+                            </a>
+                            <a href="#" class="red-buttons">
+                                <span>Next</span>
+                            </a>
+                            <a href="#" class="last grey-buttons">
+                                <span>Save</span>
+                            </a>
                         </div>
-                        <div class="panel">
-                            <div class="active-panel">
-                                <div class="description">
-                                    <a href="#">
-                                        <img src="img/down_arrow.png" alt="">Panel Positioning</a>
+                        <div id="accordion" class="panel">
+                            <h3>
+                                <span>
+                                    <img src="img/down_arrow.png" alt="">
+                                </span>
+                                <a href="#">
+                                    Panel Positioning</a>
+                            </h3>
+                            <div class="block1">
+                                <div class="tablet">
+                                    <img src="img/small_pic.png" alt="">
                                 </div>
-                                <div class="block1">
-                                    <div class="tablet">
-                                        <img src="img/small_pic.png" alt="">
-                                    </div>
-                                    <div class="panel-buttons">
-                                        <a href="#" class="grey-buttons"><span>Hide module spaces</span></a>
-                                        <a href="#" class="grey-buttons"><span>Remove all modiles</span></a>
-                                        <a href="#" class="grey-buttons"><span>Place automatically</span></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="active-panel">
-                                <div class="description">
-                                    <a href="#">
-                                        <img src="img/down_arrow.png" alt="">Adjust position</a>
-                                </div>
-                                <div class="block2 clearfix">
-                                    <a href="#" class="circle-button">
-                                        <img src="img/button.png" alt="">
+                                <div class="panel-buttons">
+                                    <a href="#" class="grey-buttons">
+                                        <span>Hide module spaces</span>
                                     </a>
-                                    <div class="inputs">
-                                        <input type="text">
-                                        <input type="number">
-                                    </div>
+                                    <a href="#" class="grey-buttons">
+                                        <span>Remove all modiles</span>
+                                    </a>
+                                    <a href="#" class="grey-buttons">
+                                        <span>Place automatically</span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="active-panel">
-                                <div class="description">
-                                    <a href="#">
-                                        <img src="img/down_arrow.png" alt="">Available space</a>
-                                </div>
-                                <div class="block3">
-                                    <div class="row clearfix">
-                                        <p class="column1">Space To Right of Array</p>
-                                        <p class="column2">0.20 m</p>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <p class="column1">Space To Left of Array</p>
-                                        <p class="column2">0.30 m</p>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <p class="column1">Space To Above Array</p>
-                                        <p class="column2">0.40 m</p>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <p class="column1">Space To Below Array</p>
-                                        <p class="column2">0.50 m</p>
-                                    </div>
+                            <h3>
+                                <span>
+                                    <img src="img/down_arrow.png" alt="">
+                                </span>
+                                <a href="#">Adjust position</a>
+                            </h3>
+                            <div class="block2 clearfix">
+                                <a href="#" class="circle-button">
+                                    <img src="img/button.png" alt="">
+                                </a>
+                                <div class="inputs">
+                                    <input type="text">
+                                    <input type="number">
                                 </div>
                             </div>
-                            <div class="active-panel">
-                                <div class="description">
-                                    <a href="#">
-                                        <img src="img/down_arrow.png" alt="">Distance to corner Module</a>
+                            <h3>
+                                <span>
+                                    <img src="img/down_arrow.png" alt="">
+                                </span>
+                                <a href="#">
+                                    Available space</a>
+                            </h3>
+                            <div class="block3">
+                                <div class="row clearfix">
+                                    <p class="column1">Space To Right of Array</p>
+                                    <p class="column2">0.20 m</p>
                                 </div>
-                                <div class="block4">
-                                    <div class="row clearfix">
-                                        <p class="column1">From Bottom</p>
-                                        <p class="column2">0.12 m</p>
-                                    </div>
-                                    <div class="row clearfix">
-                                        <p class="column1">From Left</p>
-                                        <p class="column2">0.05 m</p>
-                                    </div>
+                                <div class="row clearfix">
+                                    <p class="column1">Space To Left of Array</p>
+                                    <p class="column2">0.30 m</p>
+                                </div>
+                                <div class="row clearfix">
+                                    <p class="column1">Space To Above Array</p>
+                                    <p class="column2">0.40 m</p>
+                                </div>
+                                <div class="row clearfix">
+                                    <p class="column1">Space To Below Array</p>
+                                    <p class="column2">0.50 m</p>
+                                </div>
+                            </div>
+                            <h3>
+                                <span>
+                                    <img src="img/down_arrow.png" alt="">
+                                </span>
+                                <a href="#">
+                                    Distance to corner Module</a>
+                            </h3>
+                            <div class="block4">
+                                <div class="row clearfix">
+                                    <p class="column1">From Bottom</p>
+                                    <p class="column2">0.12 m</p>
+                                </div>
+                                <div class="row clearfix">
+                                    <p class="column1">From Left</p>
+                                    <p class="column2">0.05 m</p>
                                 </div>
                             </div>
                         </div>
@@ -230,6 +275,17 @@
             </div>
         </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="js/plugins/Accordion/jquery-ui-1.10.3.custom.min.js"></script>
+    <script>
+        $(function() {
+            $('#accordion').accordion({
+                'active':'false',
+                'autoHeight':'true',
+                'collapsible': 'true'
+            });
+        });
+    </script>
 </body>
 
 </html>

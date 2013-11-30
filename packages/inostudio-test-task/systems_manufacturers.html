@@ -15,9 +15,10 @@
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
 </head>
-    <!--[if lt IE 9]>
-    <script src="js/IE9.js"></script>
-    <![endif]-->
+<!--    <link rel="stylesheet" href="js/plugins/CoreUISelect/core-ui-select.css">-->
+    <!-- <link rel="stylesheet" href="css/core.css"> -->
+<!--    <link rel="stylesheet" href="js/plugins/CoreUISelect/core-ui-select.css">-->
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
 <body>
     <div class="page-wrapper">
         <div class="header-wrapper">
@@ -88,7 +89,7 @@
             <li>
                 <a class="item3" href="#"></a>
             </li>
-            <li>
+            <li class="last">
                 <a class="item4" href="#"></a>
             </li>
         </ul>
@@ -109,8 +110,12 @@
                         </div>
                     </div>
                     <div class="span">
-                        <select name="" id="">
+                        <select name="" id="optiongroup">
                             <option value="1">All</option>
+                            <option value="2">Item 1</option>
+                            <option value="3">Item 2</option>
+                            <option value="4">Item 3</option>
+                            <option value="5">Item 4</option>
                         </select>
                     </div>
                     <div class="span last">
@@ -130,7 +135,16 @@
                 </div>
             </div>
         </div>
-    </div>
+    <script src="js/jquery.min.js"></script>
+<!--    <script src="js/plugins/CoreUISelect/jquery.core-ui-select.js"></script>-->
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script>
+        $(function(){
+            $('select').styler({
+                browseText: 'All'
+            });
+        });
+    </script>
 </body>
 
 </html>
