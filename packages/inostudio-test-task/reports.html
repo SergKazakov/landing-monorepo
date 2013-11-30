@@ -15,6 +15,8 @@
     <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+    <link rel="stylesheet" href="js/plugins/TagsInputPlugin/jquery.tagsinput.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
 </head>
 
 <body>
@@ -87,7 +89,7 @@
             <li>
                 <a class="item3" href="#"></a>
             </li>
-            <li>
+            <li class="last">
                 <a class="item4" href="#"></a>
             </li>
         </ul>
@@ -118,15 +120,21 @@
                     </div>
                 </div>
                 <div class="content reports-content">
-                        <div class="field">
-                            <label for="">On:</label>
-                            <select name="" id="">
-                                <option value="1">Users</option>
-                            </select>
+                        <div class="field clearfix">
+                            <div class="column1">
+                                <label for="">On:</label>
+                            </div>
+                            <div class="column2">
+                                <select name="" id="">
+                                    <option value="1">Users</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="block">
-                            <input type="text">
-                            <a href="#">clear</a>
+                        <div class="input-tag-block">
+                            <input type="text" id="tag" value="Username1">
+                            <div class="clear">
+                                <a href="#">clear</a>
+                            </div>
                         </div>
                         <div class="list">
                             <div class="list-item clearfix">
@@ -247,11 +255,23 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/jquery.ui.datepicker-ru.js"></script>
-    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/plugins/TagsInputPlugin/jquery.tagsinput.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script>
         $(function() {
+            $('#tag').tagsInput({
+                   'width':'517px',
+                   'height':'25px',
+                   'interactive':true,
+                   'defaultText':'',
+                   'removeWithBackspace' : true
+            });
             $("#calendar1").datepicker();
             $("#calendar2").datepicker();
+            $('select').styler({
+                browseText: 'All'
+            });
         });
     </script>
 </body>
