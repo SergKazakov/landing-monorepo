@@ -12,9 +12,9 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/main.css">
     <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="js/plugins/Accordion/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -29,32 +29,50 @@
                 <ul class="menu clearfix">
                     <li>
                         <a class="list-item1" href="#">
-                            <span>Dashboard</span>
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Dashboard</span>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a class="list-item2 active" href="#">
-                            <span>Customer</span>
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Customer</span>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a class="list-item3" href="#">
-                            <span>Shedule</span>
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Shedule</span>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a class="list-item4" href="systems_manufacturers.html">
-                            <span>Systems</span>
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Systems</span>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a class="list-item5" href="reports.html">
-                            <span>Reports</span>
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Reports</span>
+                            </div>
                         </a>
                     </li>
                     <li>
                         <a class="list-item6" href="#">
-                            <span>Settings</span>
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Settings</span>
+                            </div>
                         </a>
                     </li>
                 </ul>
@@ -275,13 +293,13 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script> 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="js/plugins/Accordion/jquery-ui-1.10.3.custom.min.js"></script>
     <script>
         $(function() {
             $('#accordion').accordion({
-                'active':'false',
-                'heightStyle':'content',
+                'active': 'false',
+                'heightStyle': 'content',
                 'collapsible': 'true'
             });
         });
