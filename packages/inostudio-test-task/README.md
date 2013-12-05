@@ -1,3 +1,3 @@
 sergkazakov.github.io
 =====================
-This is my the first inostudio project 
+This is my first inostudio project 
