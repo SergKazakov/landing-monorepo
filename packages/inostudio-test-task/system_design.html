@@ -12,7 +12,7 @@
     <title></title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="js/plugins/Accordion/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -145,7 +145,7 @@
                     <div class="content-left">
                         <ul class="left-menu">
                             <li>
-                                <a class="active" href="#">Customer Details</a>
+                                <a href="#">Customer Details</a>
                             </li>
                             <li>
                                 <a href="power_usage.html">Power Usage</a>
@@ -163,7 +163,7 @@
                                         <a href="#">Panel Positioning</a>
                                     </li>
                                     <li>
-                                        <a href="system_design.html">System Design</a>
+                                        <a href="system_design.html" class="active">System Design</a>
                                     </li>
                                 </ul>
                             </li>
@@ -181,121 +181,117 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="plot">
-                        <p class="image-title">Panel Positioning
-                            <a href="#">
-                                <img src="img/i.png" alt="">
-                            </a>
-                        </p>
-                        <div class="big-image">
-                            <img src="img/picture.png" alt="">
+                    <div class="system-design-content">
+                        <div class="row clearfix">
+                            <div class="row-group1 clearfix">
+                                <h1>Customer Info</h1>
+                                <hr>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><label for="">Voltage</label></div>
+                                    <div class="column2"><input placeholder="Some text..." type="text"></div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><label for="">Power Supply Number</label></div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1 offset"><label for="">NMI<span></span></label></div>
+                                    <div class="column2"><input placeholder="Some text..." type="text"></div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><label for="">Meter Number</label></div>
+                                    <div class="column2"><input placeholder="Some text..." type="text"></div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><label for="">Energy Provider</label></div>
+                                    <div class="column2">
+                                    <select class="my-select reports-select system-design-select" name="" id="">
+                                        <option value="1">Users</option>
+                                        <option value="2">Users</option>
+                                        <option value="3">Users</option>
+                                        <option value="4">Users</option>
+                                        <option value="5">Users</option>
+                                    </select>
+                                    </div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><label for="">Service Type</label></div>
+                                    <div class="column2"><input placeholder="Some text..." type="text"></div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><label for="">Add Custom fileds...</label></div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="span">
+                                        <input placeholder="Some text..." type="text">
+                                    </div>
+                                    <div class="span">
+                                        <input placeholder="Some text..." class="last" type="text">
+                                    </div>
+                                    <a class="minus" href="#"><span></span></a>
+                                    <a class="plus" href="#"><span></span></a>
+                                </div>
+                            </div>
+                            <div class="row-group2 clearfix">
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1">
+                                        <h1><span class="doc"></span>Documnets</h1>
+                                    </div>
+                                    <div class="column2">
+                                        <a class="btn-grey" href="#"><span><i class="upload"></i>Upload Doc.</span></a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row-group-inner parag">
+                                    <div class="row-group-inner clearfix">
+                                        <div class="column1"><p>Contact Name</p></div>
+                                        <div class="column2"><p>A document</p></div>
+                                    </div>
+                                    <div class="row-group-inner clearfix">
+                                        <div class="column1"><p>Form 4223</p></div>
+                                        <div class="column2"><p>Another one with a long...</p></div>
+                                    </div>
+                                    <div class="row-group-inner clearfix">
+                                        <div class="column1"><p>Form 535AD</p></div>
+                                    </div>
+                                </div>
+                                <div class="row-group-inner clearfix">
+                                    <div class="column1"><h1><span class="photo"></span>Photos</h1></div>
+                                    <div class="column2">
+                                        <a class="btn-grey" href="#"><span><i class="upload"></i>Upload photos</span></a>
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row-group-inner images">
+                                    <div class="row-group-inner clearfix">
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                    </div>
+                                    <div class="row-group-inner clearfix">
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                        <div class="image-span"><img src="img/house.jpg" alt=""></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="plot-buttons clearfix">
-                            <a href="#" class="grey-buttons">
-                                <span>Back</span>
-                            </a>
-                            <a href="#" class="red-buttons">
-                                <span>Next</span>
-                            </a>
-                            <a href="#" class="last grey-buttons">
-                                <span>Save</span>
-                            </a>
-                        </div>
-                        <div id="accordion" class="panel">
-                            <h3>
-                                <span>
-                                    <img src="img/down_arrow.png" alt="">
-                                </span>
-                                <a href="#">
-                                    Panel Positioning</a>
-                            </h3>
-                            <div class="block1">
-                                <div class="tablet">
-                                    <img src="img/small_pic.png" alt="">
-                                </div>
-                                <div class="panel-buttons">
-                                    <a href="#" class="grey-buttons">
-                                        <span>Hide module spaces</span>
-                                    </a>
-                                    <a href="#" class="grey-buttons">
-                                        <span>Remove all modiles</span>
-                                    </a>
-                                    <a href="#" class="grey-buttons">
-                                        <span>Place automatically</span>
-                                    </a>
-                                </div>
-                            </div>
-                            <h3>
-                                <span>
-                                    <img src="img/down_arrow.png" alt="">
-                                </span>
-                                <a href="#">Adjust position</a>
-                            </h3>
-                            <div class="block2 clearfix">
-                                <a href="#" class="circle-button">
-                                    <img src="img/button.png" alt="">
-                                </a>
-                                <div class="inputs">
-                                    <input type="text">
-                                    <input type="number">
-                                </div>
-                            </div>
-                            <h3>
-                                <span>
-                                    <img src="img/down_arrow.png" alt="">
-                                </span>
-                                <a href="#">
-                                    Available space</a>
-                            </h3>
-                            <div class="block3">
-                                <div class="row clearfix">
-                                    <p class="column1">Space To Right of Array</p>
-                                    <p class="column2">0.20 m</p>
-                                </div>
-                                <div class="row clearfix">
-                                    <p class="column1">Space To Left of Array</p>
-                                    <p class="column2">0.30 m</p>
-                                </div>
-                                <div class="row clearfix">
-                                    <p class="column1">Space To Above Array</p>
-                                    <p class="column2">0.40 m</p>
-                                </div>
-                                <div class="row clearfix">
-                                    <p class="column1">Space To Below Array</p>
-                                    <p class="column2">0.50 m</p>
-                                </div>
-                            </div>
-                            <h3>
-                                <span>
-                                    <img src="img/down_arrow.png" alt="">
-                                </span>
-                                <a href="#">
-                                    Distance to corner Module</a>
-                            </h3>
-                            <div class="block4">
-                                <div class="row clearfix">
-                                    <p class="column1">From Bottom</p>
-                                    <p class="column2">0.12 m</p>
-                                </div>
-                                <div class="row clearfix">
-                                    <p class="column1">From Left</p>
-                                    <p class="column2">0.05 m</p>
-                                </div>
-                            </div>
+                        <div class="buttons buttons-bottom">
+                            <a class="grey-buttons" href="#"><span>Back</span></a>
+                            <a class="red-buttons" href="#"><span>Next</span></a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="js/plugins/Accordion/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script>
-        $(function() {
-            $('#accordion').accordion({
-                'active': 'false',
-                'heightStyle': 'content',
-                'collapsible': 'true'
+        $(function(){
+            $('select').styler({
+                browseText: 'All'
             });
         });
     </script>

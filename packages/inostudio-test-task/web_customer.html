@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
+    <link rel="stylesheet" href="js/plugins/jqGrid/ui.jqgrid.css">
+    <link rel="stylesheet" href="js/plugins/jqGrid/jquery-ui-custom.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="page-wrapper">
+        <div class="header-wrapper">
+            <div class="header clearfix">
+                <p class="logo">
+                    <a href="index.html">
+                        <span>ino</span><span class="last">connection</span>
+                    </a>
+                </p>
+                <ul class="menu clearfix">
+                    <li>
+                        <a class="list-item1" href="#">
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Dashboard</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-item2 active" href="web_customer.html">
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Customer</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-item3" href="#">
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Shedule</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-item4" href="systems_manufacturers.html">
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Systems</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-item5" href="reports.html">
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Reports</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="list-item6" href="#">
+                            <div>
+                                <span class="icon"></span>
+                                <span class="list-item-text">Settings</span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="user">
+                    <li>
+                        <a href="#" class="user item1">
+                            <img src="img/flag.png" alt="">
+                            <span class="span1">Hi, Dillan</span>
+                            <img class="up-arrow" src="img/up_arrow.png" alt="">
+                        </a>
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <img src="img/wheel.png" alt="">
+                                    <span class="span2">Settings</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="item2" href="#">
+                                    <img src="img/door.png" alt="">
+                                    <span class="span3">Logout</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <ul class="sidebar">
+            <li>
+                <a class="item1" href="#"></a>
+            </li>
+            <li>
+                <a class="item2" href="#"></a>
+                <ul>
+                    <li>
+                        <a class="item1-inner" href="#">Communicate</a>
+                    </li>
+                    <li>
+                        <a class="item2-inner" href="#">
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item3-inner" href="#">
+                            <span>Send Text</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item4-inner last" href="#">
+                            <span>Call</span>
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a class="item3" href="#"></a>
+            </li>
+            <li class="last">
+                <a class="item4" href="#"></a>
+            </li>
+        </ul>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="info customer-info clearfix">
+                    <div class="span">
+                        <a href="#" class="red-buttons">
+                            <span>
+                                <i class="white-plus"></i>Create New Lead</span>
+                        </a>
+                    </div>
+                    <div class="span">
+                        <a href="#" class="grey-buttons">
+                            <span>
+                                <i class="import"></i>Import Leads</span>
+                        </a>
+                    </div>
+                    <div class="span">
+                        <select name="" id="optiongroup" class="my-select systems-select">
+                            <option value="1">View: All</option>
+                            <option value="2">Item 1</option>
+                            <option value="3">Item 2</option>
+                            <option value="4">Item 3</option>
+                            <option value="5">Item 4</option>
+                        </select>
+                    </div>
+                    <div class="span page clearfix">
+                        <div class="span">
+                            <a href="#" class="first"></a>
+                        </div>
+                        <div class="span">
+                            <a href="#" class="prev"></a>
+                        </div>
+                        <div class="span">
+                            <p>Page</p>
+                        </div>
+                        <div class="span">
+                            <input type="text">
+                        </div>
+                        <div class="span">
+                            <p>of 68</p>
+                        </div>
+                        <div class="span">
+                            <a href="#" class="next"></a>
+                        </div>
+                        <div class="span">
+                            <a href="#" class="last"></a>
+                        </div>
+                    </div>
+                    <div class="span last">
+                        <div class="search">
+                            <input type="text" placeholder="Search ...">
+                            <input type="submit" value="">
+                        </div>
+                    </div>
+                </div>
+                <div class="content customer-content">
+                    <table id="list" class="customer-table"></table>
+                    <div id="pager" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
+    <script src="js/plugins/Datepicker/jquery-ui.js"></script>
+    <script src="js/plugins/jqGrid/plugins/ui.multiselect.js"></script>
+    <script src="js/plugins/jqGrid/plugins/grid.addons.js"></script>
+    <script src="js/plugins/jqGrid/plugins/ui.multiselect.js"></script>
+    <script>
+        $(function() {
+            $("#list").jqGrid({
+                datatype: "local",
+                colNames: ['Lead Status', 'Customer ID', 'Customer', 'System', 'Consultant', 'Lead Source', 'Comment'],
+                colModel: [{
+                    name: 'leadStatus',
+                    width: 60,
+                    sorttype: "int"
+                }, {
+                    name: 'customerId',
+                    width: 90,
+                    sorttype: "date"
+                }, {
+                    name: 'customer',
+                    width: 100
+                }, {
+                    name: 'system',
+                    width: 80,
+                    align: "right",
+                    sorttype: "float"
+                }, {
+                    name: 'consultant',
+                    width: 80,
+                    align: "right",
+                    sorttype: "float"
+                }, {
+                    name: 'leadSource',
+                    width: 80,
+                    align: "right",
+                    sorttype: "float"
+                }, {
+                    name: 'comment',
+                    width: 150,
+                    sortable: false
+                }],
+                rowNum:20,
+                rowList:[10,20,30],
+                pager: '#pager',
+                sortname: 'id',
+                viewrecords: true, 
+                sortorder: "desc",
+                multiselect: true,
+                caption: ""
+            }).navGrid('#pager',{edit:false,add:false,del:false}); ;
+            var mydata = [{
+                leadStatus: "Leads",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Appointments",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Quotes",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Customers",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Install booked",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Installed",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Archived",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }];
+            for (var i = 0; i <= mydata.length; i++)
+                $("#list").jqGrid('addRowData', i + 1, mydata[i]);
+            $('input[type=checkbox]').styler();
+            $('select').styler({
+                browseText: 'All'
+            });
+            $("#list").jqGrid('navGrid','#pager',{del:false,add:false,edit:false});
+//            $('.jq-checkbox').click(function() {
+//                if ($(this).hasClass('checked')) $(this).parent().parent().addClass('active');
+//                else $(this).parent().parent().removeClass('active');
+//            });
+        });
+    </script>
+</body>
+
+</html>
