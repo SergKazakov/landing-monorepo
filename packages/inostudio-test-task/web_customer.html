@@ -13,8 +13,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css"/>
     <link rel="stylesheet" href="js/plugins/jqGrid/ui.jqgrid.css">
-    <link rel="stylesheet" href="js/plugins/jqGrid/jquery-ui-custom.css">
+    <!-- <link rel="stylesheet" href="js/plugins/ProgressBar/jquery-ui-1.10.3.custom.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -201,57 +202,52 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/jqGrid/jquery.jqGrid.min.js"></script>
-    <script src="js/plugins/Datepicker/jquery-ui.js"></script>
-    <script src="js/plugins/jqGrid/plugins/ui.multiselect.js"></script>
-    <script src="js/plugins/jqGrid/plugins/grid.addons.js"></script>
-    <script src="js/plugins/jqGrid/plugins/ui.multiselect.js"></script>
+    <script src="js/plugins/jqGrid/grid.locale-ru.js"></script>
+    <script src="js/plugins/ProgressBar/jquery-ui-1.10.3.custom.min.js"></script>
     <script>
         $(function() {
+            $('select').styler({
+                browseText: 'All'
+            });
             $("#list").jqGrid({
                 datatype: "local",
                 colNames: ['Lead Status', 'Customer ID', 'Customer', 'System', 'Consultant', 'Lead Source', 'Comment'],
                 colModel: [{
                     name: 'leadStatus',
-                    width: 60,
-                    sorttype: "int"
+                    sorttype: "string"
                 }, {
                     name: 'customerId',
-                    width: 90,
-                    sorttype: "date"
+                    sorttype: "int"
                 }, {
                     name: 'customer',
-                    width: 100
+                    sorttype: "int"
                 }, {
                     name: 'system',
-                    width: 80,
                     align: "right",
-                    sorttype: "float"
+                    sorttype: "string"
                 }, {
                     name: 'consultant',
-                    width: 80,
                     align: "right",
-                    sorttype: "float"
+                    sorttype: "string"
                 }, {
                     name: 'leadSource',
-                    width: 80,
                     align: "right",
-                    sorttype: "float"
+                    sorttype: "string"
                 }, {
                     name: 'comment',
-                    width: 150,
-                    sortable: false
+                    sorttype: "string"
                 }],
-                rowNum:20,
-                rowList:[10,20,30],
+                rowNum:5,
+                rowList:[5,10,15],
                 pager: '#pager',
-                sortname: 'id',
-                viewrecords: true, 
+                //sortname: 'id',
+                viewrecords: true,
                 sortorder: "desc",
                 multiselect: true,
                 caption: ""
-            }).navGrid('#pager',{edit:false,add:false,del:false}); ;
+            });
             var mydata = [{
-                leadStatus: "Leads",
+                leadStatus: "Leads<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -259,7 +255,31 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Appointments",
+                leadStatus: "Appointments<div class='progressbar'></div>",
+                customerId: "121",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Quotes<div class='progressbar'></div>",
+                customerId: "12",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Customers<div class='progressbar'></div>",
+                customerId: "999",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Install booked<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -267,7 +287,7 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Quotes",
+                leadStatus: "Installed<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -275,7 +295,7 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Customers",
+                leadStatus: "Completed<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -283,7 +303,7 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Install booked",
+                leadStatus: "Archived<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -291,7 +311,7 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Installed",
+                leadStatus: "Completed<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -299,7 +319,7 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Completed",
+                leadStatus: "Completed<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -307,7 +327,55 @@
                 leadSource: "Peter Done",
                 comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
             }, {
-                leadStatus: "Archived",
+                leadStatus: "Completed<div class='progressbar'></div>",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed<div class='progressbar'></div>",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed<div class='progressbar'></div>",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed<div class='progressbar'></div>",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed<div class='progressbar'></div>",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed<div class='progressbar'></div>",
+                customerId: "1235",
+                customer: "<p>Customer Name</p><p>12345 City Name</p>",
+                system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
+                consultant: "Linda Rainforest",
+                leadSource: "Peter Done",
+                comment: "This is a comment that can stay on 2,even 3 lines. If mo..."
+            }, {
+                leadStatus: "Completed<div class='progressbar'></div>",
                 customerId: "1235",
                 customer: "<p>Customer Name</p><p>12345 City Name</p>",
                 system: "System Size: 10KW Total Price: 7800€ Installation Info: 100%",
@@ -317,17 +385,17 @@
             }];
             for (var i = 0; i <= mydata.length; i++)
                 $("#list").jqGrid('addRowData', i + 1, mydata[i]);
-            $('input[type=checkbox]').styler();
-            $('select').styler({
-                browseText: 'All'
+            $("#list").trigger("reloadGrid");
+            $( ".progressbar" ).progressbar({ value: 37 });
+            $('.ui-pg-button, .ui-pg-selbox').click(function(){
+                $( ".progressbar" ).progressbar({ value: 37 });
             });
-            $("#list").jqGrid('navGrid','#pager',{del:false,add:false,edit:false});
-//            $('.jq-checkbox').click(function() {
-//                if ($(this).hasClass('checked')) $(this).parent().parent().addClass('active');
-//                else $(this).parent().parent().removeClass('active');
-//            });
+            //$('input[type=checkbox]').styler();
         });
     </script>
+
+
+
 </body>
 
 </html>
