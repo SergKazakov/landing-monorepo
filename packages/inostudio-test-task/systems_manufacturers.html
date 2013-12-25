@@ -20,11 +20,9 @@
     <div class="page-wrapper">
         <div class="header-wrapper">
             <div class="header clearfix">
-                <p class="logo">
-                    <a href="index.html">
-                        <span>ino</span><span class="last">connection</span>
-                    </a>
-                </p>
+                <a class="logo" href="index.html">
+                    <span>ino</span>connection
+                </a>
                 <ul class="menu clearfix">
                     <li>
                         <a class="list-item1" href="#">
@@ -108,10 +106,24 @@
             <li>
                 <a class="item2" href="#"></a>
                 <ul>
-                    <li><a class="item1-inner" href="#">Communicate</a></li>
-                    <li><a class="item2-inner" href="#"><span>Email</span></a></li>
-                    <li><a class="item3-inner" href="#"><span>Send Text</span></a></li>
-                    <li><a class="item4-inner last" href="#"><span>Call</span></a></li>
+                    <li>
+                        <a class="item1-inner" href="#">Communicate</a>
+                    </li>
+                    <li>
+                        <a class="item2-inner" href="#">
+                            <span>Email</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item3-inner" href="#">
+                            <span>Send Text</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="item4-inner last" href="#">
+                            <span>Call</span>
+                        </a>
+                    </li>
                 </ul>
             </li>
             <li>
@@ -138,7 +150,7 @@
                         </div>
                     </div>
                     <div class="span">
-                        <select name="" id="optiongroup" class="my-select systems-select">
+                        <select name="" id="optiongroup" class="my-select dark-select">
                             <option value="1">All</option>
                             <option value="2">Item 1</option>
                             <option value="3">Item 2</option>
@@ -152,21 +164,29 @@
                             <input type="submit" value="">
                         </div>
                     </div>
-                    </div>
+                </div>
                 <div class="content systems-content">
                     <h1>Per panel Per watt Base + Per extra panel</h1>
-                    <div class="field"><label for="">Price Per Panel:</label><input placeholder="Some text..." type="text"></div>
-                    <div class="check"><input id="checkbox1" type="checkbox"><label for="checkbox1">Default</label></div>
+                    <div class="field">
+                        <label for="">Price Per Panel:</label>
+                        <input placeholder="Some text..." type="text">
+                    </div>
+                    <div class="check">
+                        <input id="checkbox1" type="checkbox">
+                        <label for="checkbox1">Default</label>
+                    </div>
                     <p class="tip">* Full price will be (price per panel)x (number of panels)</p>
-                    <a href="#" class="red-buttons"><span>Save</span></a>
-                </div>
+                    <a href="#" class="btn red-btn">
+                        <span>Save</span>
+                    </a>
                 </div>
             </div>
         </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script>
-        $(function(){
+        $(function() {
             $('#checkbox1,select').styler({
                 browseText: 'All'
             });

@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css"/>
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/redmond/jquery-ui.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="js/plugins/jqGrid/ui.jqgrid.css">
     <!-- <link rel="stylesheet" href="js/plugins/ProgressBar/jquery-ui-1.10.3.custom.min.css"> -->
     <link rel="stylesheet" href="css/main.css">
@@ -23,11 +23,9 @@
     <div class="page-wrapper">
         <div class="header-wrapper">
             <div class="header clearfix">
-                <p class="logo">
-                    <a href="index.html">
-                        <span>ino</span><span class="last">connection</span>
-                    </a>
-                </p>
+                <a class="logo" href="index.html">
+                    <span>ino</span>connection
+                </a>
                 <ul class="menu clearfix">
                     <li>
                         <a class="list-item1" href="#">
@@ -142,19 +140,19 @@
             <div class="container">
                 <div class="info customer-info clearfix">
                     <div class="span">
-                        <a href="#" class="red-buttons">
+                        <a href="#" class="btn red-btn">
                             <span>
                                 <i class="white-plus"></i>Create New Lead</span>
                         </a>
                     </div>
                     <div class="span">
-                        <a href="#" class="grey-buttons">
+                        <a href="#" class="btn grey-btn">
                             <span>
                                 <i class="import"></i>Import Leads</span>
                         </a>
                     </div>
                     <div class="span">
-                        <select name="" id="optiongroup" class="my-select systems-select">
+                        <select name="" id="optiongroup" class="my-select dark-select">
                             <option value="1">View: All</option>
                             <option value="2">Item 1</option>
                             <option value="3">Item 2</option>
@@ -194,7 +192,7 @@
                 </div>
                 <div class="content customer-content">
                     <table id="list" class="customer-table"></table>
-                    <div id="pager" ></div>
+                    <div id="pager"></div>
                 </div>
             </div>
         </div>
@@ -237,8 +235,8 @@
                     name: 'comment',
                     sorttype: "string"
                 }],
-                rowNum:5,
-                rowList:[5,10,15],
+                rowNum: 5,
+                rowList: [5, 10, 15],
                 pager: '#pager',
                 //sortname: 'id',
                 viewrecords: true,
@@ -386,9 +384,13 @@
             for (var i = 0; i <= mydata.length; i++)
                 $("#list").jqGrid('addRowData', i + 1, mydata[i]);
             $("#list").trigger("reloadGrid");
-            $( ".progressbar" ).progressbar({ value: 37 });
-            $('.ui-pg-button, .ui-pg-selbox').click(function(){
-                $( ".progressbar" ).progressbar({ value: 37 });
+            $(".progressbar").progressbar({
+                value: 37
+            });
+            $('.ui-pg-button, .ui-pg-selbox').click(function() {
+                $(".progressbar").progressbar({
+                    value: 37
+                });
             });
             //$('input[type=checkbox]').styler();
         });

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>popup create install</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
+    <!-- <link rel="stylesheet" href="js/plugins/TableSorter/table-sort-style.css"> -->
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <!--[if lt IE 9]><div class="popup-overlay popup-overlay-ie"></div><![endif]-->
+    <div class="popup-overlay">
+        <div class="popup account">
+            <h1 class="title">Account1
+                <a href="#" class="popup-close"></a>
+            </h1>
+            <div class="popup-content">
+                <div class="row-group-1">
+                    <div class="hgroup">
+                        <div class="row">
+                            <div class="column1">
+                                <h1>Users</h1>
+                            </div>
+                            <div class="column2">
+                                <div class="buttons">
+                                    <a href="#" class="btn grey-btn">
+                                        <span>Add</span>
+                                    </a>
+                                    <a href="#" class="btn grey-btn">
+                                        <span>Remove</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+                    <table id="table1" class="tablesorter table-number-1">
+                        <thead>
+                            <th>Name</th>
+                            <th class="column-2">Role</th>
+                            <th class="last"></th>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Julia</td>
+                                <td class="column-2">Admin</td>
+                                <td class="last">
+                                    <input type="checkbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kostya</td>
+                                <td class="column-2">Consultant</td>
+                                <td class="last">
+                                    <input type="checkbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Lesha</td>
+                                <td class="column-2">Manager</td>
+                                <td class="last">
+                                    <input type="checkbox">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Oleg</td>
+                                <td class="column-2">Installer</td>
+                                <td class="last">
+                                    <input type="checkbox">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="row-group-2">
+                    <div class="hgroup">
+                        <h1>Structure</h1>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="column1">
+                            <div class="dropdown-list">
+                                <ul class="parrent">
+                                    <li>
+                                        <a href="#">Account1</a>
+                                        <ul class="first-child">
+                                            <li>
+                                                <a href="#">Branch1</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Branch2</a>
+                                                <ul class="second-child">
+                                                    <li>
+                                                        <a href="#">Team1</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="#">Team2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">Branch3</a>
+                                            </li>
+                                            <li>
+                                                <a href="#">Branch4</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">Account2</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="column2">
+                            <div class="row-group-3">
+                                <div class="row">
+                                    <div class="column1">
+                                        <label for="">Name</label>
+                                    </div>
+                                    <div class="column2">
+                                        <input type="text">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="column1">
+                                        <label for="">Manager</label>
+                                    </div>
+                                    <div class="column2">
+                                        <div class="select-wrapper">
+                                            <select class="my-select light-select" name="" id="">
+                                                <option value="">User</option>
+                                                <option value="">User</option>
+                                                <option value="">User</option>
+                                                <option value="">User</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hgroup">
+                                <div class="row">
+                                    <div class="column1">
+                                        <h1>Consultants</h1>
+                                    </div>
+                                    <div class="column2">
+                                        <div class="buttons">
+                                            <a href="#" class="btn grey-btn">
+                                                <span>Add</span>
+                                            </a>
+                                            <a href="#" class="btn grey-btn">
+                                                <span>Remove</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr>
+                            </div>
+                            <table class="table-number-2">
+                                <tbody>
+                                    <tr>
+                                        <td>Julia</td>
+                                        <td class="last">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Kostya</td>
+                                        <td class="last">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Lesha</td>
+                                        <td class="last">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Oleg</td>
+                                        <td class="last">
+                                            <input type="checkbox">
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="buttons buttons-bottom clearfix">
+                    <a href="#" class="btn red-btn">
+                        <span>Save</span>
+                    </a>
+                    <a href="#" class="btn grey-btn">
+                        <span>Close</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!--[if lt IE 9]><div class="popup-valignfix"></div><![endif]-->
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
+    <script>
+        $(function() {
+            p = $('.popup-overlay');
+            p.click(function(event) {
+                e = event || window.event
+                if (e.target == this) {
+                    $(p).css('display', 'none')
+                }
+            });
+            $('.popup-close, .buttons.buttons-bottom a').click(function() {
+                p.css('display', 'none')
+            });
+            $('input[type=checkbox]').styler();
+            $('select').styler({
+                browseText: 'All'
+            });
+            $('.jq-checkbox').click(function() {
+                if ($(this).hasClass('checked')) $(this).parent().parent().addClass('active');
+                else $(this).parent().parent().removeClass('active');
+            });
+            $("#table1").tablesorter({
+                headers: {
+                    1: {
+                        sorter: false
+                    },
+                    2: {
+                        sorter: false
+                    }
+                },
+            });
+            $('table tr').click(function() {
+                if ($(this).hasClass('active')) $(this).removeClass('active');
+                else $(this).addClass('active')
+            });
+        });
+    </script>
+</body>
+
+</html>
