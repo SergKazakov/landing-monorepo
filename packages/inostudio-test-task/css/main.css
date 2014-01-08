@@ -2483,34 +2483,38 @@ input[type=text].date{
     overflow: auto;
 }
 
-.popup.account .dropdown-list li ul{
+.popup.account .dropdown-list .folder ul{
     display: none;
 }
 
-.popup.account .dropdown-list li.open > ul{
+.popup.account .dropdown-list .folder.open > ul{
     display: block;
     margin-left: 20px;
 }
 
-.popup.account .dropdown-list li.open > a{
+.popup.account .dropdown-list .folder.open > a{
     background-position: 9px -16px;
 }
 
-.popup.account .dropdown-list li.open > a.file{
+.popup.account .dropdown-list .folder.open > a.file{
     background-position: 11px 13px;
 }
 
-.popup.account .dropdown-list li.open > a.file.active{
+.popup.account .dropdown-list .folder.open > a.active{
     background-position: 9px -43px;
 }
 
-.popup.account .dropdown-list li.closed ul{
+/* .popup.account .dropdown-list .folder.open > a.file.active{
+    background-position: 9px -43px;
+} */
+
+/* .popup.account .dropdown-list li.closed ul{
     display: none;
 }
 
 .popup.account .dropdown-list li.closed a{
     background-position: 11px 13px;
-}
+} */
 
 .popup.account .dropdown-list ul a{
     font-size: 14px;

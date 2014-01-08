@@ -467,23 +467,21 @@
                 browseText: 'All'
             });
             $('.jq-checkbox').click(function() {
-                if ($(this).hasClass('checked')) $(this).parent().parent().addClass('active');
-                else $(this).parent().parent().removeClass('active');
+                if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
+                else $(this).closest('tr').removeClass('active');
             });
-            $('table tbody tr').mouseover(function(){
+            $('table tbody tr').hover(function() {
                 $(this).addClass('highlight');
-            });
-            $('table tbody tr').mouseout(function(){
+            }, function() {
                 $(this).removeClass('highlight');
             });
             $('table tbody tr').click(function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
-                    $(this).children().children().removeClass('checked');
-                }
-                else {
+                    $(this).find('.jq-checkbox').removeClass('checked');
+                } else {
                     $(this).addClass('active');
-                    $(this).children().children().addClass('checked');
+                    $(this).find('.jq-checkbox').addClass('checked');
                 }
             });
         });
