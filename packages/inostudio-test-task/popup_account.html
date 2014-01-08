@@ -13,16 +13,14 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <!-- <link rel="stylesheet" href="js/plugins/TableSorter/table-sort-style.css"> -->
     <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
-    <!--[if lt IE 9]><div class="popup-overlay popup-overlay-ie"></div><![endif]-->
-    <div class="popup-overlay">
-        <div class="popup account">
+    <div style="display: none;">
+        <div id="modal" class="box-modal popup account">
             <h1 class="title">Account1
-                <a href="#" class="popup-close"></a>
+                <a href="#" class="box-modal_close arcticmodal-close popup-close"></a>
             </h1>
             <div class="popup-content">
                 <div class="row-group-1">
@@ -90,34 +88,60 @@
                     <div class="row">
                         <div class="column1">
                             <div class="dropdown-list">
-                                <ul class="parrent">
-                                    <li>
+                                <ul id="treeview">
+                                    <li class="folder">
                                         <a href="#">Account1</a>
-                                        <ul class="first-child">
-                                            <li>
-                                                <a href="#">Branch1</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Branch2</a>
-                                                <ul class="second-child">
-                                                    <li>
-                                                        <a href="#">Team1</a>
+                                        <ul>
+                                            <li class="folder">
+                                                <a href="#">Branch-1</a>
+                                                <ul>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-1</a>
                                                     </li>
-                                                    <li>
-                                                        <a href="#">Team2</a>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-2</a>
                                                     </li>
                                                 </ul>
                                             </li>
-                                            <li>
-                                                <a href="#">Branch3</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">Branch4</a>
+                                            <li class="folder">
+                                                <a href="#">Branch-2</a>
+                                                <ul>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-1</a>
+                                                    </li>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-2</a>
+                                                    </li>
+                                                </ul>
                                             </li>
                                         </ul>
                                     </li>
-                                    <li>
-                                        <a href="#">Account2</a>
+                                    <li class="folder">
+                                        <a href="#">Account1</a>
+                                        <ul>
+                                            <li class="folder">
+                                                <a href="#">Branch-1</a>
+                                                <ul>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-1</a>
+                                                    </li>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li class="folder">
+                                                <a href="#">Branch-2</a>
+                                                <ul>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-1</a>
+                                                    </li>
+                                                    <li class="folder">
+                                                        <a class="file" href="#">Team-2</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>
                             </div>
@@ -129,7 +153,7 @@
                                         <label for="">Name</label>
                                     </div>
                                     <div class="column2">
-                                        <input type="text">
+                                        <input type="text" placeholder="Input name...">
                                     </div>
                                 </div>
                                 <div class="row">
@@ -198,32 +222,22 @@
                     </div>
                 </div>
                 <div class="buttons buttons-bottom clearfix">
-                    <a href="#" class="btn red-btn">
+                    <a href="#" class="btn red-btn box-modal_close arcticmodal-close">
                         <span>Save</span>
                     </a>
-                    <a href="#" class="btn grey-btn">
+                    <a href="#" class="btn grey-btn box-modal_close arcticmodal-close">
                         <span>Close</span>
                     </a>
                 </div>
             </div>
         </div>
-        <!--[if lt IE 9]><div class="popup-valignfix"></div><![endif]-->
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
+    <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script>
         $(function() {
-            p = $('.popup-overlay');
-            p.click(function(event) {
-                e = event || window.event
-                if (e.target == this) {
-                    $(p).css('display', 'none')
-                }
-            });
-            $('.popup-close, .buttons.buttons-bottom a').click(function() {
-                p.css('display', 'none')
-            });
             $('input[type=checkbox]').styler();
             $('select').styler({
                 browseText: 'All'
@@ -242,9 +256,28 @@
                     }
                 },
             });
-            $('table tr').click(function() {
-                if ($(this).hasClass('active')) $(this).removeClass('active');
-                else $(this).addClass('active')
+            $('table tbody tr').mouseover(function() {
+                $(this).addClass('highlight');
+            });
+            $('table tbody tr').mouseout(function() {
+                $(this).removeClass('highlight');
+            });
+            $('table tbody tr').click(function() {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $(this).children().children().removeClass('checked');
+                } else {
+                    $(this).addClass('active');
+                    $(this).children().children().addClass('checked');
+                }
+            });
+            $('#modal').arcticmodal();
+            $('.folder').click(function(){
+                $(this).addClass('open');
+            });
+            $('.folder a').click(function(){
+                $('.folder a').removeClass('active');
+                $(this).addClass('active');
             });
         });
     </script>
