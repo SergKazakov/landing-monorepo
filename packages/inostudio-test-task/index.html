@@ -13,6 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/plugins/Accordion/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -231,9 +232,18 @@
                                 <a href="#" class="circle-button">
                                     <img src="img/button.png" alt="">
                                 </a>
-                                <div class="inputs">
-                                    <input type="text">
-                                    <input type="number">
+                                <div class="row">
+                                    <div class="column1">
+                                        <input type="text">
+                                    </div>
+                                    <div class="column2">
+                                        <select class="my-select light-select" name="" id="">
+                                            <option value="">0.1</option>
+                                            <option value="">0.2</option>
+                                            <option value="">0.3</option>
+                                            <option value="">0.4</option>
+                                        </select>
+                                    </div>
                                 </div>
                             </div>
                             <h3>
@@ -282,14 +292,18 @@
             </div>
         </div>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="js/jquery.min.js"></script>
     <script src="js/plugins/Accordion/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script>
         $(function() {
             $('#accordion').accordion({
                 'active': 'false',
                 'heightStyle': 'content',
                 'collapsible': 'true'
+            });
+            $('select').styler({
+                browseText: 'All'
             });
         });
     </script>

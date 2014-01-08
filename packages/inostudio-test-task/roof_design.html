@@ -221,7 +221,7 @@
                                         <td>0</td>
                                         <td>Trapezoid</td>
                                     </tr>
-                                    <tr class="last">
+                                    <tr>
                                         <td>
                                             <input type="checkbox">
                                         </td>
@@ -238,7 +238,7 @@
                         </div>
                         <h1>Roof design</h1>
                         <hr>
-                        <div class="row last clearfix">
+                        <div class="row clearfix">
                             <div class="row-group1 clearfix">
                                 <div class="row-group-inner clearfix">
                                     <div class="column1">
@@ -469,6 +469,22 @@
             $('.jq-checkbox').click(function() {
                 if ($(this).hasClass('checked')) $(this).parent().parent().addClass('active');
                 else $(this).parent().parent().removeClass('active');
+            });
+            $('table tbody tr').mouseover(function(){
+                $(this).addClass('highlight');
+            });
+            $('table tbody tr').mouseout(function(){
+                $(this).removeClass('highlight');
+            });
+            $('table tbody tr').click(function() {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $(this).children().children().removeClass('checked');
+                }
+                else {
+                    $(this).addClass('active');
+                    $(this).children().children().addClass('checked');
+                }
             });
         });
     </script>
