@@ -484,10 +484,6 @@ body {
     background-color: #e1e5ec;
 }
 
-.page-wrapper{
-    min-width: 1202px;
-}
-
 .header,
 .container{
     margin: 0 auto;
