@@ -18,76 +18,78 @@
 </head>
 
 <body>
-        <div style="display: none;">
-            <div class="box-modal popup create-install" id="modal">
-                <h1 class="title">Create Install
-                    <a href="#" class="box-modal_close arcticmodal-close popup-close"></a>
-                </h1>
-                <div class="popup-content">
-                    <div class="row-group">
-                        <div class="row">
-                            <div class="column1">
-                                <label for="">Client ID</label>
-                            </div>
-                            <div class="column2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                            </div>
+    <div style="display: none;">
+        <div class="box-modal popup create-install" id="modal">
+            <h1 class="title">Create Install
+                <a href="#" class="box-modal_close arcticmodal-close popup-close"></a>
+            </h1>
+            <div class="popup-content">
+                <div class="row-group">
+                    <div class="row">
+                        <div class="column1">
+                            <label for="">Client ID</label>
                         </div>
-                        <div class="row">
-                            <div class="column1">
-                                <label for="">Select Installer</label>
+                        <div class="column2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
                             </div>
-                            <div class="column2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="column1">
-                                <label for="">Comment</label>
-                            </div>
-                            <div class="column2">
-                                <textarea placeholder="Some text..." name="" id="" cols="30" rows="10"></textarea>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="column1">
-                                <label for="">Install Time</label>
-                            </div>
-                            <div class="column2">
-                                <input class="date" type="text" id="calendar"><input class="date" type="text">
-                            </div>
-                        </div>
-                        <div class="buttons clearfix">
-                            <a href="#" class="btn red-btn box-modal_close arcticmodal-close">
-                                <span>Save</span>
-                            </a>
-                            <a href="#" class="btn grey-btn box-modal_close arcticmodal-close">
-                                <span>Cancel</span>
-                            </a>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="column1">
+                            <label for="">Select Installer</label>
+                        </div>
+                        <div class="column2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column1">
+                            <label for="">Comment</label>
+                        </div>
+                        <div class="column2">
+                            <textarea placeholder="Some text..." name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="column1">
+                            <label for="">Install Time</label>
+                        </div>
+                        <div class="column2">
+                            <input class="date" type="text" id="calendar">
+                            <input class="date" type="text">
+                        </div>
+                    </div>
+                    <div class="buttons clearfix">
+                        <a href="#" class="btn red-btn box-modal_close arcticmodal-close">
+                            <span>Save</span>
+                        </a>
+                        <a href="#" class="btn grey-btn box-modal_close arcticmodal-close">
+                            <span>Cancel</span>
+                        </a>
+                    </div>
                 </div>
-                </div>
+            </div>
         </div>
+    </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/Datepicker/jquery.ui.datepicker-ru.js"></script>
     <script src="js/plugins/Datepicker/jquery-ui.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
     <script>
         $(function() {
             $("#calendar").datepicker();
