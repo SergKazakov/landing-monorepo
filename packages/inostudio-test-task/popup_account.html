@@ -236,6 +236,7 @@
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
     <script>
         $(function() {
             $('input[type=checkbox]').styler();
@@ -261,6 +262,7 @@
             }, function() {
                 $(this).removeClass('highlight');
             });
+
             $('table tbody tr').click(function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
@@ -271,12 +273,12 @@
                 }
             });
             $('#modal').arcticmodal();
-            $('.folder').click(function(event){
+            $('.folder').click(function(event) {
                 if ($(this).hasClass('open')) $(this).removeClass('open');
                 else $(this).addClass('open');
                 event.stopPropagation();
             });
-            $('.folder a').click(function(){
+            $('.folder a').click(function() {
                 $('.folder a').removeClass('active');
                 $(this).addClass('active');
             });
