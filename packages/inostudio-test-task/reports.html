@@ -141,7 +141,7 @@
                         <label for="">From:</label>
                     </div>
                     <div class="column2">
-                        <input class="date" id="calendar1" type="text" name=date>
+                        <input class="date calendar" type="text" name=date>
                         <input class="date" type="text">
                     </div>
                 </div>
@@ -150,7 +150,7 @@
                         <label for="">to:</label>
                     </div>
                     <div class="column2">
-                        <input class="date" id="calendar2" type="text">
+                        <input class="date calendar" type="text">
                         <input class="date" type="text">
                     </div>
                 </div>
@@ -312,8 +312,7 @@
                 'defaultText': '',
                 'removeWithBackspace': true
             });
-            $("#calendar1").datepicker();
-            $("#calendar2").datepicker();
+            $(".calendar").datepicker();
             $('select').styler({
                 browseText: 'All'
             });

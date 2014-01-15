@@ -68,7 +68,7 @@
                             <label for="">Install Time</label>
                         </div>
                         <div class="column2">
-                            <input class="date" type="text" id="calendar">
+                            <input class="date calendar" type="text">
                             <input class="date" type="text">
                         </div>
                     </div>
@@ -92,7 +92,7 @@
     <script src="js/prefixfree.min.js"></script>
     <script>
         $(function() {
-            $("#calendar").datepicker();
+            $(".calendar").datepicker();
             $('#modal').arcticmodal();
             $('select').styler({
                 browseText: 'All'
