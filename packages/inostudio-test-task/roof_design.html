@@ -191,7 +191,7 @@
                         </a>
                     </div>
                     <div class="row">
-                        <table class="roof-table">
+                        <table class="roof-table basic-table">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -465,18 +465,14 @@
             $('select').styler({
                 browseText: 'All'
             });
-            $('.jq-checkbox').click(function() {
-                if ($(this).hasClass('checked') && !$(this).closest('tr').hasClass('active')) $(this).closest('tr').addClass('active');
-                else if ($(this).hasClass('checked') && $(this).closest('tr').hasClass('active')) {
-                    $(this).removeClass('checked');
-                    $(this).closest('tr').removeClass('active');
-                }
-                else $(this).closest('tr').removeClass('active');
-            });
             $('table tbody tr').hover(function() {
                 $(this).addClass('highlight');
             }, function() {
                 $(this).removeClass('highlight');
+            });
+            $('.jq-checkbox').click(function() {
+                if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
+                else $(this).closest('tr').removeClass('active');
             });
             $('table tbody tr').click(function() {
                 if ($(this).hasClass('active')) {

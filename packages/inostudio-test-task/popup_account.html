@@ -42,7 +42,7 @@
                         </div>
                         <hr>
                     </div>
-                    <table id="table1" class="tablesorter table-number-1">
+                    <table id="table1" class="tablesorter table-number-1 basic-table">
                         <thead>
                             <th>Name</th>
                             <th class="column-2">Role</th>
@@ -190,7 +190,7 @@
                                 </div>
                                 <hr>
                             </div>
-                            <table class="table-number-2">
+                            <table class="table-number-2 basic-table">
                                 <tbody>
                                     <tr>
                                         <td>Julia</td>
@@ -244,11 +244,7 @@
                 browseText: 'All'
             });
             $('.jq-checkbox').click(function() {
-                if ($(this).hasClass('checked') && !$(this).closest('tr').hasClass('active')) $(this).closest('tr').addClass('active');
-                else if ($(this).hasClass('checked') && $(this).closest('tr').hasClass('active')) {
-                    $(this).removeClass('checked');
-                    $(this).closest('tr').removeClass('active');
-                }
+                if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
                 else $(this).closest('tr').removeClass('active');
             });
             $("#table1").tablesorter({
