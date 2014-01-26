@@ -30,11 +30,11 @@
                                 <h1>Users</h1>
                             </div>
                             <div class="column2">
-                                <div class="buttons">
-                                    <a href="#" class="btn grey-btn">
+                                <div class="btn-line">
+                                    <a href="#" class="btn btn-grey">
                                         <span>Add</span>
                                     </a>
-                                    <a href="#" class="btn grey-btn">
+                                    <a href="#" class="btn btn-grey">
                                         <span>Remove</span>
                                     </a>
                                 </div>
@@ -178,11 +178,11 @@
                                         <h1>Consultants</h1>
                                     </div>
                                     <div class="column2">
-                                        <div class="buttons">
-                                            <a href="#" class="btn grey-btn">
+                                        <div class="btn-line">
+                                            <a href="#" class="btn btn-grey">
                                                 <span>Add</span>
                                             </a>
-                                            <a href="#" class="btn grey-btn">
+                                            <a href="#" class="btn btn-grey">
                                                 <span>Remove</span>
                                             </a>
                                         </div>
@@ -221,11 +221,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="buttons buttons-bottom clearfix">
-                    <a href="#" class="btn red-btn box-modal_close arcticmodal-close">
+                <div class="btn-line buttons-bottom">
+                    <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
                         <span>Save</span>
                     </a>
-                    <a href="#" class="btn grey-btn box-modal_close arcticmodal-close">
+                    <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
                         <span>Close</span>
                     </a>
                 </div>
@@ -237,6 +237,7 @@
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
+    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
         $(function() {
             $('input[type=checkbox]').styler();
@@ -247,22 +248,12 @@
                 if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
                 else $(this).closest('tr').removeClass('active');
             });
-            $("#table1").tablesorter({
-                headers: {
-                    1: {
-                        sorter: false
-                    },
-                    2: {
-                        sorter: false
-                    }
-                },
-            });
+            $("#table1").tablesorter();
             $('table tbody tr').hover(function() {
                 $(this).addClass('highlight');
             }, function() {
                 $(this).removeClass('highlight');
             });
-
             $('table tbody tr').click(function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');

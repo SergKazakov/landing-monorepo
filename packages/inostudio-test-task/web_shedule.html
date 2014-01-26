@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
+    <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="header-wrapper">
+        <div class="header clearfix">
+            <a class="logo" href="index.html">
+                <span>ino</span>connection
+            </a>
+            <ul class="menu clearfix">
+                <li>
+                    <a class="list-item1" href="#">
+                        <div>
+                            <span class="icon"></span>
+                            <span class="list-item-text">Dashboard</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item2" href="web_customer.html">
+                        <div>
+                            <span class="icon"></span>
+                            <span class="list-item-text">Customer</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item3 active" href="web_shedule.html">
+                        <div>
+                            <span class="icon"></span>
+                            <span class="list-item-text">Shedule</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item4" href="systems_manufacturers.html">
+                        <div>
+                            <span class="icon"></span>
+                            <span class="list-item-text">Systems</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item5" href="reports.html">
+                        <div>
+                            <span class="icon"></span>
+                            <span class="list-item-text">Reports</span>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="list-item6" href="#">
+                        <div>
+                            <span class="icon"></span>
+                            <span class="list-item-text">Settings</span>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+            <ul class="user">
+                <li>
+                    <a href="#">
+                        <span class="flag"></span>
+                        Hi, Dillan
+                        <span class="up-arrow"></span>
+                    </a>
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <span class="wheel"></span>
+                                Settings
+                            </a>
+                        </li>
+                        <li>
+                            <a class="last" href="#">
+                                <span class="door"></span>
+                                Logout
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <ul class="sidebar">
+        <li>
+            <a class="item1" href="#"></a>
+        </li>
+        <li>
+            <a class="item2" href="#"></a>
+            <ul>
+                <li>
+                    <a class="item1-inner" href="#">Communicate</a>
+                </li>
+                <li>
+                    <a class="item2-inner" href="#">
+                        <span>Email</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="item3-inner" href="#">
+                        <span>Send Text</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="item4-inner last" href="#">
+                        <span>Call</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a class="item3" href="#"></a>
+        </li>
+        <li class="last">
+            <a class="item4" href="#"></a>
+        </li>
+    </ul>
+    <div class="content-wrapper">
+        <div class="container clearfix">
+            <div class="col1">
+                <div class="info shedule clearfix">
+                    <div class="btn-group-32">
+                        <a href="#">Table</a>
+                        <a href="#" class="active">Calendar</a>
+                        <a class="last" href="#">Map</a>
+                    </div>
+                    <div class="pager clearfix">
+                        <a href="#" class="first"></a>
+                        <a href="#" class="prev"></a>
+                        <p>Page</p>
+                        <input type="text">
+                        <p>of 68</p>
+                        <a href="#" class="next"></a>
+                        <a href="#" class="last"></a>
+                    </div>
+                    <div class="search">
+                        <form>
+                            <input type="text" placeholder="Search ...">
+                            <input type="submit" value="">
+                        </form>
+                    </div>
+                </div>
+                <table class="customer-table">
+                    <thead>
+                        <tr>
+                            <th class="col-1">
+                                <input type="checkbox" class="choose-all">
+                            </th>
+                            <th class="col-2">Status
+                                <span></span>
+                            </th>
+                            <th class="col-3">Customer ID
+                                <span></span>
+                            </th>
+                            <th class="col-4">Customer
+                                <span></span>
+                            </th>
+                            <th class="col-5">System
+                                <span></span>
+                            </th>
+                            <th class="col-6">Installer
+                                <span></span>
+                            </th>
+                            <th class="col-7 last">Instal Date
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-1">
+                                <input type="checkbox">
+                            </td>
+                            <td class="col-2">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Leads</p>
+                                <div class="progressbar"></div>
+                            </td>
+                            <td class="col-3">1235</td>
+                            <td class="col-4">
+                                <p>Customer Name</p>
+                                12345 City Name
+                            </td>
+                            <td class="col-5">
+                                <p>System Size: 5KW</p>
+                                <p>Total Price: 7500€</p>
+                                <p>Installation Info: 0%</p>
+                            </td>
+                            <td class="col-6">
+                                <div class="select-wrapper">
+                                    <select class="my-select light-select" name="" id="">
+                                        <option value="">Leads</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
+                                </div>
+                                <p class="change-display">Linda Rainforest</p>
+                            </td>
+                            <td class="col-7">
+                                <p class="install-date">Dec. 15, 2011</p>
+                                <p>14:00-17:00</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="pagination shedule clearfix">
+                    <div class="pager clearfix">
+                        <a href="#" class="first"></a>
+                        <a href="#" class="prev"></a>
+                        <p>Page</p>
+                        <input type="text">
+                        <p>of 68</p>
+                        <a href="#" class="next"></a>
+                        <a href="#" class="last"></a>
+                    </div>
+                    <div class="pagesize">
+                        <p>Show per page</p>
+                        <div class="select-wrapper">
+                            <select class="my-select light-select" name="" id="">
+                                <option value="">25</option>
+                                <option value="">15</option>
+                                <option value="">10</option>
+                                <option value="">5</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col2">
+                <h1>Filters</h1>
+                <input id="checkbox1" type="checkbox">
+                <label for="checkbox1">Refine List when zooming</label>
+                <div id="map-canvas"></div>
+                <div class="row">
+                    <div class="column1">
+                        <label for="">Refine by Date</label>
+                    </div>
+                    <div class="column2">
+                        <select name="" class="my-select dark-select">
+                            <option value="1">Date Select</option>
+                            <option value="2">Item 1</option>
+                            <option value="3">Item 2</option>
+                            <option value="4">Item 3</option>
+                            <option value="5">Item 4</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="text" class="date calendar">
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+    <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
+    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <script>
+        $(function () {
+            $('input[type=checkbox]').styler();
+            $('select').styler({
+                browseText: 'All'
+            });
+            $(".customer-table").tablesorter();
+            $('table tbody tr').hover(function () {
+                $(this).addClass('highlight');
+            }, function () {
+                $(this).removeClass('highlight');
+            });
+            $('table tbody .jq-checkbox').click(function () {
+                if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
+                else $(this).closest('tr').removeClass('active');
+            });
+            $('table tbody tr').click(function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $(this).find('.jq-checkbox').removeClass('checked');
+                } else {
+                    $(this).addClass('active');
+                    $(this).find('.jq-checkbox').addClass('checked');
+                }
+            });
+            $('table tbody tr').click(function () {
+                if ($(this).find('.select-wrapper').css('display')=='none') {
+                    $(this).find('.select-wrapper').show();
+                    $(this).find('.change-display').hide();
+                }
+                else {
+                    $(this).find('.select-wrapper').hide();
+                    $(this).find('.change-display').show();
+                }
+            });
+            $('table').find('.choose-all').click(function(){
+                if ($(this).hasClass('checked')) {
+                    $('.customer-table tbody .jq-checkbox').addClass('checked');
+                    $('.customer-table tbody tr').addClass('active');
+                    $('.customer-table .select-wrapper').show();
+                    $('.customer-table .change-display').hide();
+                }
+                else {
+                    $('.customer-table tbody .jq-checkbox').removeClass('checked');
+                    $('.customer-table tbody tr').removeClass('active');
+                    $('.customer-table .select-wrapper').hide();
+                    $('.customer-table .change-display').show();
+                }
+            });
+            $(".progressbar").each(function(){
+                $(this).progressbar({value: Math.random()*100});
+            });
+            $(".calendar").datepicker({
+                  showOtherMonths: true,
+                  selectOtherMonths: true
+            });
+        });
+    </script>
+    <script>
+        var map;
+        function initialize() {
+          var mapOptions = {
+            zoom: 10,
+            center: new google.maps.LatLng(47.2273, 38.8908)
+          };
+          map = new google.maps.Map(document.getElementById('map-canvas'),
+              mapOptions);
+        }
+        google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+</body>
+
+</html>
