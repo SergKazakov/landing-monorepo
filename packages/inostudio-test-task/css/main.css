@@ -200,6 +200,8 @@
     color: #f1f1f1;
     padding-left: 4px;
     display: block;
+    position: relative;
+    text-indent: 30px;
     background: url(../img/btn_sprite.png) 0px -940px no-repeat; }
 
     .btn-grey-icon:hover { background-position: 0px -983px; }
@@ -216,7 +218,12 @@
     .btn-grey-icon:active span { background-position: 100% -377px; }
 
     .btn-grey-icon .upload {
-        padding: 0px 15px;
+        display: inline-block;
+        height: 17px;
+        width: 22px;
+        position: absolute;
+        top: 5px;
+        left: 4px;
         background: url(../img/sprites.png) -147px -152px no-repeat; }
 
 .btn-grey-no-icon {
@@ -481,6 +488,14 @@ tbody .highlight { background: #fbf9ee; }
     text-align: center;
     padding: 9px 9px 13px 11px;
     font-size: 13px;
+}
+
+.lt-ie8 .ui-datepicker-header{
+    width: 258px;
+}
+
+.lt-ie8 .ui-datepicker table{
+    width: auto;
 }
 
 /* end datepicker */
@@ -1657,14 +1672,35 @@ input[type=text].date:focus{
 
         .customer-info a span i { margin-left: 7px; }
 
+    .customer-info .btn{
+        position: relative;
+    }
+
+    .customer-info .btn-red{
+        text-indent: 36px;
+    }
+
+    .customer-info .btn-grey{
+        text-indent: 42px;
+    }
+
+    .customer-info .btn i{
+        position: absolute;
+        display: inline-block;
+    }
+
     .customer-info .white-plus {
-        padding: 0 9px;
-        margin-right: 11px;
+        height: 17px;
+        width: 18px;
+        top: 8px;
+        left: 4px;
         background: url(../img/sprites.png) -214px -152px no-repeat; }
 
     .customer-info .import {
-        padding: 2px 14px;
-        margin-right: 7px;
+        top: 6px;
+        left: 4px;
+        height: 20px;
+        width: 27px;
         background: url(../img/sprites.png) -261px -150px no-repeat; }
 
     .customer-info .pager {
