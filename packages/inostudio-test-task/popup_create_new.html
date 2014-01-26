@@ -24,7 +24,7 @@
             </h1>
             <div class="popup-content">
                 <div class="row-group clearfix">
-                    <div class="row-group1 clearfix">
+                    <div class="row-group1">
                         <div class="row">
                             <div class="column1">
                                 <label for="">Name</label>
@@ -188,26 +188,22 @@
                                     <div class="span">
                                         <input placeholder="No File" type="text">
                                     </div>
-                                    <div class="span last">
-                                        <a href="#" class="btn-grey-no-picture">
+                                    <div class="span">
+                                        <a href="#" class="btn-grey-no-icon">
                                             <span>Select</span>
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="column2">
-                                <a href="" class="upload">Upload</a>
-                            </div>
-                        </div>
+                        <a href="" class="upload">Upload</a>
                     </div>
                 </div>
-                <div class="buttons clearfix">
-                    <a href="#" class="btn red-btn box-modal_close arcticmodal-close">
+                <div class="btn-line">
+                    <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
                         <span>Save</span>
                     </a>
-                    <a href="#" class="btn grey-btn box-modal_close arcticmodal-close">
+                    <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
                         <span>Cancel</span>
                     </a>
                 </div>
@@ -218,6 +214,7 @@
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
+    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
         $(function() {
             $('select').styler({

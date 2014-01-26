@@ -13,7 +13,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link rel="stylesheet" href="js/plugins/ProgressBar/jquery-ui-1.10.3.custom.min.css">
+    <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -41,7 +41,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="list-item3" href="#">
+                    <a class="list-item3" href="web_shedule.html">
                         <div>
                             <span class="icon"></span>
                             <span class="list-item-text">Shedule</span>
@@ -73,25 +73,24 @@
                     </a>
                 </li>
             </ul>
-
             <ul class="user">
                 <li>
-                    <a href="#" class="user item1">
-                        <img src="img/flag.png" alt="">
-                        <span class="span1">Hi, Dillan</span>
-                        <img class="up-arrow" src="img/up_arrow.png" alt="">
+                    <a href="#">
+                        <span class="flag"></span>
+                        Hi, Dillan
+                        <span class="up-arrow"></span>
                     </a>
                     <ul>
                         <li>
                             <a href="#">
-                                <img src="img/wheel.png" alt="">
-                                <span class="span2">Settings</span>
+                                <span class="wheel"></span>
+                                Settings
                             </a>
                         </li>
                         <li>
-                            <a class="item2" href="#">
-                                <img src="img/door.png" alt="">
-                                <span class="span3">Logout</span>
+                            <a class="last" href="#">
+                                <span class="door"></span>
+                                Logout
                             </a>
                         </li>
                     </ul>
@@ -136,442 +135,406 @@
     <div class="content-wrapper">
         <div class="container">
             <div class="info customer-info clearfix">
-                <div class="span">
-                    <a href="#" class="btn red-btn">
-                        <span>
-                            <i class="white-plus"></i>Create New Lead</span>
-                    </a>
+                <a href="#" class="btn btn-red">
+                    <span>
+                        <i class="white-plus"></i>Create New Lead</span>
+                </a>
+                <a href="#" class="btn btn-grey">
+                    <span>
+                        <i class="import"></i>Import Leads</span>
+                </a>
+                <select name="" id="optiongroup" class="my-select dark-select">
+                    <option value="1">View: All</option>
+                    <option value="2">Item 1</option>
+                    <option value="3">Item 2</option>
+                    <option value="4">Item 3</option>
+                    <option value="5">Item 4</option>
+                </select>
+                <div class="pager clearfix">
+                    <a href="#" class="first"></a>
+                    <a href="#" class="prev"></a>
+                    <p>Page</p>
+                    <input type="text">
+                    <p>of 68</p>
+                    <a href="#" class="next"></a>
+                    <a href="#" class="last"></a>
                 </div>
-                <div class="span">
-                    <a href="#" class="btn grey-btn">
-                        <span>
-                            <i class="import"></i>Import Leads</span>
-                    </a>
-                </div>
-                <div class="span">
-                    <select name="" id="optiongroup" class="my-select dark-select">
-                        <option value="1">View: All</option>
-                        <option value="2">Item 1</option>
-                        <option value="3">Item 2</option>
-                        <option value="4">Item 3</option>
-                        <option value="5">Item 4</option>
-                    </select>
-                </div>
-                <div class="span pager clearfix">
-                    <div class="span">
-                        <a href="#" class="first"></a>
-                    </div>
-                    <div class="span">
-                        <a href="#" class="prev"></a>
-                    </div>
-                    <div class="span">
-                        <p>Page</p>
-                    </div>
-                    <div class="span">
-                        <input type="text">
-                    </div>
-                    <div class="span">
-                        <p>of 68</p>
-                    </div>
-                    <div class="span">
-                        <a href="#" class="next"></a>
-                    </div>
-                    <div class="span">
-                        <a href="#" class="last"></a>
-                    </div>
-                </div>
-                <div class="span last search">
+                <div class="search">
                     <form>
                         <input type="text" placeholder="Search ...">
                         <input type="submit" value="">
                     </form>
                 </div>
             </div>
-            <div class="content customer-content">
-                <table class="customer-table">
-                    <thead>
-                        <tr>
-                            <th class="col-1">
-                                <input type="checkbox" class="choose-all">
-                            </th>
-                            <th class="col-2">Lead Status
-                                <span></span>
-                            </th>
-                            <th class="col-3">Customer ID
-                                <span></span>
-                            </th>
-                            <th class="col-4">Customer
-                                <span></span>
-                            </th>
-                            <th class="col-5">System
-                                <span></span>
-                            </th>
-                            <th class="col-6">Consultant
-                                <span></span>
-                            </th>
-                            <th class="col-7">Lead Source
-                                <span></span>
-                            </th>
-                            <th class="col-8">Comment</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest89899</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <input type="checkbox">
-                            </td>
-                            <td class="col-2">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Leads</p>
-                                <div class="progressbar"></div>
-                            </td>
-                            <td class="col-3">1235</td>
-                            <td class="col-4">
-                                <p>Customer Name</p>
-                                12345 City Name
-                            </td>
-                            <td class="col-5">
-                                <p>System Size: 5KW</p>
-                                <p>Total Price: 7500€</p>
-                                <p>Installation Info: 0%</p>
-                            </td>
-                            <td class="col-6">
-                                <div class="select-wrapper">
-                                    <select class="my-select light-select" name="" id="">
-                                        <option value="">Leads</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                                <p class="change-display">Linda Rainforest</p>
-                            </td>
-                            <td class="col-7">Peter Done</td>
-                            <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="pagination clearfix">
-                    <div class="pager clearfix">
-                        <div class="span">
-                            <a href="#" class="first"></a>
-                        </div>
-                        <div class="span">
-                            <a href="#" class="prev"></a>
-                        </div>
-                        <div class="span">
-                            <p>Page</p>
-                        </div>
-                        <div class="span">
-                            <input type="text">
-                        </div>
-                        <div class="span">
-                            <p>of 68</p>
-                        </div>
-                        <div class="span">
-                            <a href="#" class="next"></a>
-                        </div>
-                        <div class="span">
-                            <a href="#" class="last"></a>
-                        </div>
-                    </div>
-                    <div class="pagesize">
-                        <p>Show per page</p>
-                        <div class="select-wrapper">
-                            <select class="my-select light-select" name="" id="">
-                                <option value="">25</option>
-                                <option value="">15</option>
-                                <option value="">10</option>
-                                <option value="">5</option>
-                            </select>
-                        </div>
+            <table class="customer-table">
+                <thead>
+                    <tr>
+                        <th class="col-1">
+                            <input type="checkbox" class="choose-all">
+                        </th>
+                        <th class="col-2">Lead Status
+                            <span></span>
+                        </th>
+                        <th class="col-3">Customer ID
+                            <span></span>
+                        </th>
+                        <th class="col-4">Customer
+                            <span></span>
+                        </th>
+                        <th class="col-5">System
+                            <span></span>
+                        </th>
+                        <th class="col-6">Consultant
+                            <span></span>
+                        </th>
+                        <th class="col-7">Lead Source
+                            <span></span>
+                        </th>
+                        <th class="col-8 last">Comment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest89899</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                    <tr>
+                        <td class="col-1">
+                            <input type="checkbox">
+                        </td>
+                        <td class="col-2">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Leads</p>
+                            <div class="progressbar"></div>
+                        </td>
+                        <td class="col-3">1235</td>
+                        <td class="col-4">
+                            <p>Customer Name</p>
+                            12345 City Name
+                        </td>
+                        <td class="col-5">
+                            <p>System Size: 5KW</p>
+                            <p>Total Price: 7500€</p>
+                            <p>Installation Info: 0%</p>
+                        </td>
+                        <td class="col-6">
+                            <div class="select-wrapper">
+                                <select class="my-select light-select" name="" id="">
+                                    <option value="">Leads</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                            </div>
+                            <p class="change-display">Linda Rainforest</p>
+                        </td>
+                        <td class="col-7">Peter Done</td>
+                        <td class="col-8">This is a comment that can stay on 2, even 3 lines. If mo...</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="pagination customer clearfix">
+                <div class="pager clearfix">
+                    <a href="#" class="first"></a>
+                    <a href="#" class="prev"></a>
+                    <p>Page</p>
+                    <input type="text">
+                    <p>of 68</p>
+                    <a href="#" class="next"></a>
+                    <a href="#" class="last"></a>
+                </div>
+                <div class="pagesize">
+                    <p>Show per page</p>
+                    <div class="select-wrapper">
+                        <select class="my-select light-select" name="" id="">
+                            <option value="">25</option>
+                            <option value="">15</option>
+                            <option value="">10</option>
+                            <option value="">5</option>
+                        </select>
                     </div>
                 </div>
             </div>
@@ -580,67 +543,62 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
-    <script src="js/plugins/ProgressBar/jquery-ui-1.10.3.custom.min.js"></script>
+    <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
+    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
-    $(function () {
-        $('input[type=checkbox]').styler();
-        $('select').styler({
-            browseText: 'All'
-        });
-        $(".customer-table").tablesorter({
-            headers: {
-                0: {
-                    sorter: false
+        $(function () {
+            $('input[type=checkbox]').styler();
+            $('select').styler({
+                browseText: 'All'
+            });
+            $(".customer-table").tablesorter();
+            $('table tbody tr').hover(function () {
+                $(this).addClass('highlight');
+            }, function () {
+                $(this).removeClass('highlight');
+            });
+            $('table tbody .jq-checkbox').click(function () {
+                if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
+                else $(this).closest('tr').removeClass('active');
+            });
+            $('table tbody tr').click(function () {
+                if ($(this).hasClass('active')) {
+                    $(this).removeClass('active');
+                    $(this).find('.jq-checkbox').removeClass('checked');
+                } else {
+                    $(this).addClass('active');
+                    $(this).find('.jq-checkbox').addClass('checked');
                 }
-            }
+            });
+            $('.customer-table tbody tr').click(function () {
+                if ($(this).find('.select-wrapper').css('display')=='none') {
+                    $(this).find('.select-wrapper').show();
+                    $(this).find('.change-display').hide();
+                }
+                else {
+                    $(this).find('.select-wrapper').hide();
+                    $(this).find('.change-display').show();
+                }
+            });
+            $('.customer-table').find('.choose-all').click(function(){
+                if ($(this).hasClass('checked')) {
+                    $('.customer-table tbody .jq-checkbox').addClass('checked');
+                    $('.customer-table tbody tr').addClass('active');
+                    $('.customer-table .select-wrapper').show();
+                    $('.customer-table .change-display').hide();
+                }
+                else {
+                    $('.customer-table tbody .jq-checkbox').removeClass('checked');
+                    $('.customer-table tbody tr').removeClass('active');
+                    $('.customer-table .select-wrapper').hide();
+                    $('.customer-table .change-display').show();
+                }
+            });
+            $(".progressbar").each(function(){
+                $(this).progressbar({value: Math.random()*100});
+            });
         });
-        $('table tbody tr').hover(function () {
-            $(this).addClass('highlight');
-        }, function () {
-            $(this).removeClass('highlight');
-        });
-        $('table tbody .jq-checkbox').click(function () {
-            if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
-            else $(this).closest('tr').removeClass('active');
-        });
-        $('table tbody tr').click(function () {
-            if ($(this).hasClass('active')) {
-                $(this).removeClass('active');
-                $(this).find('.jq-checkbox').removeClass('checked');
-            } else {
-                $(this).addClass('active');
-                $(this).find('.jq-checkbox').addClass('checked');
-            }
-        });
-        $('.customer-table tbody tr').click(function () {
-            if ($(this).find('.select-wrapper').css('display')=='none') {
-                $(this).find('.select-wrapper').show();
-                $(this).find('.change-display').hide();
-            }
-            else {
-                $(this).find('.select-wrapper').hide();
-                $(this).find('.change-display').show();
-            }
-        });
-        $('.customer-table').find('.choose-all').click(function(){
-            if ($(this).hasClass('checked')) {
-                $('.customer-table tbody .jq-checkbox').addClass('checked');
-                $('.customer-table tbody tr').addClass('active');
-                $('.customer-table .select-wrapper').show();
-                $('.customer-table .change-display').hide();
-            }
-            else {
-                $('.customer-table tbody .jq-checkbox').removeClass('checked');
-                $('.customer-table tbody tr').removeClass('active');
-                $('.customer-table .select-wrapper').hide();
-                $('.customer-table .change-display').show();
-            }
-        });
-        $(".progressbar").progressbar({
-            value: Math.random()*100
-        });
-    });
     </script>
 </body>
 

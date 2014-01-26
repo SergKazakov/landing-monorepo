@@ -12,7 +12,7 @@
     <title>popup create install</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="js/plugins/Datepicker/jquery-ui-1.10.3.custom.css">
+    <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.css">
 </head>
@@ -72,11 +72,11 @@
                             <input class="date" type="text">
                         </div>
                     </div>
-                    <div class="buttons clearfix">
-                        <a href="#" class="btn red-btn box-modal_close arcticmodal-close">
+                    <div class="btn-line">
+                        <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
                             <span>Save</span>
                         </a>
-                        <a href="#" class="btn grey-btn box-modal_close arcticmodal-close">
+                        <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
                             <span>Cancel</span>
                         </a>
                     </div>
@@ -85,14 +85,17 @@
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
-    <script src="js/plugins/Datepicker/jquery.ui.datepicker-ru.js"></script>
-    <script src="js/plugins/Datepicker/jquery-ui.js"></script>
+    <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
+    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
         $(function() {
-            $(".calendar").datepicker();
+            $(".calendar").datepicker({
+                  showOtherMonths: true,
+                  selectOtherMonths: true
+            });
             $('#modal').arcticmodal();
             $('select').styler({
                 browseText: 'All'
