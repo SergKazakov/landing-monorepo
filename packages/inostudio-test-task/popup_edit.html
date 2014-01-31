@@ -12,8 +12,8 @@
     <title>popup create install</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
@@ -26,199 +26,105 @@
                 <div class="row-group clearfix">
                     <div class="row-group1">
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Name</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="Some text..." type="text">
-                            </div>
+                            <label for="">Name</label>
+                            <input placeholder="Some text..." type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">STC Power Rating</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">STC Power Rating</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">STC Power</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">STC Power</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Power Tolerancees (Min-Max)</label>
-                            </div>
-                            <div class="column2">
-                                <div class="input-row">
-                                    <input placeholder="0" type="text">
-                                    <span>-</span>
-                                    <input placeholder="0" type="text">
-                                </div>
-                            </div>
+                            <label for="">Power Tolerancees (Min-Max)</label>
+                            <input class="input-group" placeholder="0" type="text">
+                            <span>-</span>
+                            <input class="input-group" placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Imp</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Imp</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Isc</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Isc</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">NOCT</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">NOCT</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Series Fuse Rating</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Series Fuse Rating</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Length</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Length</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Depth</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Depth</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">File</label>
-                            </div>
-                            <div class="column2">
-                                <div class="row">
-                                    <div class="span">
-                                        <input placeholder="No File" type="text">
-                                    </div>
-                                    <div class="span">
-                                        <a href="#" class="btn-grey-no-icon">
-                                            <span>Select</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                            <label for="">File</label>
+                            <input class="file" placeholder="No File" type="text">
+                            <a href="#" class="btn-grey-no-icon">
+                                <span>Select</span>
+                            </a>
                         </div>
+                        <a href="#" class="upload">Upload</a>
                     </div>
                     <div class="row-group2">
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Manufacture</label>
-                            </div>
-                            <div class="column2">
-                                <div class="select-wrapper">
-                                    <select name="" id="" class="my-select light-select">
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                            </div>
+                            <label for="">Manufacture</label>
+                            <select name="" id="" class=" light-select">
+                                <option value="">User</option>
+                                <option value="">User</option>
+                                <option value="">User</option>
+                                <option value="">User</option>
+                                <option value="">User</option>
+                            </select>
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">PTC Power Rating</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">PTC Power Rating</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Peak Efficiency</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Peak Efficiency</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Number of cells</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Number of cells</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Vmp</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Vmp</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Voc</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Voc</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Temp Coefficient Of Power</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Temp Coefficient Of Power</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Maximum System Voltage</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Maximum System Voltage</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Width</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Width</label>
+                            <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <div class="column1">
-                                <label for="">Weight</label>
-                            </div>
-                            <div class="column2">
-                                <input placeholder="0" type="text">
-                            </div>
+                            <label for="">Weight</label>
+                            <input placeholder="0" type="text">
                         </div>
                     </div>
                 </div>
-                <a href="#" class="upload">Upload</a>
                 <div class="btn-line">
                     <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
                         <span>Save</span>
