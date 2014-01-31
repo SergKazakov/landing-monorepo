@@ -1,0 +1,64 @@
+.lt-ie8 .ui-datepicker-header {
+    width: 258px;
+}
+.lt-ie8 .ui-datepicker table {
+    width: auto;
+}
+.lt-ie8 .header-wrapper .header {
+    background: #7c828b;
+}
+.lt-ie8 .icheckbox {
+    display: inline;
+    zoom: 1;
+}
+.lt-ie8 .system-design-content .doc,
+.lt-ie8 .system-design-content .photo {
+    vertical-align: middle;
+}
+.lt-ie8 .customer-table th{
+    position: relative;
+}
+
+.lt-ie8 .customer-table th span{
+    position: absolute;
+    right: 0;
+    float: none;
+}
+.lt-ie8 .pagesize{
+    width: 152px;
+}
+.lt-ie9 .popup.account .dropdown-list ul a.active {
+    outline: none;
+}
+.lt-ie9 input[type=text].date,
+.lt-ie9 input[type=text].time{
+    z-index: 100;
+}
+.lt-ie9 input[type=text],
+.lt-ie9 .left-menu a.active,
+.lt-ie9 .dropdown-list ul a.active,
+.lt-ie9 .tag,
+.lt-ie9 .tagsinput,
+.lt-ie9 .dropdown-list,
+.lt-ie9 textarea{
+    behavior:url(PIE.htc);
+    position: relative;
+}
+.lt-ie9 input[type=text],
+.lt-ie9 input[type=text]:focus,
+.lt-ie9 .popup,
+.lt-ie9 .popup.create-install textarea,
+.lt-ie9 .popup.create-install textarea:focus{
+    box-shadow:none;
+}
+.lt-ie9 #tag_tag:focus{
+    border: 0;
+}
+.lt-ie8 .info.reports-info .date{
+    margin-right: -21px;
+    width: 85px;
+}
+/* .lt-ie9 .sidebar,
+.lt-ie9 .sidebar ul{
+    behavior:url(PIE.htc);
+} */

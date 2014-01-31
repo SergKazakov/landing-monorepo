@@ -13,9 +13,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
-    <link rel="stylesheet" href="js/plugins/TagsInputPlugin/jquery.tagsinput.css">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/plugins/TagsInputPlugin/jquery.tagsinput.min.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
@@ -136,24 +136,12 @@
     <div class="content-wrapper">
         <div class="container">
             <div class="info reports-info clearfix">
-                <div class="row">
-                    <div class="column1">
-                        <label for="">From:</label>
-                    </div>
-                    <div class="column2">
-                        <input class="date calendar" type="text" name=date>
-                        <input class="date" type="text">
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="column1">
-                        <label for="">to:</label>
-                    </div>
-                    <div class="column2">
-                        <input class="date calendar" type="text">
-                        <input class="date" type="text">
-                    </div>
-                </div>
+                <label for="">From:</label>
+                <input class="date calendar" type="text">
+                <input class="time" type="text">
+                <label for="">to:</label>
+                <input class="date calendar" type="text">
+                <input class="time" type="text">
                 <div class="btn-group-27">
                     <a href="#" class="active">Today</a>
                     <a href="#">Week</a>
@@ -162,19 +150,15 @@
                 </div>
             </div>
             <div class="reports-content">
-                <div class="line clearfix">
-                    <div class="column1">
-                        <label for="">On:</label>
-                    </div>
-                    <div class="column2">
-                        <select class="my-select light-select" name="" id="">
-                            <option value="1">Users</option>
-                            <option value="2">Users</option>
-                            <option value="3">Users</option>
-                            <option value="4">Users</option>
-                            <option value="5">Users</option>
-                        </select>
-                    </div>
+                <div class="line">
+                    <label for="">On:</label>
+                    <select class=" light-select" name="" id="">
+                        <option value="1">Users</option>
+                        <option value="2">Users</option>
+                        <option value="3">Users</option>
+                        <option value="4">Users</option>
+                        <option value="5">Users</option>
+                    </select>
                 </div>
                 <div class="input-tag-block clearfix">
                     <input placeholder="Some text..." type="text" id="tag" value="Username1">
@@ -185,59 +169,43 @@
                 <div class="list">
                     <div class="row">
                         <p>1. Leads per range</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>2. Conversion of leads per range</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>3.1. Equipment to be installed during the date range</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>3.2. Equipment installed during the date range</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>4. Inverters: sold, installed, to be installed</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>5. Average system size</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>6. Sales</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                     <div class="row">
                         <p>7. User activity</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                 </div>
                 <div class="input-form">
@@ -290,10 +258,8 @@
                 <div class="list">
                     <div class="row">
                         <p>8. Sheduling</p>
-                        <div class="save-format clearfix">
-                            <a href="#"></a>
-                            <a href="#"></a>
-                        </div>
+                        <a class="pdf" href="#"></a>
+                        <a class="xls" href="#"></a>
                     </div>
                 </div>
             </div>

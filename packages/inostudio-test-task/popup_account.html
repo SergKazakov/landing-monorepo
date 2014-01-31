@@ -12,8 +12,8 @@
     <title>popup create install</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="css/main.min.css">
 </head>
 
 <body>
@@ -26,18 +26,14 @@
                 <div class="row-group-1">
                     <div class="hgroup">
                         <div class="row">
-                            <div class="column1">
-                                <h1>Users</h1>
-                            </div>
-                            <div class="column2">
-                                <div class="btn-line">
-                                    <a href="#" class="btn btn-grey">
-                                        <span>Add</span>
-                                    </a>
-                                    <a href="#" class="btn btn-grey">
-                                        <span>Remove</span>
-                                    </a>
-                                </div>
+                            <h1>Users</h1>
+                            <div class="btn-line">
+                                <a href="#" class="btn btn-grey">
+                                    <span>Add</span>
+                                </a>
+                                <a href="#" class="btn btn-grey">
+                                    <span>Remove</span>
+                                </a>
                             </div>
                         </div>
                         <hr>
@@ -149,43 +145,29 @@
                         <div class="column2">
                             <div class="row-group-3">
                                 <div class="row">
-                                    <div class="column1">
-                                        <label for="">Name</label>
-                                    </div>
-                                    <div class="column2">
-                                        <input type="text" placeholder="Input name...">
-                                    </div>
+                                    <label for="">Name</label>
+                                    <input type="text" placeholder="Input name...">
                                 </div>
                                 <div class="row">
-                                    <div class="column1">
-                                        <label for="">Manager</label>
-                                    </div>
-                                    <div class="column2">
-                                        <div class="select-wrapper">
-                                            <select class="my-select light-select" name="" id="">
-                                                <option value="">User</option>
-                                                <option value="">User</option>
-                                                <option value="">User</option>
-                                                <option value="">User</option>
-                                            </select>
-                                        </div>
-                                    </div>
+                                    <label for="">Manager</label>
+                                    <select class=" light-select" name="" id="">
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                        <option value="">User</option>
+                                    </select>
                                 </div>
                             </div>
                             <div class="hgroup">
                                 <div class="row">
-                                    <div class="column1">
-                                        <h1>Consultants</h1>
-                                    </div>
-                                    <div class="column2">
-                                        <div class="btn-line">
-                                            <a href="#" class="btn btn-grey">
-                                                <span>Add</span>
-                                            </a>
-                                            <a href="#" class="btn btn-grey">
-                                                <span>Remove</span>
-                                            </a>
-                                        </div>
+                                    <h1>Consultants</h1>
+                                    <div class="btn-line">
+                                        <a href="#" class="btn btn-grey">
+                                            <span>Add</span>
+                                        </a>
+                                        <a href="#" class="btn btn-grey">
+                                            <span>Remove</span>
+                                        </a>
                                     </div>
                                 </div>
                                 <hr>
@@ -233,6 +215,7 @@
         </div>
     </div>
     <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/Icheck/icheck.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
@@ -240,27 +223,29 @@
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
         $(function() {
-            $('input[type=checkbox]').styler();
+            $('input[type=checkbox]').iCheck();
             $('select').styler({
                 browseText: 'All'
-            });
-            $('.jq-checkbox').click(function() {
-                if ($(this).hasClass('checked')) $(this).closest('tr').addClass('active');
-                else $(this).closest('tr').removeClass('active');
             });
             $("#table1").tablesorter();
             $('table tbody tr').hover(function() {
                 $(this).addClass('highlight');
+                $(this).find('.icheckbox').addClass('hover');
             }, function() {
                 $(this).removeClass('highlight');
+                $(this).find('.icheckbox').removeClass('hover');
+            });
+            $('.icheckbox').on('ifClicked', function() {
+                if ($(this).hasClass('checked')) $(this).closest('tr').removeClass('active');
+                else $(this).closest('tr').addClass('active');
             });
             $('table tbody tr').click(function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
-                    $(this).find('.jq-checkbox').removeClass('checked');
+                    $(this).find('.icheckbox').iCheck('uncheck');
                 } else {
                     $(this).addClass('active');
-                    $(this).find('.jq-checkbox').addClass('checked');
+                    $(this).find('.icheckbox').iCheck('check');
                 }
             });
             $('#modal').arcticmodal();
