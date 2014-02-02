@@ -12,13 +12,11 @@ module.exports = function(grunt) {
             }
         },
     watch: { 
-            css: {
-                files: ['css/*.css'],
-                tasks: ['cssmin'] ,
-            options: {
-                livereload: true,
+            files: ['**/*.css', '**/*.html'],
+            tasks: ['cssmin'] ,
+            options:{
+              livereload:true,
             }
-          }
         },
   });
 

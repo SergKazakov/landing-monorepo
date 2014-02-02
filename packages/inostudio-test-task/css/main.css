@@ -795,6 +795,7 @@ body {
         border-radius: 0 5px 5px 0;
         padding-bottom: 4px;
         z-index: 1;
+        overflow: hidden;
     }
 
     .sidebar ul a {
@@ -807,9 +808,6 @@ body {
     .sidebar li:hover ul a:hover {
         font-family: 'HelveticaNeueBold';
         color: #d4e1f4; }
-
-    .sidebar li:hover ul li {
-        border-radius: 0 5px 5px 0; }
 
     .sidebar ul a span { margin-left: 34px; }
 
@@ -1196,10 +1194,7 @@ input[type=text].time:focus{
     margin-left: 111px;
     margin-bottom: 43px; }
 
-    .reports-content .input-tag-block .clear { padding-top: 5px; }
-
-    .reports-content .input-tag-block .tagsinput,
-.reports-content .input-tag-block .clear { float: left; }
+    .reports-content .input-tag-block .tagsinput{ float: left; }
 
     .reports-content .input-tag-block .tagsinput {
         margin-right: 13px;
@@ -1225,12 +1220,14 @@ input[type=text].time:focus{
             vertical-align: -2px;
             margin-top: 2px; }
 
-.reports-content .clear a,
-.input-form .column3 a {
+.reports-content .clear{
     font-size: 12px;
     color: #4e4e4e;
     border-bottom: 1px dashed #4e4e4e;
-    vertical-align: middle; }
+    vertical-align: middle;
+    padding-top: 5px;
+    float: left;
+}
 
 .list .row:first-child{
     margin-top: 0;
@@ -1275,28 +1272,31 @@ input[type=text].time:focus{
 
 .input-form { margin-top: 36px; }
 
+.input-form label,
+.input-form input{
+    float: left;
+}
+
     .input-form .row {
         margin-left: 31px;
         margin-bottom: 23px; }
 
-        .input-form .row .column1 {
+        .input-form .row label {
             margin-right: 12px;
             padding-top: 7px;
             width: 64px;
-            text-align: right; }
+            text-align: right;
+            font-size: 14px;
+            color: #4e4e4e;
+            font-family: 'HelveticaNeueBold';
+        }
 
-            .input-form .row .column1.last { padding-top: 1px; }
+        .input-form .row label.last { padding-top: 1px; }
 
-            .input-form .row .column1 label {
-                font-size: 14px;
-                color: #4e4e4e;
-                font-family: 'HelveticaNeueBold'; }
-
-    .input-form .column2 { margin-right: 13px; }
-
-        .input-form .column2 input { width: 517px; }
-
-    .input-form .column3 { padding-top: 5px; }
+    .input-form input { 
+        margin-right: 13px;
+        width: 517px;
+    }
 
 /* systems_manufacturers.html */
 .systems-info { padding: 9px 7px 7px 13px; }
