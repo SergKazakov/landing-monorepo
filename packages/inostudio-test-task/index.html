@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                 <li>
                     <a href="#">
                         <span class="flag"></span>
-                        Hi, Dillan
+                        <span class="username">Hi, Konstantin Konstantinopolsky</span>
                         <span class="up-arrow"></span>
                     </a>
                     <ul>
@@ -119,7 +120,7 @@
                         <span>Send Text</span>
                     </a>
                 </li>
-                <li>
+                <li class="last">
                     <a class="item4-inner last" href="#">
                         <span>Call</span>
                     </a>
@@ -229,8 +230,8 @@
                         <div class="block2 clearfix">
                             <a href="#" class="circle-button"></a>
                             <div class="row">
-                                <input type="text">
-                                <select class="light-select" name="" id="">
+                                <input type="text" id="input-text">
+                                <select class="light-select" id="select">
                                     <option value="">0.1</option>
                                     <option value="">0.2</option>
                                     <option value="">0.3</option>
@@ -294,11 +295,20 @@
                     'heightStyle': 'content',
                     'collapsible': 'true'
                 });
-                $('select').styler({
+                $('#select').styler({
                     browseText: 'All'
                 });
             });
     </script>
+    <!--[if lte IE 8]>
+ipt>
+    <script>
+        $(function(){
+            var text=$('.left-menu a.active').text();
+            $('.left-menu a.active').html('<span>' + text + '</span>');
+            $('#input-text').css('width','+=2').inputStyler();
+        });
+    </script><![endif]-->
 </body>
 
 </html>

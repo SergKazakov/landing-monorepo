@@ -1,20 +1,25 @@
+/* fix datepicker */
 .lt-ie8 .ui-datepicker-header {
     width: 258px;
 }
 .lt-ie8 .ui-datepicker table {
     width: auto;
 }
+/* fix header-wrapper*/
 .lt-ie8 .header-wrapper .header {
     background: #7c828b;
 }
+/* fix icheckbox */
 .lt-ie8 .icheckbox {
     display: inline;
     zoom: 1;
 }
+/* fix icons in system_design.html */
 .lt-ie8 .system-design-content .doc,
 .lt-ie8 .system-design-content .photo {
     vertical-align: middle;
 }
+/* fix customer-table */
 .lt-ie8 .customer-table th{
     position: relative;
 }
@@ -23,41 +28,204 @@
     right: 0;
     float: none;
 }
+/* fix pagination */
 .lt-ie8 .pagesize{
     width: 152px;
 }
+/* fix dropdown-list */
 .lt-ie9 .popup.account .dropdown-list ul a.active {
     outline: none;
-}
-.lt-ie9 input[type=text].date,
-.lt-ie9 input[type=text].time{
-    z-index: 100;
-}
-.lt-ie9 input[type=text],
-.lt-ie9 .left-menu a.active,
-.lt-ie9 .dropdown-list ul a.active,
-.lt-ie9 .tag,
-.lt-ie9 .tagsinput,
-.lt-ie9 .dropdown-list,
-.lt-ie9 textarea{
-    behavior:url(PIE.htc);
-    position: relative;
-}
-.lt-ie9 input[type=text],
-.lt-ie9 input[type=text]:focus,
-.lt-ie9 .popup,
-.lt-ie9 .popup.create-install textarea,
-.lt-ie9 .popup.create-install textarea:focus{
-    box-shadow:none;
 }
 .lt-ie9 #tag_tag:focus{
     border: 0;
 }
-.lt-ie8 .info.reports-info .date{
-    margin-right: -21px;
-    width: 85px;
+.lt-ie9 .content-right .row-group1 .row:first-child{
+    background: none;
+    margin: 0;
+    padding: 0;
 }
-/* .lt-ie9 .sidebar,
-.lt-ie9 .sidebar ul{
-    behavior:url(PIE.htc);
-} */
+.lt-ie9 .wr,
+.lt-ie9 .wr-inner,
+.lt-ie9 .left-menu a.active,
+.lt-ie9 .left-menu a.active span{
+    background: url(../img/ie_bg.png) no-repeat;
+}
+.lt-ie9 .content-right .wr{
+    padding-left: 10px;
+    margin: 0 -3px 21px -10px;
+    background-position: 0px 0px;
+}
+.lt-ie9 .content-right .wr-inner{
+    padding: 3px 3px 5px 0;
+    background-position: right -51px;
+}
+/* fix left-menu */
+.lt-ie9 .left-menu a.active{
+    border: 0;
+    width: 134px;
+    padding: 0 0 0 6px;
+    background-position: 0 -95px;
+}
+.lt-ie9 .left-menu a.active span{
+    display: block;
+    padding: 11px 0px 11px 0;
+    background-position: right -143px;
+}
+/* fix sidebar */
+.lt-ie9 .sidebar,
+.lt-ie9 .sidebar li:hover ul{
+    background: none;
+}
+.lt-ie9 .sidebar > li{
+    background: #7c828b;
+}
+.lt-ie9 .sidebar > li:hover,
+.lt-ie9 .sidebar ul li{
+    background: #4b4f54;
+}
+.lt-ie9 .sidebar > li:first-child,
+.lt-ie9 .sidebar > li.last,
+.lt-ie9 .sidebar > li:first-child:hover,
+.lt-ie9 .sidebar > li.last:hover,
+.lt-ie9 .sidebar ul li:first-child,
+.lt-ie9 .sidebar ul li.last,
+.lt-ie8 .sidebar ul li:first-child a{ /* for ie 7 */
+    background: url(../img/ie_bg.png) no-repeat;
+}
+.lt-ie9 .sidebar > li:first-child{
+    background-position: 0 -199px;
+}
+.lt-ie9 .sidebar > li.last{
+    background-position: 0 -383px;
+}
+.lt-ie9 .sidebar > li:first-child:hover{
+    background-position: -64px -199px;
+}
+.lt-ie9 .sidebar > li.last:hover{
+    background-position: -64px -383px;
+}
+.lt-ie9 .sidebar ul li:first-child{
+    background-position: -188px -199px;
+}
+.lt-ie8 .sidebar ul li:first-child a{ /* for ie 7 */
+    background-position: -211px -199px;
+}
+.lt-ie9 .sidebar ul li.last{
+    background-position: -188px -385px;
+}
+/* fix select */
+.lt-ie8 .jq-selectbox__select .jq-selectbox__trigger{
+    right: -4px;
+}
+/* fix user */
+.lt-ie8 .user span{
+    vertical-align: middle;
+}
+/* fix popup */
+.lt-ie9 .popup > .jquery-corner div{
+    border-color: #000 !important;
+    opacity: 0.3;
+    filter:  alpha(opacity=60);
+}
+/* fix input */
+.lt-ie9 input[type=text]{
+    border: 0;
+    padding-left: 0;
+    background: none;
+    float: none;
+}
+.lt-ie9 .input-wr,
+.lt-ie9 .input-wr-inner{
+    background: url(../img/ie_bg.png) no-repeat;
+}
+.lt-ie9 .search .input-wr{
+    padding-left: 12px;
+    background-position: 0 -623px;
+    float: none;
+}
+.lt-ie9 .search .input-wr-inner{
+    background-position: right -664px;
+}
+.lt-ie9 .input-wr{
+    background-position: 0 -445px;
+    float: left;
+    padding-left: 5px;
+}
+.lt-ie9 .input-wr-inner{
+    background-position: right -485px;
+    padding-top: 3px;
+}
+
+
+.lt-ie9 .create-new.popup .popup-content input[type=text].file{
+    margin-right: 0;
+}
+.lt-ie9 .input-wr + .btn-grey-no-icon{
+    margin-left: 10px;
+}
+.lt-ie9 .popup-content .input-wr + span{
+    float: left;
+    margin: 6px 2px;
+}
+.lt-ie9 .system-design-content .row.last .input-wr{
+    margin-left: 11px;
+}
+.lt-ie9 .system-design-content .row.last input{
+    margin-left: 0;
+}
+.lt-ie9 .block2 .input-wr{
+    margin-right: 8px;
+    margin-top: 14px;
+}
+.lt-ie9 .block2 input {
+    margin: 0;
+}
+.lt-ie9 .systems-content .field{
+    zoom:1;
+}
+.lt-ie9 .systems-content .field:after{
+    content:'';
+    display: table;
+    clear:both;
+}
+.lt-ie9 .systems-content .field label{
+    float: left;
+    padding-top: 5px;
+}
+.lt-ie9 input.date.hasDatepicker{
+    padding-left: 20px;
+    background: url(../img/sprites.png) -404px 0 no-repeat;
+}
+.lt-ie9 .pager .input-wr{
+    margin-top: 2px;
+    margin-right: 5px;
+}
+.lt-ie9 .pager a{
+    margin-top: 11px;
+}
+.lt-ie9 .pager input{
+    margin-right: 0;
+}
+.lt-ie9 input.time{
+    border-left: 1px solid #bbc6d3;
+    margin-top: -4px;
+    padding-left: 5px;
+}
+.lt-ie9 .popup.create-install textarea{
+    border: 0;
+    padding: 0;
+    width: 169px;
+    font-family: 'HelveticaNeue';
+}
+.lt-ie9 #tag_addTag{
+    height: 25px;
+}
+.lt-ie8 #tag_addTag{
+    height: 40px;
+}
+.lt-ie8 .reports-content{
+    zoom:1;
+}
+.lt-ie8 .user{
+    z-index: 101;
+}
