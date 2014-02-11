@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                 <li>
                     <a href="#">
                         <span class="flag"></span>
-                        Hi, Dillan
+                        <span class="username">Hi, Konstantin Konstantinopolsky</span>
                         <span class="up-arrow"></span>
                     </a>
                     <ul>
@@ -118,7 +119,7 @@
                         <span>Send Text</span>
                     </a>
                 </li>
-                <li>
+                <li  class="last">
                     <a class="item4-inner last" href="#">
                         <span>Call</span>
                     </a>
@@ -183,13 +184,12 @@
                     <div class="row">
                         <div class="row-group1 clearfix">
                             <h1>Customer Info</h1>
-                            <hr>
                             <div class="row">
-                                <label for="">Voltage</label>
+                                <label>Voltage</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Power Supply Number</label>
+                                <label>Power Supply Number</label>
                             </div>
                             <div class="row">
                                 <div class="column1">
@@ -204,11 +204,11 @@
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Meter Number</label>
+                                <label>Meter Number</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Energy Provider</label>
+                                <label>Energy Provider</label>
                                 <select class=" light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
@@ -218,11 +218,11 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Service Type</label>
+                                <label>Service Type</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Add Custom fileds...</label>
+                                <label>Add Custom fileds...</label>
                             </div>
                             <div class="row last">
                                 <input placeholder="Some text..." type="text">
@@ -236,7 +236,7 @@
                             </div>
                         </div>
                         <div class="row-group2 clearfix">
-                            <div class="row">
+                            <div class="row title">
                                 <div class="column1">
                                     <h1>
                                         <span class="doc"></span>Documents</h1>
@@ -248,7 +248,6 @@
                                     </a>
                                 </div>
                             </div>
-                            <hr>
                             <div class="row parag">
                                 <div class="row">
                                     <div class="column1">
@@ -272,7 +271,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
+                            <div class="row title">
                                 <div class="column1">
                                     <h1>
                                         <span class="photo"></span>Photos</h1>
@@ -284,7 +283,6 @@
                                     </a>
                                 </div>
                             </div>
-                            <hr>
                             <div class="row images">
                                 <div class="row">
                                     <div class="image-span">
@@ -333,9 +331,18 @@
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <!--[if lte IE 8]><script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            var text=$('.left-menu a.active').text();
+            $('.left-menu a.active').html('<span>' + text + '</span>');
+            $('.row-group1 input[type=text]').css('width','+=2').inputStyler();
+        });
+    </script><![endif]-->
     <script>
         $(function() {
-            $('select').styler({
+            var select=$('.light-select');
+            select.styler({
                 browseText: 'All'
             });
         });

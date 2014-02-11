@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -78,7 +79,7 @@
                 <li>
                     <a href="#">
                         <span class="flag"></span>
-                        Hi, Dillan
+                        <span class="username">Hi, Konstantin Konstantinopolsky</span>
                         <span class="up-arrow"></span>
                     </a>
                     <ul>
@@ -119,7 +120,7 @@
                         <span>Send Text</span>
                     </a>
                 </li>
-                <li>
+                <li class="last">
                     <a class="item4-inner last" href="#">
                         <span>Call</span>
                     </a>
@@ -144,7 +145,7 @@
                     <span>
                         <i class="import"></i>Import Leads</span>
                 </a>
-                <select name="" id="optiongroup" class=" dark-select">
+                <select class="dark-select">
                     <option value="1">View: All</option>
                     <option value="2">Item 1</option>
                     <option value="3">Item 2</option>
@@ -162,16 +163,16 @@
                 </div>
                 <div class="search">
                     <form>
-                        <input type="text" placeholder="Search ...">
+                        <input id="search" type="text" placeholder="Search ...">
                         <input type="submit" value="">
                     </form>
                 </div>
             </div>
-            <table class="customer-table">
+            <table id="table" class="customer-table">
                 <thead>
                     <tr>
-                        <th class="col-1">
-                            <input type="checkbox" class="choose-all">
+                        <th class="col-1 {sorter:false}">
+                            <input type="checkbox">
                         </th>
                         <th class="col-2">Lead Status
                             <span></span>
@@ -201,7 +202,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -223,7 +224,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -241,7 +242,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -263,7 +264,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -281,7 +282,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -303,7 +304,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -321,7 +322,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -343,7 +344,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -361,7 +362,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -383,7 +384,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -401,7 +402,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -423,7 +424,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -441,7 +442,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -463,7 +464,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -481,7 +482,7 @@
                         </td>
                         <td class="col-2">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -503,7 +504,7 @@
                         </td>
                         <td class="col-6">
                             <div class="select-wrapper">
-                                <select class=" light-select" name="" id="">
+                                <select class="light-select">
                                     <option value="">Leads</option>
                                     <option value="">User</option>
                                     <option value="">User</option>
@@ -529,7 +530,7 @@
                 </div>
                 <div class="pagesize">
                     <p>Show per page</p>
-                    <select class=" light-select" name="" id="">
+                    <select class="light-select">
                         <option value="">25</option>
                         <option value="">15</option>
                         <option value="">10</option>
@@ -543,24 +544,28 @@
     <script src="js/plugins/Icheck/icheck.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
+    <script src="js/plugins/TableSorter/jquery.metadata.js"></script>
     <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <!--[if lte IE 8]><script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            $('.pager input').css('width','+=2').inputStyler();
+            $('#search').css('width','+=2').inputStyler({inputType:'search'});
+         });
+    </script>
+    <![endif]-->
     <script>
         $(function () {
-            $('input[type=checkbox]').iCheck();
-            $('select').styler({
+            var check=$('#table input[type=checkbox]');
+            check.iCheck();
+            var select=$('.light-select, .dark-select');
+            select.styler({
                 browseText: 'All'
             });
-            $(".customer-table").tablesorter();
-            $('table tbody tr').hover(function() {
-                $(this).addClass('highlight');
-                $(this).find('.icheckbox').addClass('hover');
-            }, function() {
-                $(this).removeClass('highlight');
-                $(this).find('.icheckbox').removeClass('hover');
-            });
-            $('.icheckbox').on('ifClicked', function() {
+            $("#table").tablesorter();
+            $('#table tbody .icheckbox').on('ifClicked', function() {
                 if ($(this).hasClass('checked')) {
                     $(this).closest('tr').removeClass('active');
                     $(this).closest('tr').find('.select-wrapper').hide();
@@ -572,7 +577,8 @@
                     $(this).closest('tr').find('.change-display').hide();
                 }
             });
-            $('table tbody tr').click(function() {
+            var tr=$('#table tbody tr');
+            $('tr').on('click',function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
                     $(this).find('.icheckbox').iCheck('uncheck');
@@ -581,7 +587,7 @@
                     $(this).find('.icheckbox').iCheck('check');
                 }
             });
-            $('table tbody tr').click(function () {
+            $('tr').on('click',function () {
                 if ($(this).find('.select-wrapper').css('display')=='none') {
                     $(this).find('.select-wrapper').show();
                     $(this).find('.change-display').hide();
@@ -593,21 +599,24 @@
                     $(this).find('.icheckbox').iCheck('uncheck');
                 }
             });
-            $('.customer-table th .icheckbox').on('ifClicked',function(){
+            var selectWrapper=$('#table .select-wrapper');
+            var changeDisplay=$('#table .change-display');
+            $('#table th .icheckbox').on('ifClicked',function(){
                 if ($(this).hasClass('checked')) {
-                    $('.customer-table tbody .icheckbox').iCheck('uncheck');
-                    $('.customer-table tbody tr').removeClass('active');
-                    $('.customer-table .select-wrapper').hide();
-                    $('.customer-table .change-display').show();
+                    check.iCheck('uncheck');
+                    tr.removeClass('active');
+                    selectWrapper.hide();
+                    changeDisplay.show();
                 }
                 else {
-                    $('.customer-table tbody .icheckbox').iCheck('check');
-                    $('.customer-table tbody tr').addClass('active');
-                    $('.customer-table .select-wrapper').show();
-                    $('.customer-table .change-display').hide();
+                    check.iCheck('check');
+                    tr.addClass('active');
+                    selectWrapper.show();
+                    changeDisplay.hide();
                 }
             });
-            $(".progressbar").each(function(){
+            var progress=$(".progressbar");
+            progress.each(function(){
                 $(this).progressbar({value: Math.random()*100});
             });
         });

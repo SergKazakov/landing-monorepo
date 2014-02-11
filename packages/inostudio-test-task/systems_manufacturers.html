@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                 <li>
                     <a href="#">
                         <span class="flag"></span>
-                        Hi, Dillan
+                        <span class="username">Hi, Konstantin Konstantinopolsky</span>
                         <span class="up-arrow"></span>
                     </a>
                     <ul>
@@ -118,7 +119,7 @@
                         <span>Send Text</span>
                     </a>
                 </li>
-                <li>
+                <li class="last">
                     <a class="item4-inner last" href="#">
                         <span>Call</span>
                     </a>
@@ -135,25 +136,25 @@
     <div class="content-wrapper">
         <div class="container">
             <div class="info systems-info clearfix">
-                    <p class="systems-title">Manufacturers | All</p>
-                    <div class="btn-group-27">
-                        <a href="#">Manufacturers</a>
-                        <a href="#">Modules</a>
-                        <a href="#" class="active">Inverters</a>
-                        <a href="#">Railings</a>
-                        <a href="#">Bos</a>
-                        <a class="active last" href="#">Installation</a>
-                    </div>
-                    <select name="" id="optiongroup" class=" dark-select">
-                        <option value="1">All</option>
-                        <option value="2">Item 1</option>
-                        <option value="3">Item 2</option>
-                        <option value="4">Item 3</option>
-                        <option value="5">Item 4</option>
-                    </select>
+                <p class="systems-title">Manufacturers | All</p>
+                <div class="btn-group-27">
+                    <a href="#">Manufacturers</a>
+                    <a href="#">Modules</a>
+                    <a href="#" class="active">Inverters</a>
+                    <a href="#">Railings</a>
+                    <a href="#">Bos</a>
+                    <a class="active last" href="#">Installation</a>
+                </div>
+                <select id="select" class=" dark-select">
+                    <option value="1">All</option>
+                    <option value="2">Item 1</option>
+                    <option value="3">Item 2</option>
+                    <option value="4">Item 3</option>
+                    <option value="5">Item 4</option>
+                </select>
                 <div class="search">
                     <form>
-                        <input type="text" placeholder="Search ...">
+                        <input id="search" type="text" placeholder="Search ...">
                         <input type="submit" value="">
                     </form>
                 </div>
@@ -161,8 +162,8 @@
             <div class="systems-content">
                 <h1>Per panel Per watt Base + Per extra panel</h1>
                 <div class="field">
-                    <label for="">Price Per Panel:</label>
-                    <input placeholder="Some text..." type="text">
+                    <label>Price Per Panel:</label>
+                    <input id="input-text" placeholder="Some text..." type="text">
                 </div>
                 <div class="check">
                     <input id="checkbox1" type="checkbox">
@@ -180,12 +181,21 @@
     <script src="js/plugins/Icheck/icheck.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <!--[if lte IE 8]>
+    <script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            $('#input-text').css('width','+=2').inputStyler();
+            $('#search').css('width','+=2').inputStyler({inputType:'search'});
+         });
+    </script>
+    <![endif]-->
     <script>
         $(function() {
-            $('select').styler({
+            $('#select').styler({
                 browseText: 'All'
             });
-            $("input[type=checkbox]").iCheck();
+            $("#checkbox1").iCheck();
         });
     </script>
 </body>

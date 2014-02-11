@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="js/plugins/TagsInputPlugin/jquery.tagsinput.min.css">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -79,7 +80,7 @@
                 <li>
                     <a href="#">
                         <span class="flag"></span>
-                        Hi, Dillan
+                        <span class="username">Hi, Konstantin Konstantinopolsky</span>
                         <span class="up-arrow"></span>
                     </a>
                     <ul>
@@ -120,7 +121,7 @@
                         <span>Send Text</span>
                     </a>
                 </li>
-                <li>
+                <li class="last">
                     <a class="item4-inner last" href="#">
                         <span>Call</span>
                     </a>
@@ -137,11 +138,11 @@
     <div class="content-wrapper">
         <div class="container">
             <div class="info reports-info clearfix">
-                <label for="">From:</label>
-                <input class="date calendar" type="text">
+                <label>From:</label>
+                <input class="date" type="text" id="calendar1">
                 <input class="time" type="text">
-                <label for="">to:</label>
-                <input class="date calendar" type="text">
+                <label>to:</label>
+                <input class="date" type="text" id="calendar2">
                 <input class="time" type="text">
                 <div class="btn-group-27">
                     <a href="#" class="active">Today</a>
@@ -152,8 +153,8 @@
             </div>
             <div class="reports-content">
                 <div class="line">
-                    <label for="">On:</label>
-                    <select class=" light-select" name="" id="">
+                    <label>On:</label>
+                    <select class="light-select" id="select">
                         <option value="1">Users</option>
                         <option value="2">Users</option>
                         <option value="3">Users</option>
@@ -209,22 +210,22 @@
                 </div>
                 <div class="input-form">
                     <div class="row">
-                        <label for="">Areas:</label>
+                        <label>Areas:</label>
                         <input placeholder="Some text..." type="text">
                         <a class="clear" href="#">clear</a>
                     </div>
                     <div class="row">
-                        <label for="">Products:</label>
+                        <label>Products:</label>
                         <input placeholder="Some text..." type="text">
                         <a class="clear" href="#">clear</a>
                     </div>
                     <div class="row">
-                        <label for="">Installers:</label>
+                        <label>Installers:</label>
                         <input placeholder="Some text..." type="text">
                         <a class="clear" href="#">clear</a>
                     </div>
                     <div class="row">
-                        <label class="last" for="">Install statues:</label>
+                        <label class="last">Install statues:</label>
                         <input placeholder="Some text..." type="text">
                         <a class="clear" href="#">clear</a>
                     </div>
@@ -246,6 +247,20 @@
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <!--[if lte IE 8]><script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            $('.date').each(function(index,item){
+                var date = $(item),
+                time = date.next();
+                date.wrap('<div class="input-wr"><div class="input-wr-inner"></div></div>');
+                time.detach();
+                date.after(time);
+            });
+            $('.input-form input[type=text]').css('width','+=2').inputStyler();
+         });
+    </script>
+    <![endif]-->
     <script>
         $(function() {
             $('#tag').tagsInput({
@@ -255,11 +270,11 @@
                 'defaultText': '',
                 'removeWithBackspace': true
             });
-            $(".calendar").datepicker({
+            $("#calendar1, #calendar2").datepicker({
                   showOtherMonths: true,
                   selectOtherMonths: true
             });
-            $('select').styler({
+            $('#select').styler({
                 browseText: 'All'
             });
         });

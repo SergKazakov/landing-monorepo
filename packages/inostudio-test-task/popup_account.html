@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -37,13 +38,14 @@
                                 </a>
                             </div>
                         </div>
-                        <hr>
                     </div>
-                    <table id="table1" class="tablesorter table-number-1 basic-table">
+                    <table id="table1" class="table-number-1">
                         <thead>
-                            <th>Name</th>
-                            <th class="column-2">Role</th>
-                            <th class="last"></th>
+                            <tr>
+                                <th>Name</th>
+                                <th class="column-2">Role</th>
+                                <th class="last {sorter:false}"></th>
+                            </tr>
                         </thead>
                         <tbody>
                             <tr>
@@ -80,7 +82,6 @@
                 <div class="row-group-2">
                     <div class="hgroup">
                         <h1>Structure</h1>
-                        <hr>
                     </div>
                     <div class="row">
                         <div class="column1">
@@ -146,12 +147,12 @@
                         <div class="column2">
                             <div class="row-group-3">
                                 <div class="row">
-                                    <label for="">Name</label>
-                                    <input type="text" placeholder="Input name...">
+                                    <label>Name</label>
+                                    <input id="input-text" type="text" placeholder="Input name...">
                                 </div>
                                 <div class="row">
-                                    <label for="">Manager</label>
-                                    <select class=" light-select" name="" id="">
+                                    <label>Manager</label>
+                                    <select class="light-select" id="select">
                                         <option value="">User</option>
                                         <option value="">User</option>
                                         <option value="">User</option>
@@ -171,9 +172,8 @@
                                         </a>
                                     </div>
                                 </div>
-                                <hr>
                             </div>
-                            <table class="table-number-2 basic-table">
+                            <table id="table-2" class="table-number-2">
                                 <tbody>
                                     <tr>
                                         <td>Julia</td>
@@ -219,28 +219,23 @@
     <script src="js/plugins/Icheck/icheck.min.js"></script>
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
+    <script src="js/plugins/TableSorter/jquery.metadata.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
         $(function() {
-            $('input[type=checkbox]').iCheck();
-            $('select').styler({
+            var check=$('input[type=checkbox]');
+            check.iCheck();
+            $('#select').styler({
                 browseText: 'All'
             });
             $("#table1").tablesorter();
-            $('table tbody tr').hover(function() {
-                $(this).addClass('highlight');
-                $(this).find('.icheckbox').addClass('hover');
-            }, function() {
-                $(this).removeClass('highlight');
-                $(this).find('.icheckbox').removeClass('hover');
-            });
             $('.icheckbox').on('ifClicked', function() {
                 if ($(this).hasClass('checked')) $(this).closest('tr').removeClass('active');
                 else $(this).closest('tr').addClass('active');
             });
-            $('table tbody tr').click(function() {
+            $('table').on('click', 'tr', function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
                     $(this).find('.icheckbox').iCheck('uncheck');
@@ -261,6 +256,18 @@
             });
         });
     </script>
+    <!--[if lte IE 8]>
+    <script src="js/plugins/Corner/jquery.corner.js"></script>
+    <script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            $('#modal').corner('10px');
+            $('.dropdown-list').wrap('<div class="outer"></div>')
+            .parent().css({'padding':'1px','background':'#bbc6d3', 'top':'-4px'}).corner('6px').end().corner('6px');
+            $('#input-text').css('width','+=2').inputStyler();
+         });
+    </script>
+    <![endif]-->
 </body>
 
 </html>

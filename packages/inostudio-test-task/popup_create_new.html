@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -27,39 +28,39 @@
                 <div class="row-group clearfix">
                     <div class="row-group1">
                         <div class="row">
-                            <label for="">Name</label>
+                            <label>Name</label>
                             <input placeholder="Some text..." type="text">
                         </div>
                         <div class="row">
-                            <label for="">Maximum Input Current</label>
+                            <label>Maximum Input Current</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Max DC Input Voltage</label>
+                            <label>Max DC Input Voltage</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Max Rating for String Fuses</label>
+                            <label>Max Rating for String Fuses</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Compatible Utility Voltages</label>
+                            <label>Compatible Utility Voltages</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Weighted Efficiency</label>
+                            <label>Weighted Efficiency</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Height</label>
+                            <label>Height</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Depth</label>
+                            <label>Depth</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Ambient Temperature Range (Min-Max)</label>
+                            <label>Ambient Temperature Range (Min-Max)</label>
                             <input class="input-group" placeholder="0" type="text">
                             <span>-</span>
                             <input class="input-group" placeholder="0" type="text">
@@ -67,8 +68,8 @@
                     </div>
                     <div class="row-group2">
                         <div class="row">
-                            <label for="">Manufacture</label>
-                            <select class=" light-select">
+                            <label>Manufacture</label>
+                            <select id="select" class="light-select">
                                 <option value="">User</option>
                                 <option value="">User</option>
                                 <option value="">User</option>
@@ -77,37 +78,37 @@
                             </select>
                         </div>
                         <div class="row">
-                            <label for="">Start Voltage</label>
+                            <label>Start Voltage</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Peak Power Tracking Voltage (Min-Max)</label>
+                            <label>Peak Power Tracking Voltage (Min-Max)</label>
                             <input class="input-group" placeholder="0" type="text">
                             <span>-</span>
                             <input class="input-group" placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Rated Power Output</label>
+                            <label>Rated Power Output</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Peak Efficiency</label>
+                            <label>Peak Efficiency</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Maximum Output Current</label>
+                            <label>Maximum Output Current</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Width</label>
+                            <label>Width</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">Height</label>
+                            <label>Height</label>
                             <input placeholder="0" type="text">
                         </div>
                         <div class="row">
-                            <label for="">File</label>
+                            <label>File</label>
                             <input class="file" placeholder="No File" type="text">
                             <a href="#" class="btn-grey-no-icon">
                                 <span>Select</span>
@@ -134,12 +135,22 @@
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <script>
         $(function() {
-            $('select').styler({
+            $('#select').styler({
                 browseText: 'All'
             });
-            $('#modal').css('display', 'block').arcticmodal();
+            $('#modal').arcticmodal();
         });
     </script>
+    <!--[if lte IE 8]>
+    <script src="js/plugins/Corner/jquery.corner.js"></script>
+    <script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            $('#modal').corner('10px');
+            $('.row-group input[type=text]').css('width','+=2').inputStyler();
+        });
+    </script>
+    <![endif]-->
 </body>
 
 </html>

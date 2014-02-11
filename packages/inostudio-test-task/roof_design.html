@@ -15,6 +15,7 @@
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
     <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                 <li>
                     <a href="#">
                         <span class="flag"></span>
-                        Hi, Dillan
+                        <span class="username">Hi, Konstantin Konstantinopolsky</span>
                         <span class="up-arrow"></span>
                     </a>
                     <ul>
@@ -118,7 +119,7 @@
                         <span>Send Text</span>
                     </a>
                 </li>
-                <li>
+                <li class="last">
                     <a class="item4-inner last" href="#">
                         <span>Call</span>
                     </a>
@@ -182,7 +183,9 @@
                 <div class="roof-design-content">
                     <div class="btn-line buttons-top">
                         <a class="btn btn-red" href="#">
-                            <span>New Roff</span>
+                            <span>
+                                <i class="white-plus"></i>
+                                New Roff</span>
                         </a>
                         <a class="btn btn-grey" href="#">
                             <span>Edit</span>
@@ -192,7 +195,7 @@
                         </a>
                     </div>
                     <div class="row">
-                        <table class="roof-table basic-table">
+                        <table class="roof-table basic-table" id="table">
                             <thead>
                                 <tr>
                                     <th></th>
@@ -237,16 +240,15 @@
                         </div>
                     </div>
                     <h1>Roof design</h1>
-                    <hr>
                     <div class="row">
                         <div class="row-group1 clearfix">
                             <div class="row">
-                                <label for="">Roof name</label>
+                                <label>Roof name</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">House type</label>
-                                <select class=" light-select" name="" id="">
+                                <label>House type</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -255,8 +257,8 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Roof shape</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Roof shape</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -265,8 +267,8 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Mounting Method</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Mounting Method</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -276,19 +278,19 @@
                             </div>
                             <div class="row">
                                 <div class="column1">
-                                    <label for="">Roof pitch</label>
+                                    <label>Roof pitch</label>
                                 </div>
                                 <div class="column2">
                                     <input placeholder="Some text..." type="text">
                                 </div>
                             </div>
                             <div class="row">
-                                <label for="">Azimut (south: 0, east:90, west:-90)</label>
+                                <label>Azimut (south: 0, east:90, west:-90)</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Module Orientation</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Module Orientation</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -297,12 +299,12 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Min. between top and bottom edges</label>
+                                <label>Min. between top and bottom edges</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Add gap between rows</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Add gap between rows</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -311,22 +313,22 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Width of each gap</label>
+                                <label>Width of each gap</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                         </div>
                         <div class="row-group2 clearfix">
                             <div class="row">
-                                <label for="">Horizontal distance between modules</label>
+                                <label>Horizontal distance between modules</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Tilt Angle (Flat Roofs Only)</label>
+                                <label>Tilt Angle (Flat Roofs Only)</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Shortest daylight month</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Shortest daylight month</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -335,8 +337,8 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Row Spacing Method</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Row Spacing Method</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -345,24 +347,24 @@
                                 </select>
                             </div>
                             <div class="row">
-                                <label for="">Left side</label>
+                                <label>Left side</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Right side</label>
+                                <label>Right side</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Base</label>
+                                <label>Base</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Top</label>
+                                <label>Top</label>
                                 <input placeholder="Some text..." type="text">
                             </div>
                             <div class="row">
-                                <label for="">Units</label>
-                                <select class=" light-select" name="" id="">
+                                <label>Units</label>
+                                <select class="light-select">
                                     <option value="1">Users</option>
                                     <option value="2">Users</option>
                                     <option value="3">Users</option>
@@ -389,24 +391,27 @@
     <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <!--[if lte IE 8]><script src="js/plugins/inputStyler.min.js"></script>
+    <script>
+        $(function(){
+            var text=$('.left-menu a.active').text();
+            $('.left-menu a.active').html('<span>' + text + '</span>');
+            $('.row input[type=text]').css('width','+=2').inputStyler();
+        });
+    </script><![endif]-->
     <script>
         $(function() {
-            $('input[type=checkbox]').iCheck();
-            $('select').styler({
+            var check=$('#table input[type=checkbox]');
+            check.iCheck();
+            var select=$('.light-select');
+            select.styler({
                 browseText: 'All'
-            });
-            $('table tbody tr').hover(function() {
-                $(this).addClass('highlight');
-                $(this).find('.icheckbox').addClass('hover');
-            }, function() {
-                $(this).removeClass('highlight');
-                $(this).find('.icheckbox').removeClass('hover');
             });
             $('.icheckbox').on('ifClicked', function() {
                 if ($(this).hasClass('checked')) $(this).closest('tr').removeClass('active');
                 else $(this).closest('tr').addClass('active');
             });
-            $('table tbody tr').click(function() {
+            $('#table').on('click', 'tr', function() {
                 if ($(this).hasClass('active')) {
                     $(this).removeClass('active');
                     $(this).find('.icheckbox').iCheck('uncheck');
