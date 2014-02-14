@@ -14,9 +14,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.min.css"><![endif]-->
 </head>
 
 <body>
@@ -76,7 +76,7 @@
                 </li>
             </ul>
             <ul class="user">
-                <li>
+                <li class="first-li">
                     <a href="#">
                         <span class="flag"></span>
                         <span class="username">Hi, Konstantin Konstantinopolsky</span>
@@ -89,7 +89,7 @@
                                 Settings
                             </a>
                         </li>
-                        <li>
+                        <li class="last-li">
                             <a class="last" href="#">
                                 <span class="door"></span>
                                 Logout
@@ -286,7 +286,7 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
-    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <script>
         $(function() {
@@ -301,11 +301,10 @@
             });
     </script>
     <!--[if lte IE 8]>
-ipt>
+    <script src="js/plugins/inputStyler.min.js"></script>
     <script>
         $(function(){
-            var text=$('.left-menu a.active').text();
-            $('.left-menu a.active').html('<span>' + text + '</span>');
+            $('.left-menu a.active').wrapInner('<span></span>');
             $('#input-text').css('width','+=2').inputStyler();
         });
     </script><![endif]-->

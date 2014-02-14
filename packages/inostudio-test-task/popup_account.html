@@ -13,9 +13,9 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.min.css"><![endif]-->
 </head>
 
 <body>
@@ -39,7 +39,7 @@
                             </div>
                         </div>
                     </div>
-                    <table id="table1" class="table-number-1">
+                    <table id="table1" class="table table-number-1">
                         <thead>
                             <tr>
                                 <th>Name</th>
@@ -88,54 +88,68 @@
                             <div class="dropdown-list">
                                 <ul id="treeview">
                                     <li class="folder">
-                                        <a href="#">Account1</a>
+                                        <a href="#">
+                                            <i class="arrow"></i>Account1</a>
                                         <ul>
                                             <li class="folder">
-                                                <a href="#">Branch-1</a>
+                                                <a href="#">
+                                                    <i class="arrow"></i>Branch-1</a>
                                                 <ul>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-1</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-1</a>
                                                     </li>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-2</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-2</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li class="folder">
-                                                <a href="#">Branch-2</a>
+                                                <a href="#">
+                                                    <i class="arrow"></i>Branch-2</a>
                                                 <ul>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-1</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-1</a>
                                                     </li>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-2</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-2</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
                                     </li>
                                     <li class="folder">
-                                        <a href="#">Account1</a>
+                                        <a href="#">
+                                            <i class="arrow"></i>Account1</a>
                                         <ul>
                                             <li class="folder">
-                                                <a href="#">Branch-1</a>
+                                                <a href="#">
+                                                    <i class="arrow"></i>Branch-1</a>
                                                 <ul>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-1</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-1</a>
                                                     </li>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-2</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-2</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                             <li class="folder">
-                                                <a href="#">Branch-2</a>
+                                                <a href="#">
+                                                    <i class="arrow"></i>Branch-2</a>
                                                 <ul>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-1</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-1</a>
                                                     </li>
                                                     <li class="folder">
-                                                        <a class="file" href="#">Team-2</a>
+                                                        <a class="file" href="#">
+                                                            <i class="arrow"></i>Team-2</a>
                                                     </li>
                                                 </ul>
                                             </li>
@@ -173,7 +187,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <table id="table-2" class="table-number-2">
+                            <table id="table-2" class="table table-number-2">
                                 <tbody>
                                     <tr>
                                         <td>Julia</td>
@@ -217,7 +231,7 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/Icheck/icheck.min.js"></script>
-    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
     <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
     <script src="js/plugins/TableSorter/jquery.metadata.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
@@ -263,8 +277,12 @@
         $(function(){
             $('#modal').corner('10px');
             $('.dropdown-list').wrap('<div class="outer"></div>')
-            .parent().css({'padding':'1px','background':'#bbc6d3', 'top':'-4px'}).corner('6px').end().corner('6px');
+            .parent().css({'padding':'1px','background':'#bbc6d3', 'top':'-4px'}).corner('5px').end().corner('5px');
             $('#input-text').css('width','+=2').inputStyler();
+            $('.dropdown-list a').each(function(){
+                var text=$(this).text();
+                $(this).html('<span><i class="arrow"></i>'+text+'</span>');
+            });
          });
     </script>
     <![endif]-->
