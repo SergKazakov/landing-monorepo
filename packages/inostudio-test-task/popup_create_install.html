@@ -14,10 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="js/plugins/Timepicker/jquery.ui.timepicker.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.min.css">
     <!--[if lt ie 9]>
-        <link rel="stylesheet" href="css/ie.css">
+        <link rel="stylesheet" href="css/ie.min.css">
         <link rel="stylesheet" href="js/plugins/JqTransform/jqtransform.css">
     <![endif]-->
 </head>
@@ -57,7 +58,7 @@
                     <div class="row">
                             <label>Install Time</label>
                             <input id="calendar" class="date" type="text">
-                            <input class="time" type="text">
+                            <input id="time" class="time" type="text">
                     </div>
                     <div class="btn-line">
                         <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
@@ -73,7 +74,8 @@
     </div>
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
-    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/Timepicker/jquery.ui.timepicker.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
     <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
@@ -82,6 +84,9 @@
             $("#calendar").datepicker({
                   showOtherMonths: true,
                   selectOtherMonths: true
+            });
+            $('#time').timepicker({
+                showPeriod: true
             });
             $('#modal').arcticmodal();
             $('#select1, #select2').styler({
@@ -95,7 +100,8 @@
     <script>
         $(function(){
             $('#modal').corner('10px');
-            $('input[type=text]').css('width','+=1').wrapAll('<div class="input-wr"><div class="input-wr-inner"></div></div>');
+            $('#calendar, #time').css('width','+=1').wrapAll('<div class="input-wr"><div class="input-wr-inner"></div></div>');
+            $('#time').after('<span></span>');
             $('#jqtransform').jqTransform();
         });
     </script>

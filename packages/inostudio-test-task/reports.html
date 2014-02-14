@@ -14,10 +14,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="js/plugins/Timepicker/jquery.ui.timepicker.css">
     <link rel="stylesheet" href="js/plugins/TagsInputPlugin/jquery.tagsinput.min.css">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.min.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
     <link rel="stylesheet" href="css/main.min.css">
-    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.css"><![endif]-->
+    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.min.css"><![endif]-->
 </head>
 
 <body>
@@ -77,7 +78,7 @@
                 </li>
             </ul>
             <ul class="user">
-                <li>
+                <li class="first-li">
                     <a href="#">
                         <span class="flag"></span>
                         <span class="username">Hi, Konstantin Konstantinopolsky</span>
@@ -90,7 +91,7 @@
                                 Settings
                             </a>
                         </li>
-                        <li>
+                        <li class="last-li">
                             <a class="last" href="#">
                                 <span class="door"></span>
                                 Logout
@@ -139,11 +140,11 @@
         <div class="container">
             <div class="info reports-info clearfix">
                 <label>From:</label>
-                <input class="date" type="text" id="calendar1">
-                <input class="time" type="text">
+                <input class="date" type="text" id="date1">
+                <input class="time" type="text" id="time1">
                 <label>to:</label>
-                <input class="date" type="text" id="calendar2">
-                <input class="time" type="text">
+                <input class="date" type="text" id="date2">
+                <input class="time" type="text" id="time2">
                 <div class="btn-group-27">
                     <a href="#" class="active">Today</a>
                     <a href="#">Week</a>
@@ -243,8 +244,9 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
     <script src="js/plugins/Datepicker/jquery-ui.js"></script>
+    <script src="js/plugins/Timepicker/jquery.ui.timepicker.js"></script>
     <script src="js/plugins/TagsInputPlugin/jquery.tagsinput.js"></script>
-    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
     <script src="js/prefixfree.min.js"></script>
     <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
     <!--[if lte IE 8]><script src="js/plugins/inputStyler.min.js"></script>
@@ -257,6 +259,7 @@
                 time.detach();
                 date.after(time);
             });
+            $('#time1, #time2').after('<span></span>');
             $('.input-form input[type=text]').css('width','+=2').inputStyler();
          });
     </script>
@@ -270,9 +273,12 @@
                 'defaultText': '',
                 'removeWithBackspace': true
             });
-            $("#calendar1, #calendar2").datepicker({
+            $("#date1, #date2").datepicker({
                   showOtherMonths: true,
                   selectOtherMonths: true
+            });
+            $('#time1, #time2').timepicker({
+                showPeriod: true
             });
             $('#select').styler({
                 browseText: 'All'
