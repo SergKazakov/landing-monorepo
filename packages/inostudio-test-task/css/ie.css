@@ -330,3 +330,8 @@
 .lt-ie9 .user .last-li > a {
     background-position: right -836px;
 }
+
+/* fancybox */
+.lt-ie9 .fancybox-title-float-wrap .child{
+    background: #000 !important;
+}
