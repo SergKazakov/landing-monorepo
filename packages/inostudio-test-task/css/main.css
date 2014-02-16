@@ -1614,11 +1614,12 @@ input[type=text].time:focus{
     .system-design-content .span input.last { width: 106px; }
 
     .system-design-content .row-group1 .span,
-.system-design-content .row-group1 a {
+    .system-design-content .row-group1 a {
         float: left;
         margin-left: 11px; }
-
-    .system-design-content .row-group1 a {
+    
+    .minus,
+    .plus{
         margin-top: 1px;
         display: block;
         background: url(../img/btn_sprite.png) 0 -2984px no-repeat;
@@ -1626,18 +1627,23 @@ input[type=text].time:focus{
         height: 24px;
     }
 
-        .system-design-content .row-group1 a:hover { background-position: 0 -3029px; }
+    .minus:hover,
+    .plus:hover { background-position: 0 -3029px; }
 
-        .system-design-content .row-group1 a:active { background-position: 0 -3074px; }
+    .minus:active,
+    .plus:active { background-position: 0 -3074px; }
 
-        .system-design-content .row-group1 a span {
-            width: 19px;
-            height: 18px;
-            display: inline-block; }
+    .minus span,
+    .plus span{
+        width: 19px;
+        height: 18px;
+        display: inline-block; 
+        background: url(../img/sprites.png) no-repeat;
+    }
 
-    .system-design-content .row-group1 .minus span { background: url(../img/sprites.png) -167px -225px no-repeat; }
+    .minus span { background-position: -167px -225px; }
 
-    .system-design-content .row-group1 .plus span { background: url(../img/sprites.png) -167px -200px no-repeat; }
+    .plus span { background-position: -167px -200px; }
 
     .system-design-content .btn-grey-icon { width: 144px; }
 
@@ -1648,15 +1654,12 @@ input[type=text].time:focus{
     }
 
     .system-design-content .row-group2 .column2{
-    float: right;
+        float: right;
+        width: 184px;
     }
 
     .system-design-content .row-group2 .btn-grey-icon{
         margin-right: 20px;
-    }
-
-    .system-design-content .row-group2 .column2 p {
-        width: 184px;
     }
 
     .system-design-content .doc,
@@ -1690,6 +1693,14 @@ input[type=text].time:focus{
         border-bottom: 1px solid #bdc6d4;
     }
 
+    .system-design-content .title h1{
+        float: left;
+    }
+
+    .system-design-content .title .btn-grey-icon{
+        float: right;
+    }
+
     .system-design-content .row.parag { margin: 18px 42px 28px 20px; }
 
         .system-design-content .row.parag .row:first-child { margin-top: 0; }
@@ -1698,15 +1709,24 @@ input[type=text].time:focus{
 
     .system-design-content .row.images {
         margin-top: 14px;
-        margin-bottom: 39px; }
+        margin-bottom: 30px;
+        width: 436px;
+    }
 
-        .system-design-content .row.images .row:first-child { margin-top: 0; }
+        .system-design-content .row.images a { 
+            margin-bottom: 9px;
+            display: inline-block;
+            margin-left: 15px;
+            margin-right: -4px;
+            padding: 3px;
+            border: 1px solid #d2d4d4;
+            box-shadow: 0 0 9px rgba(0,0,0,0.5);
+        }
 
-        .system-design-content .row.images .row { margin-top: 9px; }
-
-    .system-design-content .row .image-span {
-        float: left;
-        margin-left: 15px; }
+        .system-design-content .row.images a img{
+            width: 86px;
+            height: 86px;
+        }
 
     .system-design-content .jq-selectbox__select { width: 166px; }
 
