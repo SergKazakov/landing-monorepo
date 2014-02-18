@@ -505,6 +505,7 @@ input[type=text] {
     background-color: #404448;
     filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#6d737b', endColorstr='#404448',GradientType=0); zoom: 1;
     background-image: linear-gradient(to bottom, #6d737b, #404448);
+    background-image: -webkit-linear-gradient(top, #6d737b 0%, #404448 100%);
     font-size: 17px;
     border: 0;
     padding: 4px 0;
@@ -735,7 +736,7 @@ a{
         font-size: 12px;
         background-color: #60666e;
         border: 1px solid #878e97;
-        padding: 7px 13px 10px 8px; 
+        padding: 7px 13px 10px 8px;
     }
 
         .user .username{
@@ -1003,6 +1004,7 @@ p.image-title {
         background-color: #585d63;
         filter: progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr='#818992', endColorstr='#585d63',GradientType=0); zoom: 1;
         background-image: linear-gradient(to bottom, #818992, #585d63);
+        background-image: -webkit-linear-gradient(top, #818992 0%, #585d63 100%);
         box-shadow: inset 0px 1px 2px rgba(255, 255, 255, 0.3);
         margin: 0;
         font-weight: normal;
@@ -1623,7 +1625,7 @@ input[type=text].time:focus{
     .system-design-content .row-group1 a {
         float: left;
         margin-left: 11px; }
-    
+
     .minus,
     .plus{
         margin-top: 1px;
@@ -1643,7 +1645,7 @@ input[type=text].time:focus{
     .plus span{
         width: 19px;
         height: 18px;
-        display: inline-block; 
+        display: inline-block;
         background: url(../img/sprites.png) no-repeat;
     }
 
@@ -1719,7 +1721,7 @@ input[type=text].time:focus{
         width: 436px;
     }
 
-        .system-design-content .gallery a { 
+        .system-design-content .gallery a {
             margin-bottom: 9px;
             display: inline-block;
             margin-left: 15px;
@@ -2308,14 +2310,14 @@ table .header {
         .popup.account .dropdown-list .folder.open > a .arrow {
             background-position: -304px -82px;
         }
-    
+
         .popup.account .dropdown-list .folder.open > a.file .arrow {
             background-position: -303px -53px;
         }
-    
+
         .popup.account .dropdown-list .folder.open > a.active .arrow {
             background-position: -304px -109px;
-        } 
+        }
 
 .popup.account .row-group-3 input[type=text] { width: 271px; }
 
