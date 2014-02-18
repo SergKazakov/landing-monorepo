@@ -1,3 +1,9 @@
+/* fix scroll in ie7 */
+
+.lt-ie8{
+    overflow: auto;
+}
+
 /* fix placeholder */
 
 .-js-placeholder {
