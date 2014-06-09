@@ -26,7 +26,7 @@
         <header class="header">
             <div class="header__inner">
                 <a href="#" class="logo"><img src="img/logo.png" alt=""></a>
-                <nav class="nav">
+                <nav class="nav nav-collapse">
                     <a href="#" class="nav__item">home</a>
                     <a href="#services" class="nav__item">services</a>
                     <a href="#features" class="nav__item">features</a>
@@ -35,7 +35,7 @@
                 </nav>
             </div>
         </header>
-        <section class="hero">
+        <section id="hero" class="hero">
             <h2 class="hero-title">
                 <div class="hero-title__inner">“I’m looking for the unexpected.</div>
             </h2>
@@ -121,7 +121,9 @@
                     <a href="#7" class="btn btn--bordered">visit me</a>
                 </div>
                 <div class="section__item">
-                    <div class="video-player"></div>
+                    <div class="video-player">
+                        <iframe src="//www.youtube.com/embed/NzUyorEJ8Jg" frameborder="0" allowfullscreen></iframe>
+                    </div>
                 </div>
             </div>
         </section>
@@ -157,17 +159,11 @@
                 <div class="author">-Walter White</div>
             </div>
         </section>
-        <section class="contact">
+        <section id="contact" class="contact">
             <div class="contact__inner">
                 <h2 class="title">contact</h2>
                 <form action="#">
                     <div class="contact-form">
-                        <div class="contact-form__item">
-                            <label class="form-label" for="name">full name</label>
-                            <input class="form-input" type="text" id="name" placeholder="Full Name">
-                            <label class="form-label" for="email">email</label>
-                            <input class="form-input" type="text" id="email" placeholder="Email">
-                        </div>
                         <div class="contact-form__item">
                             <p>Jujubes bear claw croissant wafer sweet lemon drops brownie chocolate bar. Sweet lollipop halvah tootsie roll cake fruitcake. Chocolate cake chocolate bar gingerbread lollipop tart. Jujubes bear claw donut chupa chups.</p>
                             <ul class="contact-info">
@@ -176,6 +172,12 @@
                                 <li>Mondovi, WI(Wisconsin) 98746-54321</li>
                                 <li>(715) 946 - 1234</li>
                             </ul>
+                        </div>
+                        <div class="contact-form__item">
+                            <label class="form-label" for="name">full name</label>
+                            <input class="form-input" type="text" id="name" placeholder="Full Name">
+                            <label class="form-label" for="email">email</label>
+                            <input class="form-input" type="text" id="email" placeholder="Email">
                         </div>
                     </div>
                     <label class="form-label" for="message">message</label>
@@ -197,11 +199,15 @@
         </footer>
         <!-- bower:js -->
         <script src="js/vendor/jquery/dist/jquery.js"></script>
+        <script src="js/vendor/responsiveNav/responsive-nav.min.js"></script>
         <!-- endbower -->
         <script src="js/main.js"></script>
         <!--[if lte ie 9]><script src="js/vendor/ie8/placeholder-min.js"></script><![endif]-->
-        <!--[if lt ie 9]>
+        <!--[if lt ie 9]><script src="js/vendor/ie8/jquery.backgroundSize.js"></script>
         <script>
+            $(function(){
+                $('.hero, .about-me, .contact').css( "background-size", "cover" );
+            });
         </script><![endif]-->
     </body>
 </html>

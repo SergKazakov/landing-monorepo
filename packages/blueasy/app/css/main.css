@@ -423,6 +423,50 @@ The provided mixins are intended to be used with the array-like variables
 .icon-dribble:before {
   content: "d"; }
 
+/*! responsive-nav.js @@version by @viljamis */
+.nav-collapse ul {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  display: block;
+  list-style: none; }
+
+.nav-collapse li {
+  width: 100%;
+  display: block; }
+
+.js .nav-collapse {
+  clip: rect(0 0 0 0);
+  max-height: 0;
+  position: absolute;
+  display: block;
+  overflow: hidden;
+  zoom: 1; }
+
+.nav-collapse.opened {
+  max-height: 9999px; }
+
+.disable-pointer-events {
+  pointer-events: none !important; }
+
+.nav-toggle {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none; }
+
+@media screen and (min-width: 769px) {
+  .js .nav-collapse {
+    position: relative; }
+
+  .js .nav-collapse.closed {
+    max-height: none; }
+
+  .nav-toggle {
+    display: none; } }
 .btn {
   display: inline-block;
   color: #353f46;
@@ -445,6 +489,7 @@ The provided mixins are intended to be used with the array-like variables
 
 .header {
   background: rgba(81, 95, 103, 0.85);
+  z-index: 100;
   position: absolute;
   left: 0;
   top: 0;
@@ -452,8 +497,14 @@ The provided mixins are intended to be used with the array-like variables
 .lt-ie9 .header {
   background: transparent;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9515F67,endColorstr=#D9515F67); }
+@media screen and (max-width: 768px) {
+  .header {
+    background: #515f67; } }
 .header__inner {
   padding: 58px 15px 57px; }
+@media screen and (max-width: 768px) {
+  .header__inner {
+    padding: 20px 15px; } }
 
 .logo {
   float: left;
@@ -470,6 +521,11 @@ The provided mixins are intended to be used with the array-like variables
 
 .nav {
   float: right; }
+@media screen and (max-width: 768px) {
+  .nav {
+    clear: left;
+    width: 100%;
+    margin-top: 20px; } }
 .nav__item {
   display: inline-block;
   color: rgba(255, 255, 255, 0.9);
@@ -483,6 +539,16 @@ The provided mixins are intended to be used with the array-like variables
   -moz-transition: color 300ms, border 300ms;
   -spec-transition: color 300ms, border 300ms;
   transition: color 300ms, border 300ms; }
+.lt-ie9 .nav__item {
+  color: #fff; }
+@media screen and (max-width: 768px) {
+  .nav__item {
+    width: 100%;
+    border: 0;
+    font-size: 1.125em;
+    padding: 5px 0; }
+  .nav__item:first-letter {
+    color: #4bcaff; } }
 .nav__item:hover, .nav__item--active {
   color: #4bcaff;
   border-color: #4bcaff; }
@@ -498,14 +564,23 @@ The provided mixins are intended to be used with the array-like variables
   text-align: center;
   font-size: 2.625em;
   margin: 10px 0; }
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 2em; } }
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.25em; } }
 .hero-title__inner {
   display: inline-block;
   color: #fff;
   font-weight: 300;
-  padding: 0 3px;
+  padding: 0 5px;
   line-height: 1.786;
   background: #515f67;
   text-transform: uppercase; }
+@media screen and (max-width: 992px) {
+  .hero-title__inner {
+    background-color: transparent; } }
 
 .services {
   background: #4bcaff;
@@ -517,10 +592,23 @@ The provided mixins are intended to be used with the array-like variables
 .services__item {
   float: left;
   position: relative;
-  padding-top: 68px;
-  width: 23.07692%; }
-.services__item + .services__item {
-  margin-left: 2.5641%; }
+  padding-top: 68px; }
+@media screen and (min-width: 993px) {
+  .services__item {
+    width: 23.07692%; }
+  .services__item + .services__item {
+    margin-left: 2.5641%; } }
+@media screen and (max-width: 992px) {
+  .services__item {
+    width: 46%;
+    margin-bottom: 20px; }
+  .services__item:nth-child(even) {
+    margin-left: 4%; } }
+@media screen and (max-width: 768px) {
+  .services__item {
+    width: 100%; }
+  .services__item:nth-child(even) {
+    margin-left: 0; } }
 .services__item:before {
   content: '';
   display: inline-block;
@@ -563,6 +651,9 @@ The provided mixins are intended to be used with the array-like variables
   font-weight: 300;
   line-height: 0.8;
   text-transform: uppercase; }
+@media screen and (max-width: 480px) {
+  .title {
+    line-height: 1.2; } }
 .title--dark {
   color: #515f67; }
 .title--portfolio {
@@ -577,12 +668,21 @@ The provided mixins are intended to be used with the array-like variables
 .filter {
   float: right;
   margin-top: 30px; }
+@media screen and (max-width: 992px) {
+  .filter {
+    width: 100%;
+    margin-bottom: 20px; } }
 .filter__item {
   float: left; }
-.filter__item + .filter__item {
-  margin-left: 16px; }
+@media screen and (min-width: 769px) {
+  .filter__item + .filter__item {
+    margin-left: 16px; } }
+@media screen and (max-width: 768px) {
+  .filter__item {
+    width: 100%;
+    margin-bottom: 20px; } }
 .filter__item-link {
-  display: block;
+  display: inline-block;
   color: rgba(81, 95, 103, 0.9);
   font-size: 0.875em;
   font-weight: 700;
@@ -594,6 +694,10 @@ The provided mixins are intended to be used with the array-like variables
   -moz-transition: color 300ms, border-color 300ms;
   -spec-transition: color 300ms, border-color 300ms;
   transition: color 300ms, border-color 300ms; }
+.lt-ie9 .filter__item-link {
+  color: #ccc; }
+.lt-ie9 .filter__item-link--active {
+  color: #4bcaff; }
 .filter__item-link:hover, .filter__item-link--active {
   color: #4bcaff;
   border-color: #4bcaff; }
@@ -607,13 +711,27 @@ The provided mixins are intended to be used with the array-like variables
 .gallery__item {
   float: left;
   height: 0;
-  padding-top: 23.07692%;
-  position: relative;
-  width: 23.07692%;
   margin-bottom: 30px;
-  margin-left: 2.5641%; }
-.gallery__item:nth-child(4n+1) {
-  margin-left: 0; }
+  position: relative; }
+@media screen and (min-width: 993px) {
+  .gallery__item {
+    padding-top: 23.07692%;
+    width: 23.07692%;
+    margin-left: 2.5641%; }
+  .gallery__item:nth-child(4n+1) {
+    margin-left: 0; } }
+@media screen and (max-width: 992px) {
+  .gallery__item {
+    width: 48%;
+    padding-top: 40%; }
+  .gallery__item:nth-child(even) {
+    margin-left: 4%; } }
+@media screen and (max-width: 480px) {
+  .gallery__item {
+    width: 100%;
+    padding-top: 70%; }
+  .gallery__item:nth-child(even) {
+    margin-left: 0; } }
 .gallery__item:hover .gallery__overlay {
   opacity: 1; }
 .lt-ie9 .gallery__item:hover .gallery__overlay {
@@ -663,18 +781,34 @@ The provided mixins are intended to be used with the array-like variables
 .section__inner {
   padding: 54px 15px 80px; }
 .section__item {
-  float: left;
-  width: 48.71795%;
-  margin-left: 11.11111%; }
-.section__item:first-child {
-  width: 40.17094%;
-  margin-left: 0; }
+  float: left; }
+@media screen and (min-width: 993px) {
+  .section__item {
+    width: 48.71795%;
+    margin-left: 11.11111%; }
+  .section__item:first-child {
+    width: 40.17094%;
+    margin-left: 0; } }
+@media screen and (max-width: 992px) {
+  .section__item {
+    width: 100%; } }
 
 .video-player {
   height: 0;
   padding-top: 54.75214%;
-  margin: 26px 0 0 11px;
-  background: url(../img/video.jpg) no-repeat; }
+  position: relative; }
+@media screen and (min-width: 993px) {
+  .video-player {
+    margin: 26px 0 0 11px; } }
+@media screen and (max-width: 992px) {
+  .video-player {
+    margin-top: 20px; } }
+.video-player iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%; }
 
 .twitter {
   background: #4bcaff; }
@@ -692,6 +826,9 @@ The provided mixins are intended to be used with the array-like variables
   font-size: 1.75em;
   font-weight: 300;
   line-height: 1.786; }
+@media screen and (max-width: 480px) {
+  .twitter__post {
+    font-size: 1.125em; } }
 
 .hashtag {
   font-weight: 600;
@@ -708,10 +845,15 @@ The provided mixins are intended to be used with the array-like variables
 .about-me__inner {
   padding: 74px 15px 165px; }
 .about-me__item {
-  float: left;
-  width: 48.71795%; }
-.about-me__item + .about-me__item {
-  margin-left: 2.5641%; }
+  float: left; }
+@media screen and (min-width: 769px) {
+  .about-me__item {
+    width: 48.71795%; }
+  .about-me__item + .about-me__item {
+    margin-left: 2.5641%; } }
+@media screen and (max-width: 768px) {
+  .about-me__item {
+    width: 100%; } }
 
 .socials {
   margin-top: 30px; }
@@ -726,6 +868,10 @@ The provided mixins are intended to be used with the array-like variables
   -moz-transition: all 300ms;
   -spec-transition: all 300ms;
   transition: all 300ms; }
+@media screen and (max-width: 480px) {
+  .socials__item {
+    padding: 20px;
+    font-size: 1.25em; } }
 .socials__item + .socials__item {
   margin-left: 16px; }
 .socials__item:hover {
@@ -735,6 +881,10 @@ The provided mixins are intended to be used with the array-like variables
   position: absolute;
   left: 13px;
   top: 14px; }
+@media screen and (max-width: 480px) {
+  .socials__item:before {
+    left: 10px;
+    top: 10px; } }
 
 .testimonials__inner {
   padding: 54px 15px 61px; }
@@ -746,6 +896,9 @@ The provided mixins are intended to be used with the array-like variables
   line-height: 1.786;
   margin: 11px 0;
   position: relative; }
+@media screen and (max-width: 480px) {
+  .blockquote {
+    font-size: 1.125em; } }
 .blockquote:before {
   content: '';
   position: absolute;
@@ -774,18 +927,26 @@ The provided mixins are intended to be used with the array-like variables
 .contact-form {
   margin-top: 37px; }
 .contact-form__item {
-  float: left;
-  width: 48.71795%;
-  margin-left: 11.11111%; }
-.contact-form__item:first-child {
-  width: 40.17094%;
-  margin-left: 0; }
+  float: right; }
+@media screen and (min-width: 769px) {
+  .contact-form__item {
+    width: 40.17094%;
+    margin-left: 0; }
+  .contact-form__item:first-child {
+    width: 48.71795%;
+    margin-left: 11.11111%; } }
+@media screen and (max-width: 768px) {
+  .contact-form__item {
+    width: 100%; } }
 .contact-info {
   color: #fff;
   font-size: 0.875em;
   font-weight: 600;
   line-height: 1.714;
   margin-top: 35px; }
+@media screen and (max-width: 768px) {
+  .contact-info {
+    margin-bottom: 20px; } }
 
 .form-label {
   color: #fff;
@@ -802,9 +963,9 @@ The provided mixins are intended to be used with the array-like variables
   border: 2px solid #fff;
   padding: 17px 5px;
   background-color: transparent;
-  -moz-border-radius: none;
-  -webkit-border-radius: none;
-  border-radius: none;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   -spec-transition: all 300ms;
@@ -820,8 +981,11 @@ The provided mixins are intended to be used with the array-like variables
   color: #fff;
   font-weight: 700;
   line-height: 1.714;
-  padding: 18px 148px;
+  padding: 18px 12.64957%;
   text-transform: uppercase;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   -spec-transition: all 300ms;
@@ -833,8 +997,14 @@ The provided mixins are intended to be used with the array-like variables
   background: #353f47; }
 .footer__inner {
   padding: 72px 15px 74px; }
+@media screen and (max-width: 480px) {
+  .footer__inner {
+    text-align: center; } }
 .footer-nav {
   float: left; }
+@media screen and (max-width: 480px) {
+  .footer-nav {
+    width: 100%; } }
 .footer-nav__item {
   display: inline-block;
   color: #515f67;
@@ -846,13 +1016,18 @@ The provided mixins are intended to be used with the array-like variables
   -moz-transition: color 300ms;
   -spec-transition: color 300ms;
   transition: color 300ms; }
+@media screen and (max-width: 480px) {
+  .footer-nav__item {
+    display: block;
+    font-size: 1.125em; } }
 .footer-nav__item:hover {
   color: #677984; }
 .footer-nav__item + .footer-nav__item {
   margin-left: 7px; }
-.footer-nav__item + .footer-nav__item:before {
-  content: '|';
-  margin-right: 8px; }
+@media screen and (min-width: 481px) {
+  .footer-nav__item + .footer-nav__item:before {
+    content: '|';
+    margin-right: 8px; } }
 
 .copyright {
   float: right;
@@ -861,5 +1036,25 @@ The provided mixins are intended to be used with the array-like variables
   font-weight: 600;
   line-height: 2;
   margin: 0; }
+@media screen and (max-width: 480px) {
+  .copyright {
+    width: 100%;
+    font-size: 1.125em; } }
+
+.nav-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid #4bcaff; }
+
+.icon-bar {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #4bcaff; }
+.icon-bar + .icon-bar {
+  margin-top: 4px; }
 
 /*# sourceMappingURL=main.css.map */
