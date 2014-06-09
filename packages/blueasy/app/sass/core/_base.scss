@@ -16,11 +16,24 @@ a {
     text-decoration: none;
 }
 
+p{
+    line-height: 1.714;
+    color: #fff;
+    font-size: em(14);
+}
+
 
 input {
     border: 0;
     font-family: $base-font-family;
     &:focus {
         outline: 0;
+    }
+}
+
+textarea{
+    resize: none;
+    &:focus{
+        outline: none;
     }
 }

@@ -6,4 +6,480 @@
 @import "core/sprite";
 @import "vendor/fonts";
 
+.btn{
+	display: inline-block;
+	color:  #353f46;
+	font-size: em(14);
+	font-weight: $bold;
+	line-height: 1.714;
+	text-transform: uppercase;
+	padding: 8px 38px;
+	@include transition(all $transition-duration);
+	&:hover{
+		cursor: pointer;
+	}
+	&--bordered{
+		border: 2px solid #353f46;
+		&:hover{
+			color: lighten(#353f46, 5%);
+			border-color: lighten(#353f46, 5%);
+		}
+	}
+}
 
+.header{
+	@include rgba($bg-color-1, 0.85);
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	&__inner{
+		@extend %container;
+		@extend %clearfix;
+		padding: 58px $container-gutter 57px; 
+	}
+}
+
+.logo{
+	float: left;
+	margin-top: 7px;
+	@include transition(opacity $transition-duration);
+	&:hover{
+		@include opacity(0.5);
+	}
+}
+
+.nav{
+	float: right;
+	&__item{
+		display: inline-block;
+		color:  rgba(255, 255, 255, 0.9);
+		font-size: em(14);
+		font-weight: $bold;
+		line-height: 1.714;
+		text-transform: uppercase;
+		padding: 5px 17px;
+		border: 2px solid transparent;
+		@include transition(color $transition-duration, border $transition-duration);
+		&:hover, &--active{
+			color: $bg-color-2;
+			border-color: $bg-color-2;
+		}
+	}
+}
+
+.hero{
+	background: url(../img/hero.jpg) no-repeat;
+	@include background-size;
+	padding: percentage(400/1920) $container-gutter percentage(258/1920);
+	&-title{
+		text-align: center;
+		font-size: em(42);
+		margin: 10px 0;
+		&__inner{
+			display: inline-block;
+			color:  #fff;
+			font-weight: $light;
+			padding: 0 3px;
+			line-height: 1.786;
+			background: $bg-color-1;
+			text-transform: uppercase;
+		}
+	}
+}
+
+$images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame); 
+
+.services{
+	background:$bg-color-2;
+	color: #fff;
+	&__inner{
+		@extend %container;
+		padding: 54px $container-gutter 64px;
+	}
+	&-container{
+		@extend %clearfix;
+		margin-top: 39px;
+	}
+	&__item{
+		float: left;
+		position: relative;
+		padding-top: 68px;
+		width: percentage(270px/ $container-width);
+		&+&{
+			margin-left: percentage(30px/ $container-width);
+		}
+		&:before{
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+		@each $i, $img in $images{
+			&--#{$i}:before{
+				@include sprite($img);
+			}
+		}
+		&-title{
+			font-size: em(24);
+			font-weight: $semibold;
+			line-height: 1;
+			text-transform: uppercase;
+		}
+		&-content{
+			font-size: em(12);
+			font-weight: $semibold;
+			line-height: 1.5;
+		}
+	}
+}
+
+.title{
+	color:  #fff;
+	font-size: em(30);
+	font-weight: $light;
+	line-height: 0.8;
+	text-transform: uppercase;
+	&--dark{
+		color: #515f67;
+	}
+	&--portfolio{
+		float: left;
+	}
+	&:after{
+		content: '';
+		display: block;
+		border-bottom: 2px solid;
+		width: 45px;
+		margin-top: 9px;
+	}
+}
+
+.filter{
+	float: right;
+	margin-top: 30px;
+	@extend %clearfix;
+	&__item{
+		float: left;
+		&+&{
+			margin-left: 16px;
+		}
+		&-link{
+			display: block;
+			color:  rgba(81, 95, 103, 0.9);
+			font-size: em(14);
+			font-weight: $bold;
+			line-height: 1.714;
+			text-transform: uppercase;
+			padding: 2px 15px;
+			border: 2px solid transparent;
+			@include transition(color $transition-duration, border-color $transition-duration);
+			&:hover, &--active{
+				color: $bg-color-2;
+				border-color: $bg-color-2;
+			}
+		}
+	}
+}
+
+.portfolio{
+	&__inner{
+		@extend %container;
+		@extend %clearfix;
+		padding: 54px $container-gutter 50px;
+	}
+}
+
+.gallery{
+	clear: left;
+	margin-top: 140px;
+	@extend %clearfix;
+	&__item{
+		float: left;
+		height: 0;
+		padding-top: percentage(270px/ $container-width);
+		position: relative;
+		width: percentage(270px/ $container-width);
+		margin-bottom: 30px;
+		margin-left: percentage(30px/ $container-width);;
+		&:nth-child(4n+1){
+			margin-left: 0;
+		}
+		&:hover .gallery__overlay{
+			@include opacity(1);
+			//ie8
+			@include ie-rgba(#454e56, 0.8);
+		}
+	}
+	&__img, &__overlay{
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	&__overlay{
+		@include rgba(#454e56, 0.8);
+		@include opacity(0);
+		@include transition(opacity $transition-duration);
+	}
+}
+
+.plus{
+	@include sprite($plus);
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	//ie8
+	.lt-ie9 &{
+		visibility: hidden;
+	}
+	.lt-ie9 .gallery__item:hover &{
+		visibility: visible;
+	}
+}
+
+
+.section{
+	background:$bg-color-1;
+	&__inner{
+		@extend %container;
+		@extend %clearfix;
+		padding: 54px $container-gutter 80px;
+	}
+	&__item{
+		float: left;
+		&:first-child{
+			width: percentage(470px/ $container-width);
+			margin-left: 0;
+		}
+		width: percentage(570px/ $container-width);
+		margin-left: percentage(130px/ $container-width);
+	}
+}
+
+.video-player{
+	height: 0;
+	padding-top: 54.75214%;
+	margin: 26px 0 0 11px;
+	background: url(../img/video.jpg) no-repeat;
+}
+
+.twitter{
+	background:$bg-color-2;
+	&__inner{
+		@extend %container;
+		padding: 54px $container-gutter 35px;
+		position: relative;
+	}
+	&__img{
+		position: absolute;
+		right: 11px;
+		top: 76px;
+		color: #fff;
+		font-size: em(32);
+	}
+	&__post{
+		color:  #fff;
+		font-size: em(28);
+		font-weight: $light;
+		line-height: 1.786;
+	}
+}
+
+.hashtag{
+	font-weight: $semibold;
+	color: #fff;
+	&:hover{
+		text-decoration: underline;
+	}
+}
+
+.about-me{
+	background: url(../img/photo.jpg) no-repeat;
+	@include background-size;
+	&__inner{
+		@extend %container;
+		@extend %clearfix;
+		padding: 74px $container-gutter 165px;
+	}
+	&__item{
+		float: left;
+		width: percentage(570px/ $container-width);
+		&+&{
+			margin-left: percentage(30px/ $container-width);
+		}
+	}
+}
+
+.socials{
+	margin-top: 30px;
+	&__item{
+		display: inline-block;
+		border: 2px solid #fff;
+		padding: 30px;
+		color: #fff;
+		position: relative;
+		font-size: em(33);
+		&+&{
+			margin-left: 16px;
+		}
+		@include transition(all $transition-duration);
+		&:hover{
+			color: darken(#fff, 20%);
+			border-color: darken(#fff, 20%);
+		}
+		&:before{
+			position: absolute;
+			left: 13px;
+			top: 14px;
+		}
+	}
+}
+
+.testimonials{
+	&__inner{
+		@extend %container;
+		padding: 54px $container-gutter 61px;
+	}
+}
+
+.blockquote{
+	color:  #515f67;
+	font-size: em(28);
+	font-weight: $light;
+	line-height: 1.786;
+	margin: 11px 0;
+	position: relative;
+	&:before{
+		content: '';
+		position: absolute;
+		display: inline-block;
+		right: 0;
+		top: -59px;
+		@include sprite($quotes);
+	}
+}
+
+.author{
+	color:  $bg-color-2;
+	font-size: em(14);
+	font-weight: $bold;
+	line-height: 3.571;
+}
+
+.contact{
+	background:url(../img/contact.jpg) no-repeat;
+	@include background-size;
+	&__inner{
+		@extend %container;
+		padding: 54px $container-gutter 80px;
+	}
+	&-form{
+		@extend %clearfix;
+		margin-top: 37px;
+		&__item{
+			float: left;
+			width: percentage(570px/ $container-width);
+			margin-left: percentage(130px/ $container-width);
+			&:first-child{
+				width: percentage(470px/ $container-width);
+				margin-left: 0;
+			}
+		}
+	}
+	&-info{
+		color:  #fff;
+		font-size: em(14);
+		font-weight: $semibold;
+		line-height: 1.714;
+		margin-top: 35px;
+	}
+}
+
+.form{
+	&-label{
+		color:  #fff;
+		font-size: em(14);
+		font-weight: $bold;
+		line-height: 1.714;
+		text-transform: uppercase;
+		display: block;
+		&:hover{
+			cursor: pointer;
+		}
+	}
+	&-input, &-textarea{
+		width: 100%;
+		display: block;
+		border: 2px solid #fff;
+		padding: 17px 5px;
+		background-color: transparent;
+		@include border-radius(none);
+		@include transition(all $transition-duration);
+		margin-bottom: 37px;
+		&:hover, &:focus{
+			border-color: darken(#fff, 20%);
+		}
+	}
+	&-textarea{
+		min-height: 220px;
+	}
+	&-submit{
+		display: inline-block;
+		background: $bg-color-2;
+		color: #fff;
+		font-weight: $bold;
+		line-height: 1.714;
+		padding: 18px 148px;
+		text-transform: uppercase;
+		@include transition(all $transition-duration);
+		&:hover{
+			background:darken($bg-color-2, 10%);
+		}
+	}
+}
+
+.footer{
+	background: #353f47;
+	&__inner{
+		@extend %container;
+		@extend %clearfix;
+		padding: 72px $container-gutter 74px;
+	}
+	&-nav{
+		float: left;
+		&__item{
+			display: inline-block;
+			color:  #515f67;
+			font-size: em(12);
+			font-weight: $semibold;
+			line-height: 2;
+			text-transform: uppercase;
+			@include transition(color $transition-duration);
+			&:hover{
+				color: lighten(#515f67, 10%);
+			}
+			&+&{
+				margin-left: 7px;
+				&:before{
+					content: '|';
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+}
+
+.copyright{
+	float: right;
+	color:  #515f67;
+	font-size: em(12);
+	font-weight: $semibold;
+	line-height: 2;
+	margin: 0;
+}

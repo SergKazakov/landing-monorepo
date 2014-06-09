@@ -1,0 +1,107 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+*/
+$coffee-x: 0px;
+$coffee-y: 0px;
+$coffee-offset-x: 0px;
+$coffee-offset-y: 0px;
+$coffee-width: 34px;
+$coffee-height: 48px;
+$coffee-total-width: 160px;
+$coffee-total-height: 108px;
+$coffee-image: 'sprite.png';
+$coffee: 0px 0px 0px 0px 34px 48px 160px 108px 'sprite.png';
+$frame-x: 49px;
+$frame-y: 0px;
+$frame-offset-x: -49px;
+$frame-offset-y: 0px;
+$frame-width: 48px;
+$frame-height: 48px;
+$frame-total-width: 160px;
+$frame-total-height: 108px;
+$frame-image: 'sprite.png';
+$frame: 49px 0px -49px 0px 48px 48px 160px 108px 'sprite.png';
+$instant-x: 112px;
+$instant-y: 0px;
+$instant-offset-x: -112px;
+$instant-offset-y: 0px;
+$instant-width: 48px;
+$instant-height: 48px;
+$instant-total-width: 160px;
+$instant-total-height: 108px;
+$instant-image: 'sprite.png';
+$instant: 112px 0px -112px 0px 48px 48px 160px 108px 'sprite.png';
+$plus-x: 62px;
+$plus-y: 63px;
+$plus-offset-x: -62px;
+$plus-offset-y: -63px;
+$plus-width: 32px;
+$plus-height: 33px;
+$plus-total-width: 160px;
+$plus-total-height: 108px;
+$plus-image: 'sprite.png';
+$plus: 62px 63px -62px -63px 32px 33px 160px 108px 'sprite.png';
+$quotes-x: 109px;
+$quotes-y: 63px;
+$quotes-offset-x: -109px;
+$quotes-offset-y: -63px;
+$quotes-width: 32px;
+$quotes-height: 26px;
+$quotes-total-width: 160px;
+$quotes-total-height: 108px;
+$quotes-image: 'sprite.png';
+$quotes: 109px 63px -109px -63px 32px 26px 160px 108px 'sprite.png';
+$serious-x: 0px;
+$serious-y: 63px;
+$serious-offset-x: 0px;
+$serious-offset-y: -63px;
+$serious-width: 47px;
+$serious-height: 45px;
+$serious-total-width: 160px;
+$serious-total-height: 108px;
+$serious-image: 'sprite.png';
+$serious: 0px 63px 0px -63px 47px 45px 160px 108px 'sprite.png';
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(../img/#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
