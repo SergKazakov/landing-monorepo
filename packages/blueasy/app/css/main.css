@@ -334,6 +334,9 @@ td, th {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html, body {
+  height: 100%; }
+
 body {
   font: 16px/1.2 "Open Sans", sans-serif; }
 
@@ -499,10 +502,10 @@ The provided mixins are intended to be used with the array-like variables
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9515F67,endColorstr=#D9515F67); }
 @media screen and (max-width: 768px) {
   .header {
-    background: #515f67; } }
+    background: rgba(81, 95, 103, 0.9); } }
 .header__inner {
   padding: 58px 15px 57px; }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 992px) {
   .header__inner {
     padding: 20px 15px; } }
 
@@ -553,20 +556,36 @@ The provided mixins are intended to be used with the array-like variables
   color: #4bcaff;
   border-color: #4bcaff; }
 
-.hero {
-  background: url(../img/hero.jpg) no-repeat;
-  -mox-background-size: cover;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  padding: 20.83333% 15px 13.4375%; }
+.background {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-position: 50% 50% 9 !important; }
+
+.fullscreen, .content-a {
+  width: 100%;
+  min-height: 100%; }
+
+.not-fullscreen, .not-fullscreen .content-a, .fullscreen.not-overflow, .fullscreen.not-overflow .content-a {
+  height: 100%;
+  overflow: hidden; }
+
+.content-a {
+  display: table;
+  padding: 0 15px; }
+
+.content-b {
+  display: table-cell;
+  position: relative;
+  vertical-align: middle;
+  text-align: center; }
+
 .hero-title {
   text-align: center;
   font-size: 2.625em;
   margin: 10px 0; }
 @media screen and (max-width: 768px) {
   .hero-title {
-    font-size: 2em; } }
+    font-size: 1.5625em; } }
 @media screen and (max-width: 480px) {
   .hero-title {
     font-size: 1.25em; } }

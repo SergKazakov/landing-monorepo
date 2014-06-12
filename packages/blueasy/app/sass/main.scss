@@ -36,13 +36,13 @@
 	top: 0;
 	right: 0;
 	@include max-screen(768px){
-		background:$bg-color-1;
+		background: rgba($bg-color-1, 0.9);
 	}
 	&__inner{
 		@extend %container;
 		@extend %clearfix;
 		padding: 58px $container-gutter 57px; 
-		@include max-screen(768px){
+		@include max-screen(992px){
 			padding: 20px $container-gutter;
 		}
 	}
@@ -93,16 +93,43 @@
 	}
 }
 
+.background {
+    background-repeat:no-repeat;
+    background-position:50% 50%;
+    background-position:50% 50%9 !important;
+}
+
+.fullscreen,
+.content-a {
+    width:100%;
+    min-height:100%;
+}
+.not-fullscreen,
+.not-fullscreen .content-a,
+.fullscreen.not-overflow,
+.fullscreen.not-overflow .content-a {
+    height:100%;
+    overflow:hidden;
+}
+
+.content-a {
+    display:table;
+    padding: 0 $container-gutter; 
+}
+.content-b {
+    display:table-cell;
+    position:relative;
+    vertical-align:middle;
+    text-align:center;
+}
+
 .hero{
-	background: url(../img/hero.jpg) no-repeat;
-	@include background-size;
-	padding: percentage(400/1920) $container-gutter percentage(258/1920);
 	&-title{
 		text-align: center;
 		font-size: em(42);
 		margin: 10px 0;
 		@include max-screen(768px){
-			font-size: em(32);
+			font-size: em(25);
 		}
 		@include max-screen(480px){
 			font-size: em(20);
