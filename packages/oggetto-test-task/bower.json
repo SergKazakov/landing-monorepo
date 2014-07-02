@@ -1,0 +1,12 @@
+{
+    "name": "oggetto-test-task",
+    "version": "0.0.0",
+    "dependencies": {
+         "modernizr":              "latest", 
+        
+        
+         "jquery-placeholder":     "latest", 
+        
+        "jquery": "^1.11.0"
+    }
+}
