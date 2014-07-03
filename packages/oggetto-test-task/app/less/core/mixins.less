@@ -1,0 +1,40 @@
+.container() {
+    .center-block;
+    max-width: @cw;
+
+}
+
+.em(@target: @browser-context, @context: @browser-context ) {
+    font-size: unit((@target /@context), em);
+}
+    
+.rgba(@colour, @alpha)
+{
+    @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+    @ieAlphaColour: argb(@alphaColour);
+     
+    background: @alphaColour; 
+     
+    .lt-ie9 &{
+        background: transparent;
+        -ms-filter:  "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; 
+    }
+}
+
+.ie-rgba(@colour, @alpha){
+    
+    @alphaColour: hsla(hue(@colour), saturation(@colour), lightness(@colour), @alpha);
+    @ieAlphaColour: argb(@alphaColour);
+     
+    .lt-ie9 &{
+        background: transparent;
+        -ms-filter:  "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; 
+    }
+}
+
+.placeholder(@text: uppercase) {
+  &:-moz-placeholder            { text-transform: @text; } // Firefox 4-18
+  &::-moz-placeholder           { text-transform: @text; } // Firefox 19+
+  &:-ms-input-placeholder       { text-transform: @text; } // Internet Explorer 10+
+  &::-webkit-input-placeholder  { text-transform: @text; } // Safari and Chrome
+}

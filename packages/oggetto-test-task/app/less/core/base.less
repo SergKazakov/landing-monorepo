@@ -2,8 +2,14 @@
     .box-sizing(border-box);
 }
 
+html{
+    position: relative;
+}
+
 body {
     font: unit(@browser-context, px)/1.2 @base-font-family;
+    color: @base-color;
+    text-transform: uppercase;
 }
 
 ul {
@@ -14,6 +20,11 @@ ul {
 
 a {
     text-decoration: none;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 

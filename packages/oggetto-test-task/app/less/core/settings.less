@@ -6,9 +6,30 @@
 @semibold:     600;
 @bold:         700;
 @extrabold:    800;
-@base-color: #384d5c;
+@base-color:   #636363;
 
 
 //grid
-@container-width: 1170px;
+@container-width: 1230px;
+@cw: @container-width;
 @container-gutter: 15px;
+
+//colors
+@border-color: #d3b155;
+@title-color: #000;
+@text-color: #a1a1a1;
+
+//transitions
+@td: 300ms; // transition-delay
+
+//fonts
+@font-face {
+    font-family: 'Dtlhaar';
+    src: url('../fonts/dtlhaarlemmerdcaps-webfont.eot');
+    src: url('../fonts/dtlhaarlemmerdcaps-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/dtlhaarlemmerdcaps-webfont.woff') format('woff'),
+         url('../fonts/dtlhaarlemmerdcaps-webfont.ttf') format('truetype'),
+         url('../fonts/dtlhaarlemmerdcaps-webfont.svg#dtlhaarlemmerdcapsregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
