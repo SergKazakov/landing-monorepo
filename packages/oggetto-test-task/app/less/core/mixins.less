@@ -1,11 +1,10 @@
 .container() {
     .center-block;
-    max-width: @cw;
-
+    max-width: @container-gutter*2 + @cw;
 }
 
 .em(@target: @browser-context, @context: @browser-context ) {
-    font-size: unit((@target /@context), em);
+    font-size: unit(@target /@context, em);
 }
     
 .rgba(@colour, @alpha)
@@ -30,6 +29,12 @@
         background: transparent;
         -ms-filter:  "progid:DXImageTransform.Microsoft.gradient(startColorstr=@{ieAlphaColour}, endColorstr=@{ieAlphaColour})"; 
     }
+}
+
+.align(){
+    position: absolute;
+    left: 50%;
+    .translate(-50%, 0);
 }
 
 .placeholder(@text: uppercase) {

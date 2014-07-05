@@ -24,9 +24,6 @@ module.exports = function (grunt) {
                 sourceMap: true
             },
             dev: {
-                options: {
-                    strictMath: true
-                },
                 files: {
                     'app/css/all.css': ['app/less/all.less']
                 }
