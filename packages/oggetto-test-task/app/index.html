@@ -60,8 +60,8 @@
             </li>
         </ul>
     </header>
-    <div class="sidebar">
-        <ul class="sidebar-container">
+    <div class="sidebar" id="sidebar">
+        <ul class="sidebar-container" id="sidebar-container">
             <li class="sidebar__header">all clothing</li>
             <li>
                 <a href="#7" class="sidebar__link">new arrivals</a>
@@ -114,7 +114,7 @@
                 <h2 class="title">dresses</h2>
                 <span class="title-divider"></span>
             </div>
-            <div class="gallery">
+            <div id="gallery" class="gallery">
                 <div class="gallery__item">
                     <a href="#7" class="gallery-img-container">
                         <img src="img/img-1.jpg" alt="" class="gallery__img">
@@ -242,7 +242,7 @@
                 <div class="footer-top__header">Join our mailing list</div>
                 <form action="#">
                     <div class="form-row">
-                        <input type="text" class="input" placeholder="your email">
+                        <input type="text" id="subscribe" class="input" placeholder="your email">
                         <input type="submit" class="btn" value="">
                     </div>
                 </form>
@@ -268,7 +268,7 @@
         </div>
         <div class="footer-bottom">
             <p class="copyright">© 2013 PAUW Amsterdam</p>
-            <ul class="footer-bottom__nav js-align">
+            <ul id="footer-bottom-nav" class="footer-bottom__nav">
                 <li class="footer-bottom__nav-item">
                     <a href="#7" class="footer-bottom__nav-item-link">terms & conditions</a>
                 </li>
@@ -308,7 +308,7 @@
         <script src="js/vendor/jquery-placeholder/jquery.placeholder.js"></script>
         <script>
             $(function(){
-                $('input').placeholder();
+                $('#subscribe').placeholder();
             });
         </script>
     <![endif]-->

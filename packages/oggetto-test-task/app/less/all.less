@@ -1,13 +1,14 @@
 @import "core/reset";
-@import "core/settings";
 @import "vendor/preboot";
+@import "core/settings";
 @import "core/mixins";
 @import "core/base";
 @import "core/sprite";
 
 .header,
 .main,
-.footer{
+.footer-top,
+.footer-bottom{
     min-width: 930px;
 }
 .header {
@@ -223,7 +224,7 @@
         height: 0;
         .csstransitions &:hover{
             .gallery__img-hover, .gallery__img-overlay{
-                .opacity(1);
+                opacity: 1;
             }
         }
     }
@@ -257,7 +258,7 @@
         letter-spacing: 3px;
     }
     &-name{
-        color:  @text-color;
+        color:  @link-color;
         line-height: 2;
         .em(10);
     }
@@ -296,10 +297,10 @@
             .em(14);
         }
         &-body{
-            color:  @text-color;
+            color:  @link-color;
             line-height: 1.7;
             .em(11);
-            padding: 0 50px;
+            padding: 0 48px;
             letter-spacing: 1px;
         }
     }
@@ -335,7 +336,7 @@
             &-item{
             }
             &-link{
-                color:  @text-color;
+                color:  @link-color;
                 letter-spacing: 2px;
                 line-height: 2.3;
                 .em(10);
@@ -382,9 +383,8 @@
     width: 100%;
     border: 0;
     background: #222838;
-    color:  @text-color;
+    color:  @link-color;
     letter-spacing: 2px;
-    .placeholder;
     .em(10);
     .transition(background @td);
     &:hover, &:focus{

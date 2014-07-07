@@ -1,12 +1,15 @@
 $(function () {
     'use strict';
-    var sidebarDuration = 150,
-        galleryImgDuration = 500;
+    var sidebar = $('#sidebar'),
+        sidebarContainer = $('#sidebar-container'),
+        sidebarDuration = 150,
+        galleryImgContainer = $('#gallery').find('.gallery-img-container'),
+        galleryImgDuration = 500,
+        footerNav = $('#footer-bottom-nav');
 
     if (!Modernizr.csstransitions && Modernizr.rgba) {
-        $('.sidebar-container').hover(
+        sidebarContainer.hover(
             function () {
-                var sidebar = $(this).closest('.sidebar');
                 sidebar
                     .stop()
                     .animate({
@@ -22,7 +25,6 @@ $(function () {
                     });
             },
             function () {
-                var sidebar = $(this).closest('.sidebar');
                 sidebar
                     .stop()
                     .animate({
@@ -39,7 +41,7 @@ $(function () {
             });
     }
     if (!Modernizr.csstransitions) {
-        $('.gallery-img-container').hover(
+        galleryImgContainer.hover(
             function () {
                 $(this)
                     .find('.gallery__img-hover')
@@ -51,10 +53,10 @@ $(function () {
                 $(this)
                     .find('.gallery__img-overlay')
                     .addClass('iergba')
-                    .stop().
-                animate({
-                    'opacity': 1
-                }, galleryImgDuration);
+                    .stop()
+                    .animate({
+                        'opacity': 1
+                    }, galleryImgDuration);
             },
             function () {
                 $(this)
@@ -74,32 +76,24 @@ $(function () {
             });
     }
     if (!Modernizr.rgba) {
-        $('.sidebar-container').hover(
+        sidebarContainer.hover(
             function () {
-                $(this)
-                    .closest('.sidebar')
-                    .addClass('sidebar_active');
+                sidebar.addClass('sidebar_active');
             },
             function () {
-                $(this)
-                    .closest('.sidebar')
-                    .removeClass('sidebar_active');
+                sidebar.removeClass('sidebar_active');
             });
     }
     if (Modernizr.csstransitions) {
-        $('.sidebar-container').hover(
+        sidebarContainer.hover(
             function () {
-                $(this)
-                    .closest('.sidebar')
-                    .addClass('sidebar_active');
+                sidebar.addClass('sidebar_active');
             },
             function () {
-                $(this)
-                    .closest('.sidebar')
-                    .removeClass('sidebar_active');
+                sidebar.removeClass('sidebar_active');
             });
     }
     if (!Modernizr.csstransforms) {
-        $('.js-align').css('margin-left', -$('.js-align').innerWidth() / 2);
+        footerNav.css('margin-left', -footerNav.innerWidth() / 2);
     }
 });
