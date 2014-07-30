@@ -1,31 +1,6 @@
 $(function() {
     'use strict';
 
-    var windowWidth = $(window).width(),
-        bigScreen = windowWidth > 993,
-        middleScreen = windowWidth < 993 && windowWidth > 480;
-
-    function marginRecalc(mas) {
-        if (bigScreen) {
-            mas.each(function(i, item) {
-                if (i % 4 === 0) {
-                    $(item).css('margin-left', 0);
-                } else {
-                    $(item).css('margin-left', '2.5641%');
-                }
-            });
-        } else if (middleScreen) {
-            mas.each(function(i, item) {
-                if (i % 2 === 0) {
-                    $(item).css('margin-left', 0);
-                } else {
-                    $(item).css('margin-left', '4%');
-                }
-            });
-        }
-        return mas;
-    };
-
     //    filter
     var filterItem = 'filter__item-link';
     $('.' + filterItem).on('click', function(e) {
@@ -37,11 +12,12 @@ $(function() {
             var dataClass = $(this).data('class');
             var galleryItems = $('.gallery__item');
             if (dataClass != 'all') {
-                galleryItems.hide();
-                var filterItems = galleryItems.filter('.gallery__item--' + dataClass);
-                marginRecalc(filterItems).fadeIn();
+                galleryItems
+                .hide()
+                .filter('.gallery__item--' + dataClass)
+                .fadeIn();
             } else {
-                marginRecalc(galleryItems).fadeIn();
+                galleryItems.fadeIn();
             }
         }
     });

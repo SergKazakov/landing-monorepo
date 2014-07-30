@@ -29,21 +29,21 @@
 }
 
 .header{
-	@include rgba($bg-color-1, 0.85);
+    @include rgba($bg-color-1, 0.9);
 	z-index: 100;
 	position: absolute;
 	left: 0;
 	top: 0;
 	right: 0;
-	@include max-screen(768px){
-		background: rgba($bg-color-1, 0.9);
+	@include min-screen(769px){
+		@include rgba($bg-color-1, 0.85);
 	}
 	&__inner{
 		@extend %container;
 		@extend %clearfix;
-		padding: 58px $container-gutter 57px; 
-		@include max-screen(992px){
-			padding: 20px $container-gutter;
+        padding: 20px $cg;
+		@include min-screen(993px){
+			padding: 58px $cg 57px;
 		}
 	}
 }
@@ -58,11 +58,12 @@
 }
 
 .nav{
-	float: right;
-	@include max-screen(768px){
-		clear: left;
-		width: 100%;
-		margin-top: 20px;
+    width: 100%;
+    margin-top: 20px;
+	@include min-screen(769px){
+		float: right;
+        margin-top: 0;
+        width: auto;
 	}
 	&__item{
 		display: inline-block;
@@ -114,7 +115,7 @@
 
 .content-a {
     display:table;
-    padding: 0 $container-gutter; 
+    padding: 0 $cg; 
 }
 .content-b {
     display:table-cell;
@@ -124,66 +125,58 @@
 }
 
 .hero{
+    text-align: center;
 	&-title{
-		text-align: center;
-		font-size: em(42);
-		margin: 10px 0;
-		@include max-screen(768px){
+        display: inline-block;
+        color:  #fff;
+        font-weight: $light;
+        padding: 0 5px;
+        line-height: 1.786;
+        text-transform: uppercase;
+		font-size: em(20);
+		margin: 5px 0;
+        background: transparent;
+        @include min-screen(481px){
 			font-size: em(25);
 		}
-		@include max-screen(480px){
-			font-size: em(20);
+		@include min-screen(769px){
+			font-size: em(42);
 		}
-		&__inner{
-			display: inline-block;
-			color:  #fff;
-			font-weight: $light;
-			padding: 0 5px;
-			line-height: 1.786;
-			background: $bg-color-1;
-			text-transform: uppercase;
-			@include max-screen(992px){
-				background-color: transparent;
-			}
-		}
+        @include min-screen(993px){
+            background: $bg-color-1;
+        }
 	}
 }
 
 $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame); 
+
+$services-item-margin: percentage($cg/($cw+2*$cg));
 
 .services{
 	background:$bg-color-2;
 	color: #fff;
 	&__inner{
 		@extend %container;
-		padding: 54px $container-gutter 64px;
+		padding: 54px $cg 64px;
 	}
 	&-container{
 		@extend %clearfix;
 		margin-top: 39px;
+        margin-left: -$cg;
+        margin-right: -$cg;
 	}
 	&__item{
 		float: left;
 		position: relative;
 		padding-top: 68px;
+        width: 100%-$services-item-margin*2;
+        margin: 0 $services-item-margin 20px;
+        @include min-screen(769px){
+			width: 50%-$services-item-margin*2;
+            margin-bottom: 0;
+		}
 		@include min-screen(993px){
-			width: percentage(270px/ $container-width);
-			&+&{
-				margin-left: percentage(30px/ $container-width);
-			}
-		}
-		@include max-screen(992px){
-			width: 46%;
-			margin-bottom: 20px;
-			&:nth-child(even){
-				margin-left: 4%;
-			}
-		}
-		@include max-screen(768px){
-			width: 100%;
-			&:nth-child(even){
-				margin-left: 0;
-			}
+			width: percentage(270px/ ($cw+2*$cg));
 		}
 		&:before{
 			content: '';
@@ -215,10 +208,10 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	color:  #fff;
 	font-size: em(30);
 	font-weight: $light;
-	line-height: 0.8;
+	line-height: 1.2;
 	text-transform: uppercase;
-	@include max-screen(480px){
-		line-height: 1.2;
+	@include min-screen(481px){
+		line-height: 0.8;
 	}
 	&--dark{
 		color: #515f67;
@@ -239,20 +232,21 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	float: right;
 	margin-top: 30px;
 	@extend %clearfix;
-	@include max-screen(992px){
-		width: 100%;
-		margin-bottom: 20px;
+    width: 100%;
+    margin-bottom: 20px;
+	@include min-screen(993px){
+		width: auto;
 	}
 	&__item{
 		float: left;
+        width: 100%;
+        margin-bottom: 20px;
 		@include min-screen(769px){
+            width: auto;
+            margin-bottom: 0;
 			&+&{
 				margin-left: 16px;
 			}
-		}
-		@include max-screen(768px){
-			width: 100%;
-			margin-bottom: 20px;
 		}
 		&-link{
 			display: inline-block;
@@ -282,40 +276,32 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	&__inner{
 		@extend %container;
 		@extend %clearfix;
-		padding: 54px $container-gutter 50px;
+		padding: 54px $cg 50px;
 	}
 }
+
+$gallery-item-margin: percentage($cg/($cw+2*$cg));
 
 .gallery{
 	clear: left;
 	margin-top: 140px;
+    margin-left: -$cg;
+    margin-right: -$cg;
 	@extend %clearfix;
 	&__item{
 		float: left;
 		height: 0;
-		margin-bottom: 30px;
 		position: relative;
-		@include min-screen(993px){
-			padding-top: percentage(270px/ $container-width);
-			width: percentage(270px/ $container-width);
-			margin-left: percentage(30px/ $container-width);
-			&:nth-child(4n+1){
-				margin-left: 0;
-			}
-		}
-		@include max-screen(992px){
-			width: 48%;
+        margin: 0 $gallery-item-margin 30px;
+        width: 100% - $gallery-item-margin*2;
+        padding-top: 70%;
+        @include min-screen(481px){
+			width: 50% - $gallery-item-margin*2;
 			padding-top: 40%;
-			&:nth-child(even){
-				margin-left: 4%;
-			}
 		}
-		@include max-screen(480px){
-			width: 100%;
-			padding-top: 70%;
-			&:nth-child(even){
-				margin-left: 0;
-			}
+		@include min-screen(993px){
+			padding-top: percentage(270px/ ($cw+2*$cg));
+			width: percentage(270px/ ($cw+2*$cg));
 		}
 		&:hover .gallery__overlay{
 			@include opacity(1);
@@ -360,20 +346,18 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	&__inner{
 		@extend %container;
 		@extend %clearfix;
-		padding: 54px $container-gutter 80px;
+		padding: 54px $cg 80px;
 	}
 	&__item{
 		float: left;
+        width: 100%;
 		@include min-screen(993px){
 			&:first-child{
-				width: percentage(470px/ $container-width);
+				width: percentage(470px/ $cw);
 				margin-left: 0;
 			}
-			width: percentage(570px/ $container-width);
-			margin-left: percentage(130px/ $container-width);
-		}
-		@include max-screen(992px){
-			width: 100%;
+			width: percentage(570px/ $cw);
+			margin-left: percentage(130px/ $cw);
 		}
 	}
 }
@@ -382,11 +366,9 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	height: 0;
 	padding-top: 54.75214%;
 	position: relative;
+    margin-top: 20px;
 	@include min-screen(993px){
 		margin: 26px 0 0 11px;
-	}
-	@include max-screen(992px){
-		margin-top: 20px;
 	}
 	iframe{
 		position: absolute;
@@ -401,7 +383,7 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	background:$bg-color-2;
 	&__inner{
 		@extend %container;
-		padding: 54px $container-gutter 35px;
+		padding: 54px $cg 35px;
 		position: relative;
 	}
 	&__img{
@@ -413,11 +395,11 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	}
 	&__post{
 		color:  #fff;
-		font-size: em(28);
 		font-weight: $light;
 		line-height: 1.786;
-		@include max-screen(480px){
-			font-size: em(18);
+        font-size: em(18);
+		@include min-screen(481px){
+			font-size: em(28);
 		}
 	}
 }
@@ -436,18 +418,16 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	&__inner{
 		@extend %container;
 		@extend %clearfix;
-		padding: 74px $container-gutter 165px;
+		padding: 74px $cg 165px;
 	}
 	&__item{
 		float: left;
+        width: 100%;
 		@include min-screen(769px){
-			width: percentage(570px/ $container-width);
+			width: percentage(570px/ $cw);
 			&+&{
-				margin-left: percentage(30px/ $container-width);
+				margin-left: percentage(30px/ $cw);
 			}
-		}
-		@include max-screen(768px){
-			width: 100%;
 		}
 	}
 }
@@ -457,29 +437,29 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	&__item{
 		display: inline-block;
 		border: 2px solid #fff;
-		padding: 30px;
+        padding: 20px;
+        font-size: em(20);
 		color: #fff;
 		position: relative;
-		font-size: em(33);
-		@include max-screen(480px){
-			padding: 20px;
-			font-size: em(20);
-		}
-		&+&{
+        @include transition(all $transition-duration);
+        &+&{
 			margin-left: 16px;
 		}
-		@include transition(all $transition-duration);
-		&:hover{
+        &:hover{
 			color: darken(#fff, 20%);
 			border-color: darken(#fff, 20%);
 		}
+		@include min-screen(481px){
+			padding: 30px;
+            font-size: em(33);
+		}
 		&:before{
 			position: absolute;
-			left: 13px;
-			top: 14px;
-			@include max-screen(480px){
-				left: 10px;
-				top: 10px;
+			left: 10px;
+			top: 10px;
+			@include min-screen(481px){
+				left: 13px;
+				top: 14px;
 			}
 		}
 	}
@@ -488,19 +468,19 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 .testimonials{
 	&__inner{
 		@extend %container;
-		padding: 54px $container-gutter 61px;
+		padding: 54px $cg 61px;
 	}
 }
 
 .blockquote{
 	color:  #515f67;
-	font-size: em(28);
+	font-size: em(18);
 	font-weight: $light;
 	line-height: 1.786;
 	margin: 11px 0;
 	position: relative;
-	@include max-screen(480px){
-		font-size: em(18);
+	@include min-screen(481px){
+		font-size: em(28);
 	}
 	&:before{
 		content: '';
@@ -524,23 +504,21 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	@include background-size;
 	&__inner{
 		@extend %container;
-		padding: 54px $container-gutter 80px;
+		padding: 54px $cg 80px;
 	}
 	&-form{
 		@extend %clearfix;
 		margin-top: 37px;
 		&__item{
 			float: right;
+            width: 100%;
 			@include min-screen(769px){
-				width: percentage(470px/ $container-width);
+				width: percentage(470px/ $cw);
 				margin-left: 0;
 				&:first-child{
-					width: percentage(570px/ $container-width);
-					margin-left: percentage(130px/ $container-width);
+					width: percentage(570px/ $cw);
+					margin-left: percentage(130px/ $cw);
 				}
-			}
-			@include max-screen(768px){
-				width: 100%;
 			}
 		}
 	}
@@ -550,8 +528,9 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 		font-weight: $semibold;
 		line-height: 1.714;
 		margin-top: 35px;
-		@include max-screen(768px){
-			margin-bottom: 20px;
+        margin-bottom: 20px;
+		@include min-screen(769px){
+			margin-bottom: 0;
 		}
 	}
 }
@@ -590,7 +569,7 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 		color: #fff;
 		font-weight: $bold;
 		line-height: 1.714;
-		padding: 18px percentage(148px/ $container-width);
+		padding: 18px percentage(148px/ $cw);
 		text-transform: uppercase;
 		@include border-radius(0);
 		@include transition(all $transition-duration);
@@ -605,27 +584,29 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 	&__inner{
 		@extend %container;
 		@extend %clearfix;
-		padding: 72px $container-gutter 74px;
-		@include max-screen(480px){
-			text-align: center;
+		padding: 72px $cg 74px;
+        text-align: center;
+		@include min-screen(481px){
+			text-align: left;
 		}
 	}
 	&-nav{
 		float: left;
-		@include max-screen(480px){
-			width: 100%;
+        width: 100%;
+		@include min-screen(481px){
+			width: auto;
 		}
 		&__item{
-			display: inline-block;
+			display: block;
 			color:  #515f67;
-			font-size: em(12);
+			font-size: em(18);
 			font-weight: $semibold;
 			line-height: 2;
 			text-transform: uppercase;
 			@include transition(color $transition-duration);
-			@include max-screen(480px){
-				display: block;
-				font-size: em(18);
+			@include min-screen(481px){
+				display: inline-block;
+				font-size: em(12);
 			}
 			&:hover{
 				color: lighten(#515f67, 10%);
@@ -645,14 +626,15 @@ $images: (coffee: $coffee, instant: $instant, serious: $serious, frame: $frame);
 
 .copyright{
 	float: right;
+    width: 100%;
 	color:  #515f67;
-	font-size: em(12);
+	font-size: em(18);
 	font-weight: $semibold;
 	line-height: 2;
 	margin: 0;
-	@include max-screen(480px){
-		width: 100%;
-		font-size: em(18);
+	@include min-screen(481px){
+		width: auto;
+		font-size: em(12);
 	}
 }
 

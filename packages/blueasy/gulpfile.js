@@ -33,7 +33,9 @@ gulp.task('sass', function() {
         .pipe(sass({
             style: 'expended',
             sourcemap: true
-        }))
+        }).on('error', function(er){
+                console.log(er.message);
+            }))
         .pipe(gulp.dest('app/css'));
 });
 

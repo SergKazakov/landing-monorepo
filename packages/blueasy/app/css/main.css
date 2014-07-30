@@ -491,7 +491,7 @@ The provided mixins are intended to be used with the array-like variables
   border-color: #404c55; }
 
 .header {
-  background: rgba(81, 95, 103, 0.85);
+  background: rgba(81, 95, 103, 0.9);
   z-index: 100;
   position: absolute;
   left: 0;
@@ -499,15 +499,18 @@ The provided mixins are intended to be used with the array-like variables
   right: 0; }
 .lt-ie9 .header {
   background: transparent;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9515F67,endColorstr=#D9515F67); }
-@media screen and (max-width: 768px) {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#E6515F67,endColorstr=#E6515F67); }
+@media screen and (min-width: 769px) {
   .header {
-    background: rgba(81, 95, 103, 0.9); } }
+    background: rgba(81, 95, 103, 0.85); }
+  .lt-ie9 .header {
+    background: transparent;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#D9515F67,endColorstr=#D9515F67); } }
 .header__inner {
-  padding: 58px 15px 57px; }
-@media screen and (max-width: 992px) {
+  padding: 20px 15px; }
+@media screen and (min-width: 993px) {
   .header__inner {
-    padding: 20px 15px; } }
+    padding: 58px 15px 57px; } }
 
 .logo {
   float: left;
@@ -523,12 +526,13 @@ The provided mixins are intended to be used with the array-like variables
   -ms-filter: alpha(opacity=50); }
 
 .nav {
-  float: right; }
-@media screen and (max-width: 768px) {
+  width: 100%;
+  margin-top: 20px; }
+@media screen and (min-width: 769px) {
   .nav {
-    clear: left;
-    width: 100%;
-    margin-top: 20px; } }
+    float: right;
+    margin-top: 0;
+    width: auto; } }
 .nav__item {
   display: inline-block;
   color: rgba(255, 255, 255, 0.9);
@@ -579,27 +583,27 @@ The provided mixins are intended to be used with the array-like variables
   vertical-align: middle;
   text-align: center; }
 
+.hero {
+  text-align: center; }
 .hero-title {
-  text-align: center;
-  font-size: 2.625em;
-  margin: 10px 0; }
-@media screen and (max-width: 768px) {
-  .hero-title {
-    font-size: 1.5625em; } }
-@media screen and (max-width: 480px) {
-  .hero-title {
-    font-size: 1.25em; } }
-.hero-title__inner {
   display: inline-block;
   color: #fff;
   font-weight: 300;
   padding: 0 5px;
   line-height: 1.786;
-  background: #515f67;
-  text-transform: uppercase; }
-@media screen and (max-width: 992px) {
-  .hero-title__inner {
-    background-color: transparent; } }
+  text-transform: uppercase;
+  font-size: 1.25em;
+  margin: 5px 0;
+  background: transparent; }
+@media screen and (min-width: 481px) {
+  .hero-title {
+    font-size: 1.5625em; } }
+@media screen and (min-width: 769px) {
+  .hero-title {
+    font-size: 2.625em; } }
+@media screen and (min-width: 993px) {
+  .hero-title {
+    background: #515f67; } }
 
 .services {
   background: #4bcaff;
@@ -607,27 +611,22 @@ The provided mixins are intended to be used with the array-like variables
 .services__inner {
   padding: 54px 15px 64px; }
 .services-container {
-  margin-top: 39px; }
+  margin-top: 39px;
+  margin-left: -15px;
+  margin-right: -15px; }
 .services__item {
   float: left;
   position: relative;
-  padding-top: 68px; }
+  padding-top: 68px;
+  width: 97.5%;
+  margin: 0 1.25% 20px; }
+@media screen and (min-width: 769px) {
+  .services__item {
+    width: 47.5%;
+    margin-bottom: 0; } }
 @media screen and (min-width: 993px) {
   .services__item {
-    width: 23.07692%; }
-  .services__item + .services__item {
-    margin-left: 2.5641%; } }
-@media screen and (max-width: 992px) {
-  .services__item {
-    width: 46%;
-    margin-bottom: 20px; }
-  .services__item:nth-child(even) {
-    margin-left: 4%; } }
-@media screen and (max-width: 768px) {
-  .services__item {
-    width: 100%; }
-  .services__item:nth-child(even) {
-    margin-left: 0; } }
+    width: 22.5%; } }
 .services__item:before {
   content: '';
   display: inline-block;
@@ -668,11 +667,11 @@ The provided mixins are intended to be used with the array-like variables
   color: #fff;
   font-size: 1.875em;
   font-weight: 300;
-  line-height: 0.8;
+  line-height: 1.2;
   text-transform: uppercase; }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
   .title {
-    line-height: 1.2; } }
+    line-height: 0.8; } }
 .title--dark {
   color: #515f67; }
 .title--portfolio {
@@ -686,20 +685,22 @@ The provided mixins are intended to be used with the array-like variables
 
 .filter {
   float: right;
-  margin-top: 30px; }
-@media screen and (max-width: 992px) {
+  margin-top: 30px;
+  width: 100%;
+  margin-bottom: 20px; }
+@media screen and (min-width: 993px) {
   .filter {
-    width: 100%;
-    margin-bottom: 20px; } }
+    width: auto; } }
 .filter__item {
-  float: left; }
+  float: left;
+  width: 100%;
+  margin-bottom: 20px; }
 @media screen and (min-width: 769px) {
+  .filter__item {
+    width: auto;
+    margin-bottom: 0; }
   .filter__item + .filter__item {
     margin-left: 16px; } }
-@media screen and (max-width: 768px) {
-  .filter__item {
-    width: 100%;
-    margin-bottom: 20px; } }
 .filter__item-link {
   display: inline-block;
   color: rgba(81, 95, 103, 0.9);
@@ -726,31 +727,24 @@ The provided mixins are intended to be used with the array-like variables
 
 .gallery {
   clear: left;
-  margin-top: 140px; }
+  margin-top: 140px;
+  margin-left: -15px;
+  margin-right: -15px; }
 .gallery__item {
   float: left;
   height: 0;
-  margin-bottom: 30px;
-  position: relative; }
+  position: relative;
+  margin: 0 1.25% 30px;
+  width: 97.5%;
+  padding-top: 70%; }
+@media screen and (min-width: 481px) {
+  .gallery__item {
+    width: 47.5%;
+    padding-top: 40%; } }
 @media screen and (min-width: 993px) {
   .gallery__item {
-    padding-top: 23.07692%;
-    width: 23.07692%;
-    margin-left: 2.5641%; }
-  .gallery__item:nth-child(4n+1) {
-    margin-left: 0; } }
-@media screen and (max-width: 992px) {
-  .gallery__item {
-    width: 48%;
-    padding-top: 40%; }
-  .gallery__item:nth-child(even) {
-    margin-left: 4%; } }
-@media screen and (max-width: 480px) {
-  .gallery__item {
-    width: 100%;
-    padding-top: 70%; }
-  .gallery__item:nth-child(even) {
-    margin-left: 0; } }
+    padding-top: 22.5%;
+    width: 22.5%; } }
 .gallery__item:hover .gallery__overlay {
   opacity: 1; }
 .lt-ie9 .gallery__item:hover .gallery__overlay {
@@ -800,7 +794,8 @@ The provided mixins are intended to be used with the array-like variables
 .section__inner {
   padding: 54px 15px 80px; }
 .section__item {
-  float: left; }
+  float: left;
+  width: 100%; }
 @media screen and (min-width: 993px) {
   .section__item {
     width: 48.71795%;
@@ -808,20 +803,15 @@ The provided mixins are intended to be used with the array-like variables
   .section__item:first-child {
     width: 40.17094%;
     margin-left: 0; } }
-@media screen and (max-width: 992px) {
-  .section__item {
-    width: 100%; } }
 
 .video-player {
   height: 0;
   padding-top: 54.75214%;
-  position: relative; }
+  position: relative;
+  margin-top: 20px; }
 @media screen and (min-width: 993px) {
   .video-player {
     margin: 26px 0 0 11px; } }
-@media screen and (max-width: 992px) {
-  .video-player {
-    margin-top: 20px; } }
 .video-player iframe {
   position: absolute;
   left: 0;
@@ -842,12 +832,12 @@ The provided mixins are intended to be used with the array-like variables
   font-size: 2em; }
 .twitter__post {
   color: #fff;
-  font-size: 1.75em;
   font-weight: 300;
-  line-height: 1.786; }
-@media screen and (max-width: 480px) {
+  line-height: 1.786;
+  font-size: 1.125em; }
+@media screen and (min-width: 481px) {
   .twitter__post {
-    font-size: 1.125em; } }
+    font-size: 1.75em; } }
 
 .hashtag {
   font-weight: 600;
@@ -864,60 +854,58 @@ The provided mixins are intended to be used with the array-like variables
 .about-me__inner {
   padding: 74px 15px 165px; }
 .about-me__item {
-  float: left; }
+  float: left;
+  width: 100%; }
 @media screen and (min-width: 769px) {
   .about-me__item {
     width: 48.71795%; }
   .about-me__item + .about-me__item {
     margin-left: 2.5641%; } }
-@media screen and (max-width: 768px) {
-  .about-me__item {
-    width: 100%; } }
 
 .socials {
   margin-top: 30px; }
 .socials__item {
   display: inline-block;
   border: 2px solid #fff;
-  padding: 30px;
+  padding: 20px;
+  font-size: 1.25em;
   color: #fff;
   position: relative;
-  font-size: 2.0625em;
   -webkit-transition: all 300ms;
   -moz-transition: all 300ms;
   -spec-transition: all 300ms;
   transition: all 300ms; }
-@media screen and (max-width: 480px) {
-  .socials__item {
-    padding: 20px;
-    font-size: 1.25em; } }
 .socials__item + .socials__item {
   margin-left: 16px; }
 .socials__item:hover {
   color: #cccccc;
   border-color: #cccccc; }
+@media screen and (min-width: 481px) {
+  .socials__item {
+    padding: 30px;
+    font-size: 2.0625em; } }
 .socials__item:before {
   position: absolute;
-  left: 13px;
-  top: 14px; }
-@media screen and (max-width: 480px) {
+  left: 10px;
+  top: 10px; }
+@media screen and (min-width: 481px) {
   .socials__item:before {
-    left: 10px;
-    top: 10px; } }
+    left: 13px;
+    top: 14px; } }
 
 .testimonials__inner {
   padding: 54px 15px 61px; }
 
 .blockquote {
   color: #515f67;
-  font-size: 1.75em;
+  font-size: 1.125em;
   font-weight: 300;
   line-height: 1.786;
   margin: 11px 0;
   position: relative; }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
   .blockquote {
-    font-size: 1.125em; } }
+    font-size: 1.75em; } }
 .blockquote:before {
   content: '';
   position: absolute;
@@ -946,7 +934,8 @@ The provided mixins are intended to be used with the array-like variables
 .contact-form {
   margin-top: 37px; }
 .contact-form__item {
-  float: right; }
+  float: right;
+  width: 100%; }
 @media screen and (min-width: 769px) {
   .contact-form__item {
     width: 40.17094%;
@@ -954,18 +943,16 @@ The provided mixins are intended to be used with the array-like variables
   .contact-form__item:first-child {
     width: 48.71795%;
     margin-left: 11.11111%; } }
-@media screen and (max-width: 768px) {
-  .contact-form__item {
-    width: 100%; } }
 .contact-info {
   color: #fff;
   font-size: 0.875em;
   font-weight: 600;
   line-height: 1.714;
-  margin-top: 35px; }
-@media screen and (max-width: 768px) {
+  margin-top: 35px;
+  margin-bottom: 20px; }
+@media screen and (min-width: 769px) {
   .contact-info {
-    margin-bottom: 20px; } }
+    margin-bottom: 0; } }
 
 .form-label {
   color: #fff;
@@ -1015,19 +1002,21 @@ The provided mixins are intended to be used with the array-like variables
 .footer {
   background: #353f47; }
 .footer__inner {
-  padding: 72px 15px 74px; }
-@media screen and (max-width: 480px) {
+  padding: 72px 15px 74px;
+  text-align: center; }
+@media screen and (min-width: 481px) {
   .footer__inner {
-    text-align: center; } }
+    text-align: left; } }
 .footer-nav {
-  float: left; }
-@media screen and (max-width: 480px) {
+  float: left;
+  width: 100%; }
+@media screen and (min-width: 481px) {
   .footer-nav {
-    width: 100%; } }
+    width: auto; } }
 .footer-nav__item {
-  display: inline-block;
+  display: block;
   color: #515f67;
-  font-size: 0.75em;
+  font-size: 1.125em;
   font-weight: 600;
   line-height: 2;
   text-transform: uppercase;
@@ -1035,10 +1024,10 @@ The provided mixins are intended to be used with the array-like variables
   -moz-transition: color 300ms;
   -spec-transition: color 300ms;
   transition: color 300ms; }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
   .footer-nav__item {
-    display: block;
-    font-size: 1.125em; } }
+    display: inline-block;
+    font-size: 0.75em; } }
 .footer-nav__item:hover {
   color: #677984; }
 .footer-nav__item + .footer-nav__item {
@@ -1050,15 +1039,16 @@ The provided mixins are intended to be used with the array-like variables
 
 .copyright {
   float: right;
+  width: 100%;
   color: #515f67;
-  font-size: 0.75em;
+  font-size: 1.125em;
   font-weight: 600;
   line-height: 2;
   margin: 0; }
-@media screen and (max-width: 480px) {
+@media screen and (min-width: 481px) {
   .copyright {
-    width: 100%;
-    font-size: 1.125em; } }
+    width: auto;
+    font-size: 0.75em; } }
 
 .nav-toggle {
   position: relative;
