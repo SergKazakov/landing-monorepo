@@ -1,2 +1,0 @@
-oggetto-test-task
-=================
