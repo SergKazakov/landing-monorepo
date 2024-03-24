@@ -1,0 +1,21 @@
+{
+    "name": "oggetto-test-task",
+    "version": "0.0.0",
+    "dependencies": {},
+    "devDependencies": {
+        "grunt-contrib-watch":      "latest",
+        "grunt":                    "latest",
+        "grunt-newer":              "latest",
+        "load-grunt-tasks":         "latest",
+        "grunt-spritesmith":        "latest",
+        "grunt-contrib-less":       "latest",
+        "grunt-browser-sync":       "latest",
+        "grunt-uncss":              "latest",
+        "grunt-processhtml":        "latest",
+        "grunt-contrib-uglify":     "latest",
+        "grunt-contrib-cssmin":     "latest"
+    },
+    "engines": {
+        "node": "latest"
+    }
+}
