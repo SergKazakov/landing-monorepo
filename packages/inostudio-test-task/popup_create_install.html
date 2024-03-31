@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>popup create install</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.css">
+    <link rel="stylesheet" href="js/plugins/Timepicker/jquery.ui.timepicker.css">
+    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
+    <link rel="stylesheet" href="css/main.min.css">
+    <!--[if lt ie 9]>
+        <link rel="stylesheet" href="css/ie.min.css">
+        <link rel="stylesheet" href="js/plugins/JqTransform/jqtransform.css">
+    <![endif]-->
+</head>
+
+<body>
+    <div style="display: none;">
+        <div class="box-modal popup create-install" id="modal">
+            <h1 class="title">Create Install
+                <a href="#" class="box-modal_close arcticmodal-close popup-close"></a>
+            </h1>
+            <div class="popup-content">
+                <div class="row-group">
+                    <div class="row">
+                            <label>Client ID</label>
+                                <select id="select1" class="light-select">
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                    </div>
+                    <div class="row">
+                            <label>Select Installer</label>
+                                <select id="select2" class="light-select">
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                    <option value="">User</option>
+                                </select>
+                    </div>
+                    <div class="row">
+                            <label>Comment</label>
+                            <form action="#" id="jqtransform">
+                                <textarea placeholder="Some text..." cols="30" rows="10"></textarea>
+                            </form>
+                    </div>
+                    <div class="row">
+                            <label>Install Time</label>
+                            <input id="calendar" class="date" type="text">
+                            <input id="time" class="time" type="text">
+                    </div>
+                    <div class="btn-line">
+                        <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
+                            <span>Save</span>
+                        </a>
+                        <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
+                            <span>Cancel</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/plugins/JQueryUI/jquery-ui-1.10.4.custom.min.js"></script>
+    <script src="js/plugins/Timepicker/jquery.ui.timepicker.js"></script>
+    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
+    <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
+    <script src="js/prefixfree.min.js"></script>
+    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <script>
+        $(function() {
+            $("#calendar").datepicker({
+                  showOtherMonths: true,
+                  selectOtherMonths: true
+            });
+            $('#time').timepicker({
+                showPeriod: true
+            });
+            $('#modal').arcticmodal();
+            $('#select1, #select2').styler({
+                browseText: 'All'
+            });
+        });
+    </script>
+    <!--[if lte IE 8]>
+    <script src="js/plugins/Corner/jquery.corner.js"></script>
+    <script src="js/plugins/JqTransform/jquery.jqtransform.js"></script>
+    <script>
+        $(function(){
+            $('#modal').corner('10px');
+            $('#calendar, #time').css('width','+=1').wrapAll('<div class="input-wr"><div class="input-wr-inner"></div></div>');
+            $('#time').after('<span></span>');
+            $('#jqtransform').jqTransform();
+        });
+    </script>
+    <![endif]-->
+</body>
+
+</html>
