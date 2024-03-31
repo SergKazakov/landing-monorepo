@@ -1,166 +1,144 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>popup create install</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/main.min.css">
-    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.min.css"><![endif]-->
-</head>
-
-<body>
-    <div style="display: none;">
-        <div class="box-modal popup create-new" id="modal">
-            <h1 class="title">Edit KWL-220S (220W)
-                <a href="#" class="popup-close box-modal_close arcticmodal-close"></a>
-            </h1>
-            <div class="popup-content">
-                <div class="row-group clearfix">
-                    <div class="row-group1">
-                        <div class="row">
-                            <label>Name</label>
-                            <input placeholder="Some text..." type="text">
-                        </div>
-                        <div class="row">
-                            <label>STC Power Rating</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>STC Power</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Power Tolerancees (Min-Max)</label>
-                            <input class="input-group" placeholder="0" type="text">
-                            <span>-</span>
-                            <input class="input-group" placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Imp</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Isc</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>NOCT</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Series Fuse Rating</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Length</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Depth</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>File</label>
-                            <input class="file" placeholder="No File" type="text">
-                            <a href="#" class="btn-grey-no-icon">
-                                <span>Select</span>
-                            </a>
-                        </div>
-                        <a href="#" class="upload">Upload</a>
-                    </div>
-                    <div class="row-group2">
-                        <div class="row">
-                            <label>Manufacture</label>
-                            <select id="select" class=" light-select">
-                                <option value="">User</option>
-                                <option value="">User</option>
-                                <option value="">User</option>
-                                <option value="">User</option>
-                                <option value="">User</option>
-                            </select>
-                        </div>
-                        <div class="row">
-                            <label>PTC Power Rating</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Peak Efficiency</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Number of cells</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Vmp</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Voc</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Temp Coefficient Of Power</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Maximum System Voltage</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Width</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                        <div class="row">
-                            <label>Weight</label>
-                            <input placeholder="0" type="text">
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-line">
-                    <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
-                        <span>Save</span>
-                    </a>
-                    <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
-                        <span>Cancel</span>
-                    </a>
-                </div>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="/js/plugins/jQueryFormStyler/jquery.formstyler.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div style="display: none">
+      <div class="box-modal popup create-new" id="modal">
+        <h1 class="title">
+          Edit KWL-220S (220W)
+          <a href="#" class="popup-close box-modal_close arcticmodal-close"></a>
+        </h1>
+        <div class="popup-content">
+          <div class="row-group clearfix">
+            <div class="row-group1">
+              <div class="row">
+                <label>Name</label>
+                <input placeholder="Some text..." type="text" />
+              </div>
+              <div class="row">
+                <label>STC Power Rating</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>STC Power</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Power Tolerancees (Min-Max)</label>
+                <input class="input-group" placeholder="0" type="text" />
+                <span>-</span>
+                <input class="input-group" placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Imp</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Isc</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>NOCT</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Series Fuse Rating</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Length</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Depth</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>File</label>
+                <input class="file" placeholder="No File" type="text" />
+                <a href="#" class="btn-grey-no-icon">
+                  <span>Select</span>
+                </a>
+              </div>
+              <a href="#" class="upload">Upload</a>
             </div>
+            <div class="row-group2">
+              <div class="row">
+                <label>Manufacture</label>
+                <select id="select" class="light-select">
+                  <option value="">User</option>
+                  <option value="">User</option>
+                  <option value="">User</option>
+                  <option value="">User</option>
+                  <option value="">User</option>
+                </select>
+              </div>
+              <div class="row">
+                <label>PTC Power Rating</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Peak Efficiency</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Number of cells</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Vmp</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Voc</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Temp Coefficient Of Power</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Maximum System Voltage</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Width</label>
+                <input placeholder="0" type="text" />
+              </div>
+              <div class="row">
+                <label>Weight</label>
+                <input placeholder="0" type="text" />
+              </div>
+            </div>
+          </div>
+          <div class="btn-line">
+            <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
+              <span>Save</span>
+            </a>
+            <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
+              <span>Cancel</span>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
-    <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
-    <script src="js/prefixfree.min.js"></script>
-    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
+    <script src="/js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script>
-        $(function() {
-            $('#select').styler({
-                browseText: 'All'
-            });
-            $('#modal').arcticmodal();
+      $(function () {
+        $("#select").styler({
+          browseText: "All",
         });
+        $("#modal").arcticmodal();
+      });
     </script>
-    <!--[if lte IE 8]>
-    <script src="js/plugins/Corner/jquery.corner.js"></script>
-    <script src="js/plugins/inputStyler.min.js"></script>
-    <script>
-        $(function(){
-            $('#modal').corner('10px');
-            $('.row-group input[type=text]').css('width','+=2').inputStyler();
-        });
-    </script>
-    <![endif]-->
-</body>
-
+  </body>
 </html>
