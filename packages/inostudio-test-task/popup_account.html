@@ -1,291 +1,296 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!-->
-<html class="no-js">
-<!--<![endif]-->
-
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>popup create install</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="js/plugins/jQueryFormStyler/jquery.formstyler.css">
-    <link rel="stylesheet" href="css/main.min.css">
-    <!--[if lt ie 9]><link rel="stylesheet" href="css/ie.min.css"><![endif]-->
-</head>
-
-<body>
-    <div style="display: none;">
-        <div id="modal" class="box-modal popup account">
-            <h1 class="title">Account1
-                <a href="#" class="box-modal_close arcticmodal-close popup-close"></a>
-            </h1>
-            <div class="popup-content">
-                <div class="row-group-1">
-                    <div class="hgroup">
-                        <div class="row">
-                            <h1>Users</h1>
-                            <div class="btn-line">
-                                <a href="#" class="btn btn-grey">
-                                    <span>Add</span>
-                                </a>
-                                <a href="#" class="btn btn-grey">
-                                    <span>Remove</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <table id="table1" class="table table-number-1">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th class="column-2">Role</th>
-                                <th class="last {sorter:false}"></th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Julia</td>
-                                <td class="column-2">Admin</td>
-                                <td class="last">
-                                    <input type="checkbox">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Kostya</td>
-                                <td class="column-2">Consultant</td>
-                                <td class="last">
-                                    <input type="checkbox">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Lesha</td>
-                                <td class="column-2">Manager</td>
-                                <td class="last">
-                                    <input type="checkbox">
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Oleg</td>
-                                <td class="column-2">Installer</td>
-                                <td class="last">
-                                    <input type="checkbox">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="/js/plugins/jQueryFormStyler/jquery.formstyler.css"
+    />
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div style="display: none">
+      <div id="modal" class="box-modal popup account">
+        <h1 class="title">
+          Account1
+          <a href="#" class="box-modal_close arcticmodal-close popup-close"></a>
+        </h1>
+        <div class="popup-content">
+          <div class="row-group-1">
+            <div class="hgroup">
+              <div class="row">
+                <h1>Users</h1>
+                <div class="btn-line">
+                  <a href="#" class="btn btn-grey">
+                    <span>Add</span>
+                  </a>
+                  <a href="#" class="btn btn-grey">
+                    <span>Remove</span>
+                  </a>
                 </div>
-                <div class="row-group-2">
-                    <div class="hgroup">
-                        <h1>Structure</h1>
-                    </div>
-                    <div class="row">
-                        <div class="column1">
-                            <div class="dropdown-list">
-                                <ul id="treeview">
-                                    <li class="folder">
-                                        <a href="#">
-                                            <i class="arrow"></i>Account1</a>
-                                        <ul>
-                                            <li class="folder">
-                                                <a href="#">
-                                                    <i class="arrow"></i>Branch-1</a>
-                                                <ul>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-1</a>
-                                                    </li>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="folder">
-                                                <a href="#">
-                                                    <i class="arrow"></i>Branch-2</a>
-                                                <ul>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-1</a>
-                                                    </li>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="folder">
-                                        <a href="#">
-                                            <i class="arrow"></i>Account1</a>
-                                        <ul>
-                                            <li class="folder">
-                                                <a href="#">
-                                                    <i class="arrow"></i>Branch-1</a>
-                                                <ul>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-1</a>
-                                                    </li>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                            <li class="folder">
-                                                <a href="#">
-                                                    <i class="arrow"></i>Branch-2</a>
-                                                <ul>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-1</a>
-                                                    </li>
-                                                    <li class="folder">
-                                                        <a class="file" href="#">
-                                                            <i class="arrow"></i>Team-2</a>
-                                                    </li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="column2">
-                            <div class="row-group-3">
-                                <div class="row">
-                                    <label>Name</label>
-                                    <input id="input-text" type="text" placeholder="Input name...">
-                                </div>
-                                <div class="row">
-                                    <label>Manager</label>
-                                    <select class="light-select" id="select">
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                        <option value="">User</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="hgroup">
-                                <div class="row">
-                                    <h1>Consultants</h1>
-                                    <div class="btn-line">
-                                        <a href="#" class="btn btn-grey">
-                                            <span>Add</span>
-                                        </a>
-                                        <a href="#" class="btn btn-grey">
-                                            <span>Remove</span>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                            <table id="table-2" class="table table-number-2">
-                                <tbody>
-                                    <tr>
-                                        <td>Julia</td>
-                                        <td class="last">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Kostya</td>
-                                        <td class="last">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Lesha</td>
-                                        <td class="last">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>Oleg</td>
-                                        <td class="last">
-                                            <input type="checkbox">
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <div class="btn-line buttons-bottom">
-                    <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
-                        <span>Save</span>
-                    </a>
-                    <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
-                        <span>Close</span>
-                    </a>
-                </div>
+              </div>
             </div>
+            <table id="table1" class="table table-number-1">
+              <thead>
+                <tr>
+                  <th>Name</th>
+                  <th class="column-2">Role</th>
+                  <th class="last {sorter:false}"></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Julia</td>
+                  <td class="column-2">Admin</td>
+                  <td class="last">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Kostya</td>
+                  <td class="column-2">Consultant</td>
+                  <td class="last">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Lesha</td>
+                  <td class="column-2">Manager</td>
+                  <td class="last">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+                <tr>
+                  <td>Oleg</td>
+                  <td class="column-2">Installer</td>
+                  <td class="last">
+                    <input type="checkbox" />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="row-group-2">
+            <div class="hgroup">
+              <h1>Structure</h1>
+            </div>
+            <div class="row">
+              <div class="column1">
+                <div class="dropdown-list">
+                  <ul id="treeview">
+                    <li class="folder">
+                      <a href="#">
+                        <i class="arrow"></i>
+                        Account1
+                      </a>
+                      <ul>
+                        <li class="folder">
+                          <a href="#">
+                            <i class="arrow"></i>
+                            Branch-1
+                          </a>
+                          <ul>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-1
+                              </a>
+                            </li>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-2
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="folder">
+                          <a href="#">
+                            <i class="arrow"></i>
+                            Branch-2
+                          </a>
+                          <ul>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-1
+                              </a>
+                            </li>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-2
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                    <li class="folder">
+                      <a href="#">
+                        <i class="arrow"></i>
+                        Account1
+                      </a>
+                      <ul>
+                        <li class="folder">
+                          <a href="#">
+                            <i class="arrow"></i>
+                            Branch-1
+                          </a>
+                          <ul>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-1
+                              </a>
+                            </li>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-2
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="folder">
+                          <a href="#">
+                            <i class="arrow"></i>
+                            Branch-2
+                          </a>
+                          <ul>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-1
+                              </a>
+                            </li>
+                            <li class="folder">
+                              <a class="file" href="#">
+                                <i class="arrow"></i>
+                                Team-2
+                              </a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div class="column2">
+                <div class="row-group-3">
+                  <div class="row">
+                    <label>Name</label>
+                    <input
+                      id="input-text"
+                      type="text"
+                      placeholder="Input name..."
+                    />
+                  </div>
+                  <div class="row">
+                    <label>Manager</label>
+                    <select class="light-select" id="select">
+                      <option value="">User</option>
+                      <option value="">User</option>
+                      <option value="">User</option>
+                      <option value="">User</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="hgroup">
+                  <div class="row">
+                    <h1>Consultants</h1>
+                    <div class="btn-line">
+                      <a href="#" class="btn btn-grey">
+                        <span>Add</span>
+                      </a>
+                      <a href="#" class="btn btn-grey">
+                        <span>Remove</span>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <table id="table-2" class="table table-number-2">
+                  <tbody>
+                    <tr>
+                      <td>Julia</td>
+                      <td class="last">
+                        <input type="checkbox" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Kostya</td>
+                      <td class="last">
+                        <input type="checkbox" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Lesha</td>
+                      <td class="last">
+                        <input type="checkbox" />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>Oleg</td>
+                      <td class="last">
+                        <input type="checkbox" />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <div class="btn-line buttons-bottom">
+            <a href="#" class="btn btn-red box-modal_close arcticmodal-close">
+              <span>Save</span>
+            </a>
+            <a href="#" class="btn btn-grey box-modal_close arcticmodal-close">
+              <span>Close</span>
+            </a>
+          </div>
         </div>
+      </div>
     </div>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/plugins/Icheck/icheck.min.js"></script>
-    <script src="js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
-    <script src="js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
-    <script src="js/plugins/TableSorter/jquery.metadata.js"></script>
-    <script src="js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
-    <script src="js/prefixfree.min.js"></script>
-    <!--[if lte IE 9]><script src="js/placeholder-min.js"></script><![endif]-->
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/plugins/Icheck/icheck.min.js"></script>
+    <script src="/js/plugins/jQueryFormStyler/jquery.formstyler.min.js"></script>
+    <script src="/js/plugins/TableSorter/jquery.tablesorter.min.js"></script>
+    <script src="/js/plugins/TableSorter/jquery.metadata.js"></script>
+    <script src="/js/plugins/ArcticModal/jquery.arcticmodal-0.3.min.js"></script>
     <script>
-        $(function() {
-            var check=$('input[type=checkbox]');
-            check.iCheck();
-            $('#select').styler({
-                browseText: 'All'
-            });
-            $("#table1").tablesorter();
-            $('.icheckbox').on('ifClicked', function() {
-                if ($(this).hasClass('checked')) $(this).closest('tr').removeClass('active');
-                else $(this).closest('tr').addClass('active');
-            });
-            $('table').on('click', 'tr', function() {
-                if ($(this).hasClass('active')) {
-                    $(this).removeClass('active');
-                    $(this).find('.icheckbox').iCheck('uncheck');
-                } else {
-                    $(this).addClass('active');
-                    $(this).find('.icheckbox').iCheck('check');
-                }
-            });
-            $('#modal').arcticmodal();
-            $('.folder').click(function(event) {
-                if ($(this).hasClass('open')) $(this).removeClass('open');
-                else $(this).addClass('open');
-                event.stopPropagation();
-            });
-            $('.folder a').click(function() {
-                $('.folder a').removeClass('active');
-                $(this).addClass('active');
-            });
+      $(function () {
+        var check = $("input[type=checkbox]");
+        check.iCheck();
+        $("#select").styler({
+          browseText: "All",
         });
+        $("#table1").tablesorter();
+        $(".icheckbox").on("ifClicked", function () {
+          if ($(this).hasClass("checked"))
+            $(this).closest("tr").removeClass("active");
+          else $(this).closest("tr").addClass("active");
+        });
+        $("table").on("click", "tr", function () {
+          if ($(this).hasClass("active")) {
+            $(this).removeClass("active");
+            $(this).find(".icheckbox").iCheck("uncheck");
+          } else {
+            $(this).addClass("active");
+            $(this).find(".icheckbox").iCheck("check");
+          }
+        });
+        $("#modal").arcticmodal();
+        $(".folder").click(function (event) {
+          if ($(this).hasClass("open")) $(this).removeClass("open");
+          else $(this).addClass("open");
+          event.stopPropagation();
+        });
+        $(".folder a").click(function () {
+          $(".folder a").removeClass("active");
+          $(this).addClass("active");
+        });
+      });
     </script>
-    <!--[if lte IE 8]>
-    <script src="js/plugins/Corner/jquery.corner.js"></script>
-    <script src="js/plugins/inputStyler.min.js"></script>
-    <script>
-        $(function(){
-            $('#modal').corner('10px');
-            $('.dropdown-list').wrap('<div class="outer"></div>')
-            .parent().css({'padding':'1px','background':'#bbc6d3', 'top':'-4px'}).corner('5px').end().corner('5px');
-            $('#input-text').css('width','+=2').inputStyler();
-            $('.dropdown-list a').each(function(){
-                var text=$(this).text();
-                $(this).html('<span><i class="arrow"></i>'+text+'</span>');
-            });
-         });
-    </script>
-    <![endif]-->
-</body>
-
+  </body>
 </html>
