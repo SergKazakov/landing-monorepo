@@ -602,7 +602,7 @@ input:focus {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -o-user-select: none;
-  user-select: none;
+       user-select: none;
 }
 
 @media screen and (min-width: 769px) {

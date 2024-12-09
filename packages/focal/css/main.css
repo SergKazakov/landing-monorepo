@@ -621,7 +621,7 @@ The provided mixins are intended to be used with the array-like variables
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -o-user-select: none;
-  user-select: none;
+       user-select: none;
 }
 
 @media screen and (min-width: 993px) {
